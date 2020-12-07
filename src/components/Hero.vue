@@ -1,0 +1,36 @@
+<template>
+  <div class="hero">
+    <div class="container">
+      <h2 class="animated fadeIn">Started with GeoCities now I'm here.</h2>
+        <h1 class="animated fadeIn delay1">Hi there, my name is Sarah Dulat and I am a front-end web developer at <a href="http://www.reorg-research.com" target="_blank">Reorg Research</a> in NYC (<a href="https://jobs.lever.co/reorgresearch?lever-via=gozPBhAQBk" target="_blank">we're hiring!</a>).</h1>
+        <h2 class="animated fadeIn delay2">In my former life I was a graphic designer and have now merged that experience with this new branch in my career. When I'm not fixing bugs I'm probably at hot yoga, ballet or learning something new.</h2>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Hero',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
