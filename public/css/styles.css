@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F16544;
+	font-family: "Candara", Verdana, sans-serif;
+	padding: 0 15px 30px;
+	margin: 0;
+}
+
+.sherbert {
+	animation-name: sherbert;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sherbert {
+   0% {
+      background: #F16544;
+   }
+
+   100% {
+      background: #F93A7C;
+   }
+}
+
+.container {
+	margin: auto;
+	padding: 25px 25% 0 50px;
+}
+
+h1 {
+	color: rgba(255,255,255,0.9);
+	font-family: 'Arvo', serif;
+	letter-spacing: 1px;
+	line-height: 45px;
+}
+
+h1 a {
+	color: rgba(255,255,255,0.9);
+	text-decoration: underline;
+}
+
+h1 a:hover {
+	color: rgba(255,255,255,0.7);
+}
+
+h2 {
+	color: rgba(255,255,255,0.9);
+	font-family: 'Arvo', serif;
+	letter-spacing: 1px;
+	line-height: 40px;
+}
+
+h3 {
+	color: #FFFFFF;
+}
+
+h3 a {
+	color: rgba(255,255,255,0.9);
+	text-decoration: none;
+}
+
+h3 a:hover {
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+
+.portfolio {
+    margin: 0;
+    width: 100%;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+
+.portfolio img {
+	position: relative;
+	margin: 0 0 20px;
+	display: inline-block;
+	max-width: 100%;
+}
+
+iframe {
+	position: relative;
+	margin: 0 0 20px;
+	display: inline-block;
+	max-width: 100%;
+	background-color: #F16544;
+}
+
+.webportfolio {
+    margin: 0;
+    width: 100%;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+.webportfolio img {
+	position: relative;
+	margin: 0 0 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 10px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  border-top: 10px solid rgba(255,255,255,0.3);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+	from { bottom:-100px; opacity:0 }
+	to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+	from{ bottom:-100px; opacity:0 }
+	to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+	display: none;
+	text-align: center;
+}
+
+#footer a, #footer p {
+	color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: right;
+}
+
+#footer a:hover {
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    overflow: visible;
+    z-index: 99;
+    padding: 0px 15px;
+    background-color: #F16544;
+    height: 40px;
+}
+
+/*--MEDIA--*/
+
+/* Large Devices, Wide Screens */
+    @media only all and (min-width : 1600px) {
+    	.container {
+			margin: auto;
+			padding: 25px 25% 0 50px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only all and (max-width : 992px) {
+    .portfolio {
+    	-moz-column-count: 3; 
+    	-webkit-column-count: 3; 
+    	column-count: 3;
+    }
+}
+
+    /* Small Devices, Tablets */
+    @media only all and (max-width : 768px) {
+    	.container {
+			margin: auto;
+			padding: 25px 50px;
+		}
+		.portfolio {
+			-moz-column-count: 2; 
+			-webkit-column-count: 2; 
+			column-count: 2;
+		}
+
+		.webportfolio {
+		-moz-column-count: 1; 
+		-webkit-column-count: 1; 
+		column-count: 1;
+		}
+
+		h1 {
+		font-size: 24px;
+		line-height: 30px;
+		}
+
+		h2 {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+    /* Extra Small Devices, Phones */ 
+    @media only all and (max-width : 480px) {
+		.portfolio, .webportfolio {
+			-moz-column-count: 1; 
+			-webkit-column-count: 1; 
+			column-count: 1;
+		}
+
+		#footer a, p {
+		font-size: 9px;
+		text-align: right;
+		}
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only all and (max-width : 320px) {
+	    .portfolio, .webportfolio {
+			-moz-column-count: 1; 
+			-webkit-column-count: 1; 
+			column-count: 1;}
+	    }
+    }
