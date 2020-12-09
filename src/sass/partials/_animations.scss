@@ -1,38 +1,46 @@
 /*FADE*/
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-
 /*DELAYS*/
-
 .delay1 {
   -webkit-animation-delay: 0.5s; /* Chrome, Safari, Opera */
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-
 .delay2 {
   -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-    animation-delay: 1s;
+  animation-delay: 1s;
+}
+/*BACKGROUND*/
+.sherbert {
+  animation-name: sherbert;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes sherbert {
+   0% {
+    background: #F16544;
+   }
+   100% {
+    background: #F93A7C;
+   }
 }
