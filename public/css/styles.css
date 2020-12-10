@@ -1,22 +1,3 @@
-@charset "UTF-8";
-/* CSS Document */
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #F16544;
-	font-family: "Candara", Verdana, sans-serif;
-	padding: 0 15px 30px;
-	margin: 0;
-}
-
-.container {
-	margin: auto;
-	padding: 25px 25% 0 50px;
-}
-
 .portfolio {
     margin: 0;
     width: 100%;
