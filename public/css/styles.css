@@ -25,6 +25,13 @@ body {
   padding: 25px 25% 100% 50px;
 }
 
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 /*FADE*/
 @-webkit-keyframes fadeIn {
   from {
@@ -101,47 +108,17 @@ h3 a:hover {
   text-decoration: none;
 }
 
-#hero h1 {
+#hero {
   color: rgba(255, 255, 255, 0.9);
 }
-#hero h1 a {
+#hero a {
   color: rgba(255, 255, 255, 0.9);
 }
-#hero h1 a:hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-#hero h2 {
-  color: rgba(255, 255, 255, 0.9);
-}
-#hero h3 {
-  color: #FFFFFF;
-}
-#hero h3 a {
-  color: rgba(255, 255, 255, 0.9);
-}
-#hero h3 a:hover {
+#hero a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#work h1, #skills h1, #contact h1 {
-  color: #F16544;
-}
-#work h1 a, #skills h1 a, #contact h1 a {
-  color: #F16544;
-}
-#work h1 a:hover, #skills h1 a:hover, #contact h1 a:hover {
-  color: #F16544;
-}
-#work h2, #skills h2, #contact h2 {
-  color: #F16544;
-}
-#work h3, #skills h3, #contact h3 {
-  color: #F16544;
-}
-#work h3 a, #skills h3 a, #contact h3 a {
-  color: #F16544;
-}
-#work h3 a:hover, #skills h3 a:hover, #contact h3 a:hover {
+#work, #skills, #contact {
   color: #F16544;
 }
 
