@@ -1,13 +1,13 @@
 <template>
-  <div id="work">
+  <div id="skills">
     <div class="container">
-		<h1 class="animated fadeIn delay1">Work</h1>
+		<h1 class="animated fadeIn delay1">Skills</h1>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Work'
+  name: 'Skills'
 }
 </script>

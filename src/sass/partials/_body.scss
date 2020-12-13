@@ -11,9 +11,12 @@ body {
 }
 .container {
 	margin: auto;
-	padding: 25px 25% 100% 50px;
+	padding: 25px 25% 0 50px;
 }
-.hero {
+#hero {
 	height: 100vh;
 	min-height: 400px;
+	.container {
+		padding: 25px 25% 100% 50px;
+	}
 }

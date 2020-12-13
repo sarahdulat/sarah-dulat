@@ -17,7 +17,7 @@ h3 a {
 h3 a:hover {
 	text-decoration: none;
 }
-.hero {
+#hero {
 	h1 {
 		color: rgba(255,255,255,0.9);
 	}
@@ -40,7 +40,7 @@ h3 a:hover {
 		color: rgba(255,255,255,0.7);
 	}	
 }
-.work {
+#work, #skills {
 	h1 {
 		color: black;
 	}

@@ -12,12 +12,15 @@ body {
 
 .container {
   margin: auto;
-  padding: 25px 25% 100% 50px;
+  padding: 25px 25% 0 50px;
 }
 
-.hero {
+#hero {
   height: 100vh;
   min-height: 400px;
+}
+#hero .container {
+  padding: 25px 25% 100% 50px;
 }
 
 /*FADE*/
@@ -96,47 +99,47 @@ h3 a:hover {
   text-decoration: none;
 }
 
-.hero h1 {
+#hero h1 {
   color: rgba(255, 255, 255, 0.9);
 }
-.hero h1 a {
+#hero h1 a {
   color: rgba(255, 255, 255, 0.9);
 }
-.hero h1 a:hover {
+#hero h1 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
-.hero h2 {
+#hero h2 {
   color: rgba(255, 255, 255, 0.9);
 }
-.hero h3 {
+#hero h3 {
   color: #FFFFFF;
 }
-.hero h3 a {
+#hero h3 a {
   color: rgba(255, 255, 255, 0.9);
 }
-.hero h3 a:hover {
+#hero h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.work h1 {
+#work h1, #skills h1 {
   color: black;
 }
-.work h1 a {
+#work h1 a, #skills h1 a {
   color: black;
 }
-.work h1 a:hover {
+#work h1 a:hover, #skills h1 a:hover {
   color: black;
 }
-.work h2 {
+#work h2, #skills h2 {
   color: black;
 }
-.work h3 {
+#work h3, #skills h3 {
   color: #000000;
 }
-.work h3 a {
+#work h3 a, #skills h3 a {
   color: black;
 }
-.work h3 a:hover {
+#work h3 a:hover, #skills h3 a:hover {
   color: black;
 }
 
