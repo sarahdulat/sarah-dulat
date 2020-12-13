@@ -1,5 +1,6 @@
 h1 {
 	font-family: 'Arvo', serif;
+	font-weight: bold;
 	letter-spacing: 1px;
 	line-height: 45px;
 }
@@ -40,26 +41,26 @@ h3 a:hover {
 		color: rgba(255,255,255,0.7);
 	}	
 }
-#work, #skills {
+#work, #skills, #contact {
 	h1 {
-		color: black;
+		color: #F16544;
 	}
 	h1 a {
-		color: black;
+		color: #F16544;
 	}
 	h1 a:hover {
-		color: black;
+		color: #F16544;
 	}
 	h2 {
-		color: black;
+		color: #F16544;
 	}
 	h3 {
-		color: #000000;
+		color: #F16544;
 	}
 	h3 a {
-		color: black;
+		color: #F16544;
 	}
 	h3 a:hover {
-		color: black;
+		color: #F16544;
 	}
 }

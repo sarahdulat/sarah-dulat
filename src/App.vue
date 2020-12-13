@@ -3,6 +3,7 @@
     <Hero />
     <Work />
     <Skills />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Hero from './components/Hero.vue'
 import Work from './components/Work.vue'
 import Skills from './components/Skills.vue'
+import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -19,6 +21,7 @@ export default {
     Hero,
     Work,
     Skills,
+    Contact,
     Footer
   }
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -77,6 +79,7 @@ body {
 }
 h1 {
   font-family: "Arvo", serif;
+  font-weight: bold;
   letter-spacing: 1px;
   line-height: 45px;
 }
@@ -121,26 +124,26 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#work h1, #skills h1 {
-  color: black;
+#work h1, #skills h1, #contact h1 {
+  color: #F16544;
 }
-#work h1 a, #skills h1 a {
-  color: black;
+#work h1 a, #skills h1 a, #contact h1 a {
+  color: #F16544;
 }
-#work h1 a:hover, #skills h1 a:hover {
-  color: black;
+#work h1 a:hover, #skills h1 a:hover, #contact h1 a:hover {
+  color: #F16544;
 }
-#work h2, #skills h2 {
-  color: black;
+#work h2, #skills h2, #contact h2 {
+  color: #F16544;
 }
-#work h3, #skills h3 {
-  color: #000000;
+#work h3, #skills h3, #contact h3 {
+  color: #F16544;
 }
-#work h3 a, #skills h3 a {
-  color: black;
+#work h3 a, #skills h3 a, #contact h3 a {
+  color: #F16544;
 }
-#work h3 a:hover, #skills h3 a:hover {
-  color: black;
+#work h3 a:hover, #skills h3 a:hover, #contact h3 a:hover {
+  color: #F16544;
 }
 
 /* Large Devices, Wide Screens */
