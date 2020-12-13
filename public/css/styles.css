@@ -3,15 +3,21 @@
 }
 
 body {
-  background-color: #F16544;
+  background-color: #FFFFFF;
   font-family: "Candara", Verdana, sans-serif;
-  padding: 0 15px 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
 .container {
   margin: auto;
-  padding: 25px 25% 0 50px;
+  padding: 25px 25% 100% 50px;
+}
+
+.hero {
+  height: 100vh;
+  min-height: 400px;
 }
 
 /*FADE*/
@@ -150,7 +156,7 @@ h3 a:hover {
 
 #social {
   position: fixed;
-  bottom: 0px;
+  top: 0px;
   right: 0px;
   width: 100%;
   overflow: visible;

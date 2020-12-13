@@ -1,5 +1,5 @@
 <template>
-  <div class="hero sherbert">
+  <div class="hero">
     <div class="container">
       <h2 class="animated fadeIn">Started with GeoCities now I'm here.</h2>
         <h1 class="animated fadeIn delay1">Hi there, my name is Sarah Dulat and I am a front end web developer at <a href="http://www.reorg-research.com" target="_blank">Reorg</a> in NYC (<a href="https://jobs.lever.co/reorgresearch?lever-via=gozPBhAQBk" target="_blank">we're hiring!</a>).</h1>
