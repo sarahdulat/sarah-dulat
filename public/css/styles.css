@@ -73,40 +73,71 @@ body {
   }
 }
 h1 {
-  color: rgba(255, 255, 255, 0.9);
   font-family: "Arvo", serif;
   letter-spacing: 1px;
   line-height: 45px;
 }
 
 h1 a {
-  color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
 }
 
-h1 a:hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 h2 {
-  color: rgba(255, 255, 255, 0.9);
   font-family: "Arvo", serif;
   letter-spacing: 1px;
   line-height: 40px;
 }
 
-h3 {
-  color: #FFFFFF;
-}
-
 h3 a {
-  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 
 h3 a:hover {
-  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+}
+
+.hero h1 {
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero h1 a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero h1 a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+.hero h2 {
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero h3 {
+  color: #FFFFFF;
+}
+.hero h3 a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero h3 a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.work h1 {
+  color: black;
+}
+.work h1 a {
+  color: black;
+}
+.work h1 a:hover {
+  color: black;
+}
+.work h2 {
+  color: black;
+}
+.work h3 {
+  color: #000000;
+}
+.work h3 a {
+  color: black;
+}
+.work h3 a:hover {
+  color: black;
 }
 
 /* Large Devices, Wide Screens */
@@ -142,21 +173,21 @@ h3 a:hover {
   }
 }
 /* Custom, iPhone Retina */
-#social a, #social p {
+#footer a, #footer p {
   color: #FFFFFF;
   font-size: 12px;
   text-decoration: none;
   text-align: right;
 }
 
-#social a:hover {
+#footer a:hover {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
 
-#social {
+#footer {
   position: fixed;
-  top: 0px;
+  bottom: 0px;
   right: 0px;
   width: 100%;
   overflow: visible;

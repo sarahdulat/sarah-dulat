@@ -1,16 +1,16 @@
-#social a, #social p {
+#footer a, #footer p {
 	color: #FFFFFF;
 	font-size: 12px;
 	text-decoration: none;
 	text-align: right;
 }
-#social a:hover {
+#footer a:hover {
 	color: rgba(255,255,255,0.7);
 	text-decoration: none;
 }
-#social {
+#footer {
     position: fixed;
-    top: 0px;
+    bottom: 0px;
     right: 0px;
     width: 100%;
     overflow: visible;

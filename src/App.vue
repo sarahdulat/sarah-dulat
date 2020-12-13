@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <Header />
     <Hero />
     <Work />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Work from './components/Work.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
     Hero,
-    Work
+    Work,
+    Footer
   }
 }
 </script>
