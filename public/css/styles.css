@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F16544;
+  font-family: "Candara", Verdana, sans-serif;
+  padding: 0 15px 30px;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  padding: 25px 25% 0 50px;
+}
+
+/*FADE*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/*DELAYS*/
+.delay1 {
+  -webkit-animation-delay: 0.5s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 1s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+}
+
+/*BACKGROUND*/
+.sherbert {
+  animation-name: sherbert;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sherbert {
+  0% {
+    background: #F16544;
+  }
+  100% {
+    background: #F93A7C;
+  }
+}
+h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Arvo", serif;
+  letter-spacing: 1px;
+  line-height: 45px;
+}
+
+h1 a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
+h1 a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Arvo", serif;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+
+h3 {
+  color: #FFFFFF;
+}
+
+h3 a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+/* Large Devices, Wide Screens */
+@media only all and (min-width: 1600px) {
+  .container {
+    margin: auto;
+    padding: 25px 25% 0 50px;
+  }
+}
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only all and (max-width: 768px) {
+  .container {
+    margin: auto;
+    padding: 25px 50px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only all and (max-width: 480px) {
+  #social a, p {
+    font-size: 9px;
+    text-align: right;
+  }
+}
+/* Custom, iPhone Retina */
+#social a, #social p {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: right;
+}
+
+#social a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+#social {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  overflow: visible;
+  z-index: 99;
+  padding: 0px 15px;
+  background-color: #F16544;
+  height: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
