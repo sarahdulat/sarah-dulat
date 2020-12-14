@@ -1,13 +1,13 @@
 h1 {
 	font-family: 'Arvo', serif;
 	letter-spacing: 1px;
-	line-height: 45px;
+	line-height: 54px;
 	font-weight: 600;
 	a {
 		text-decoration: underline;
 	}
 	.name {
-		font-size: 48px;
+		font-size: 58px;
 	}
 }
 h2 {
@@ -24,6 +24,9 @@ h3 {
 		text-decoration: none;
 	}
 }
+.no-wrap {
+	white-space: nowrap;
+}
 #hero {
 	color: rgba(255,255,255,0.9);
 	h2 {
@@ -38,8 +41,8 @@ h3 {
 }
 #work, #contact {
 	h1 {
-		font-size: 100px;
-		letter-spacing: -10px;
+		font-size: 58px;
+		letter-spacing: -5px;
 	}
 }
 #work, #skills, #contact {

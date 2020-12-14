@@ -17,7 +17,10 @@
 		}
 		h1 {
 			font-size: 24px;
-			line-height: 30px;
+			line-height: 44px;
+			.name {
+				font-size: 44px;
+			}
 		}
 		h2 {
 			font-size: 18px;
@@ -26,10 +29,7 @@
 	}
     /* Extra Small Devices, Phones */ 
     @media only all and (max-width : 480px) {
-		#social a, p {
-			font-size: 9px;
-			text-align: right;
-		}
+
     }
     /* Custom, iPhone Retina */ 
     @media only all and (max-width : 320px) {
