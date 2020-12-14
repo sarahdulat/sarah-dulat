@@ -1,7 +1,7 @@
 <template>
   <div id="work">
     <div class="container">
-		<h1 class="animated fadeIn delay1">Work</h1>
+		<h1>Work</h1>
     </div>
   </div>
 </template>

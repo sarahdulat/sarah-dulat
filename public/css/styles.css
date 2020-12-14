@@ -6,7 +6,7 @@
 
 body {
   background-color: #FFFFFF;
-  font-family: "Candara", Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -23,6 +23,17 @@ body {
 }
 #hero .container {
   padding: 25px 25% 100% 50px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .animated {
