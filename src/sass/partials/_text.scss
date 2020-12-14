@@ -6,9 +6,12 @@ h1 {
 	a {
 		text-decoration: underline;
 	}
+	.name {
+		font-size: 48px;
+	}
 }
 h2 {
-	font-family: 'Arvo', serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 1px;
 	line-height: 40px;
 	font-weight: 100;
@@ -23,12 +26,21 @@ h3 {
 }
 #hero {
 	color: rgba(255,255,255,0.9);
+	h2 {
+		font-family: 'Arvo', serif;
+	}
 	a {
 		color: rgba(255,255,255,0.9);
 	}
 	a:hover {
 		color: rgba(255,255,255,0.7);
-	}	
+	}
+}
+#work, #contact {
+	h1 {
+		font-size: 100px;
+		letter-spacing: -10px;
+	}
 }
 #work, #skills, #contact {
 	color: #F16544;

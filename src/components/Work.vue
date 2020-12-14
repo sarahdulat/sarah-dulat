@@ -3,14 +3,17 @@
     <div class="container">
 		<h1>Work</h1>
 		<div class="row">
+			I'm passionate about intuitive UI/UX and creating highly responsive and performant apps. From mock ups to architecture I like organized and consistant structure that won't make a user second guess what to do next. I find there are always ways to speed things up and do regular refactors as I learn and grow.
+		</div>
+		<div class="row">
             <div class="column">
-                WORK
+                INTUITIVE UI/UX
             </div>
             <div class="column">
-                WORK
+                RESPONSIVE LAYOUTS
             </div>
             <div class="column">
-               WORK 
+               ORGANIZED ARCHITECTURE 
             </div>
         </div>
     </div>

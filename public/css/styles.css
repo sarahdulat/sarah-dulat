@@ -22,7 +22,11 @@ body {
   min-height: 400px;
 }
 #hero .container {
-  padding: 25px 25% 100% 50px;
+  padding: 25px 30% 100% 50px;
+}
+
+#work .container {
+  padding: 0 25% 100% 50px;
 }
 
 .row {
@@ -104,9 +108,12 @@ h1 {
 h1 a {
   text-decoration: underline;
 }
+h1 .name {
+  font-size: 48px;
+}
 
 h2 {
-  font-family: "Arvo", serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   line-height: 40px;
   font-weight: 100;
@@ -122,11 +129,19 @@ h3 a:hover {
 #hero {
   color: rgba(255, 255, 255, 0.9);
 }
+#hero h2 {
+  font-family: "Arvo", serif;
+}
 #hero a {
   color: rgba(255, 255, 255, 0.9);
 }
 #hero a:hover {
   color: rgba(255, 255, 255, 0.7);
+}
+
+#work h1, #contact h1 {
+  font-size: 100px;
+  letter-spacing: -10px;
 }
 
 #work, #skills, #contact {

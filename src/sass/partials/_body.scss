@@ -17,7 +17,12 @@ body {
 	height: 100vh;
 	min-height: 400px;
 	.container {
-		padding: 25px 25% 100% 50px;
+		padding: 25px 30% 100% 50px;
+	}
+}
+#work {
+	.container {
+		padding: 0 25% 100% 50px;
 	}
 }
 .row {

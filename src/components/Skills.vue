@@ -1,7 +1,6 @@
 <template>
   <div id="skills">
     <div class="container">
-		<h1>Skills</h1>
         <div class="row">
             <div class="column">
                 <h3>Languages &amp; Libraries</h3>
