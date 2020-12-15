@@ -42,9 +42,16 @@ h3 {
 #work, #contact {
 	h1 {
 		font-size: 58px;
-		letter-spacing: -5px;
+		letter-spacing: -3px;
+		margin-bottom: 0;
+		color: #F16544;
 	}
 }
 #work, #skills, #contact {
-	color: #F16544;
+	color: #000000;
+}
+#skills {
+	h3 {
+		color: #F93981;
+	}
 }

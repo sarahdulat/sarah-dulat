@@ -8,7 +8,7 @@
             </div>
             <div class="column">
                 <h3>Thanks for stopping by.</h3>
-                <p>CONTACT</p>
+                <p>How to reach me:</p>
                 <p>(847) 877-1347</p>
                 <p><a href="mailto: sarah@sarahdulat.com">sarah@sarahdulat.com</a></p>
             </div>

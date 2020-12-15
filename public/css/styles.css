@@ -29,7 +29,15 @@ body {
   max-height: 300px;
 }
 #work .container {
-  padding: 0 25% 100% 50px;
+  padding: 0 50px 50px 50px;
+}
+
+#skills {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#contact .container {
+  padding: 0 25% 50px 50px;
 }
 
 .row {
@@ -99,7 +107,7 @@ body {
     background: #F16544;
   }
   100% {
-    background: #F93A7C;
+    background: #F93981;
   }
 }
 h1 {
@@ -148,11 +156,17 @@ h3 a:hover {
 
 #work h1, #contact h1 {
   font-size: 58px;
-  letter-spacing: -5px;
+  letter-spacing: -3px;
+  margin-bottom: 0;
+  color: #F16544;
 }
 
 #work, #skills, #contact {
-  color: #F16544;
+  color: #000000;
+}
+
+#skills h3 {
+  color: #F93981;
 }
 
 /* Large Devices, Wide Screens */
