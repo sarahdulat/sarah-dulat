@@ -1,18 +1,17 @@
 #footer {
     position: fixed;
     bottom: 0px;
-    right: 0px;
+    left: 0px;
     width: 100%;
     overflow: visible;
     z-index: 99;
-    padding: 0 15px;
+    padding: 10px 15px 0;
     background-color: #F16544;
     height: 40px;
-    a, p {
+    .social, span, a {
     	color: #FFFFFF;
     	font-size: 12px;
     	text-decoration: none;
-    	text-align: right;
     }
     a:hover {
         color: rgba(255,255,255,0.7);
