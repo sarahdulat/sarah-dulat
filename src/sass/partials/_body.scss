@@ -20,10 +20,10 @@ body {
 		padding: 25px 30% 100% 50px;
 	}
 }
-#work {
+#about, #work {
 	max-height: 300px;
 	.container {
-		padding: 0 50px 50px 50px;
+		padding: 0 50px 25px 50px;
 	}
 }
 #skills {
@@ -37,7 +37,13 @@ body {
 .row {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
+}
+#about, #footer {
+	.row {
+		justify-content: space-between;
+	}
 }
 .column {
 	display: flex;

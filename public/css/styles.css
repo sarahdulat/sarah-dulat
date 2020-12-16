@@ -25,11 +25,11 @@ body {
   padding: 25px 30% 100% 50px;
 }
 
-#work {
+#about, #work {
   max-height: 300px;
 }
-#work .container {
-  padding: 0 50px 50px 50px;
+#about .container, #work .container {
+  padding: 0 50px 25px 50px;
 }
 
 #skills {
@@ -43,6 +43,11 @@ body {
 .row {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about .row, #footer .row {
   justify-content: space-between;
 }
 
@@ -154,14 +159,19 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#work h1, #contact h1 {
+#about p {
+  font-size: 24px;
+}
+
+#about h1, #work h1, #contact h1 {
   font-size: 58px;
   letter-spacing: -3px;
   margin-bottom: 0;
   color: #F16544;
+  text-align: center;
 }
 
-#work, #skills, #contact {
+#about, #skills, #work, #contact {
   color: #000000;
 }
 

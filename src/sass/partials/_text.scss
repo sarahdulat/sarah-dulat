@@ -39,15 +39,21 @@ h3 {
 		color: rgba(255,255,255,0.7);
 	}
 }
-#work, #contact {
+#about {
+	p {
+		font-size: 24px;
+	}
+}
+#about, #work, #contact {
 	h1 {
 		font-size: 58px;
 		letter-spacing: -3px;
 		margin-bottom: 0;
 		color: #F16544;
+		text-align: center;
 	}
 }
-#work, #skills, #contact {
+#about, #skills, #work, #contact {
 	color: #000000;
 }
 #skills {
