@@ -40,20 +40,47 @@ h3 {
 	}
 }
 #about {
+	#values {
+		font-family: 'Arvo', serif;
+		font-weight: 600;
+		padding: 25px 0 0;
+		color: rgba(0,0,0,0.25);
+		#intuitive {
+			font-size: 30px;
+		}
+		#ui {
+			font-size: 55px;
+			color: #F16544;
+		}
+		#responsive {
+			font-size: 25px;
+			color: #F16544;
+		}
+		#layouts {
+			font-size: 35px;
+		}
+		#organized {
+			font-size: 27px;
+			color: #F16544;
+		}
+		#architecture {
+			font-size: 20px;
+		}	
+	}
 	p {
 		font-size: 24px;
 	}
 }
-#about, #work, #contact {
+#about, #contact {
 	h1 {
 		font-size: 58px;
-		letter-spacing: -3px;
+		letter-spacing: -1px;
 		margin-bottom: 30px;
 		color: #F16544;
 		text-align: center;
 	}
 }
-#about, #skills, #work, #contact {
+#about, #skills, #contact {
 	color: #000000;
 }
 #skills {

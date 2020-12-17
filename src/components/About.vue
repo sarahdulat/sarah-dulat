@@ -1,16 +1,19 @@
 <template>
     <div id="about">
         <div class="container">
-            <h1>About</h1>
-            <div class="row">
+            <!-- <h1>About</h1> -->
+            <div class="row" id="values">
                 <div class="column">
-                    INTUITIVE UI/UX
+                    <span id="responsive">RESPONSIVE</span>
+                    <span id="layouts">LAYOUTS</span>
                 </div>
                 <div class="column">
-                    RESPONSIVE LAYOUTS
+                    <span id="intuitive">INTUITIVE</span>
+                    <span id="ui">UI/UX</span>
                 </div>
                 <div class="column">
-                   ORGANIZED ARCHITECTURE 
+                   <span id="organized">ORGANIZED</span>
+                   <span id="architecture">ARCHITECTURE</span> 
                 </div>
             </div>
             <div class="row">

@@ -25,6 +25,10 @@ body {
   padding: 25px 30% 100% 50px;
 }
 
+#about #values {
+  align-items: center;
+}
+
 #skills {
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -151,19 +155,46 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
+#about #values {
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  padding: 25px 0 0;
+  color: rgba(0, 0, 0, 0.25);
+}
+#about #values #intuitive {
+  font-size: 30px;
+}
+#about #values #ui {
+  font-size: 55px;
+  color: #F16544;
+}
+#about #values #responsive {
+  font-size: 25px;
+  color: #F16544;
+}
+#about #values #layouts {
+  font-size: 35px;
+}
+#about #values #organized {
+  font-size: 27px;
+  color: #F16544;
+}
+#about #values #architecture {
+  font-size: 20px;
+}
 #about p {
   font-size: 24px;
 }
 
-#about h1, #work h1, #contact h1 {
+#about h1, #contact h1 {
   font-size: 58px;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
   margin-bottom: 30px;
   color: #F16544;
   text-align: center;
 }
 
-#about, #skills, #work, #contact {
+#about, #skills, #contact {
   color: #000000;
 }
 
