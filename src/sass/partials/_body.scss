@@ -11,7 +11,7 @@ body {
 }
 .container {
 	margin: auto;
-	padding: 25px 25% 50px 50px;
+	padding: 0 50px 50px;
 }
 #hero {
 	height: 100vh;
@@ -20,18 +20,10 @@ body {
 		padding: 25px 30% 100% 50px;
 	}
 }
-#about, #work {
-	max-height: 300px;
-	.container {
-		padding: 0 50px 25px 50px;
-	}
-}
 #skills {
-	background-color: rgba(0,0,0,0.1);
-}
-#contact {
+	background-color: rgba(0,0,0,0.05);
 	.container {
-		padding: 0 25% 50px 50px;
+		padding: 30px 0;
 	}
 }
 .row {
@@ -40,7 +32,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 }
-#about, #footer {
+#footer {
 	.row {
 		justify-content: space-between;
 	}
