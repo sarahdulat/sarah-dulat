@@ -1,7 +1,6 @@
 <template>
     <div id="about">
         <div class="container">
-            <!-- <h1>About</h1> -->
             <div class="row" id="values">
                 <div class="column">
                     <span id="responsive">RESPONSIVE</span>
