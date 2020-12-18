@@ -6,7 +6,7 @@
                 <div class="photo"></div>
             </div>
             <div class="column">
-                <h2>Thanks for stopping by.</h2>
+                <h2>Thanks for stopping by!</h2>
                 <p>
                     Keep in <a href="mailto: sarah@sarahdulat.com">touch</a>, find me on <a href="#">LinkedIn</a> or take a look at my <a href="#">resume<i class="fas fa-file-pdf"></i></a>.
                 </p>
