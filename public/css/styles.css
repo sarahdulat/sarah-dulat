@@ -27,6 +27,7 @@ body {
 
 #about #values {
   align-items: center;
+  padding: 50px 0 25px;
 }
 
 #skills {
@@ -36,10 +37,17 @@ body {
   padding: 30px 0;
 }
 
+#contact div.photo {
+  margin: 30px 0;
+  height: 200px;
+  width: 200px;
+  background-color: #F16544;
+}
+
 .row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -97,7 +105,7 @@ body {
 /*BACKGROUND*/
 .sherbert {
   animation-name: sherbert;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -108,7 +116,7 @@ body {
     background: #F16544;
   }
   100% {
-    background: #F93981;
+    background: #FF7E61;
   }
 }
 h1 {
@@ -125,10 +133,8 @@ h1 .name {
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 1px;
-  line-height: 40px;
-  font-weight: 100;
+  font-family: "Arvo", serif;
+  font-weight: 600;
 }
 
 h3 a {
@@ -146,7 +152,9 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 #hero h2 {
-  font-family: "Arvo", serif;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-weight: 100;
 }
 #hero a {
   color: rgba(255, 255, 255, 0.9);
@@ -158,7 +166,6 @@ h3 a:hover {
 #about #values {
   font-family: "Arvo", serif;
   font-weight: 600;
-  padding: 25px 0 0;
   color: rgba(0, 0, 0, 0.25);
 }
 #about #values #intuitive {
@@ -184,6 +191,7 @@ h3 a:hover {
 }
 #about p {
   font-size: 24px;
+  text-align: center;
 }
 
 #about h1, #contact h1 {
@@ -195,11 +203,28 @@ h3 a:hover {
 }
 
 #about, #skills, #contact {
-  color: #000000;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 #skills h3 {
   color: #F93981;
+}
+
+#contact h2 {
+  color: #F16544;
+  margin-bottom: 0;
+}
+#contact p {
+  font-size: 18px;
+}
+#contact p a {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+#contact p i {
+  text-decoration: none;
+  color: #FF7E61;
+  margin: 0 0 0 5px;
 }
 
 /* Large Devices, Wide Screens */
