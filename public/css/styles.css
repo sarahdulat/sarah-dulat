@@ -231,6 +231,9 @@ h3 a:hover {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.8);
 }
+#contact p a:hover {
+  color: #FF7E61;
+}
 #contact p i {
   text-decoration: none;
   color: #FF7E61;
