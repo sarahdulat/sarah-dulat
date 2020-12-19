@@ -232,7 +232,7 @@ h3 a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 #contact p a:hover {
-  color: #FF7E61;
+  color: rgba(0, 0, 0, 0.6);
 }
 #contact p i {
   text-decoration: none;
