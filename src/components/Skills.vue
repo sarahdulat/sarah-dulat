@@ -1,45 +1,25 @@
 <template>
   <div id="skills">
     <div class="container">
-        <div class="row">
+        <div class="row skills">
             <div class="column">
-                <ul>
-                    <li>VueJS</li>
-                    <li>JavaScript</li>
-                    <li>React.js</li>
-                    <li>Vuex</li>
-                    <li>D3.js</li>
-                    <li>Sass</li>
-                    <li>Bootstrap</li>
-                    <li>SQL</li>
-                    <li>jQuery</li>
-                </ul>
+                <div><i class="fab fa-2x fa-vuejs"></i> VueJS</div>
+                <div><i class="fab fa-2x fa-js"></i> JavaScript</div>
+                <div><i class="fab fa-2x fa-react"></i> React</div>
+                <div><i class="fab fa-2x fa-sass"></i> Sass</div>
+                <div><i class="fab fa-2x fa-bootstrap"></i> Bootstrap</div>
             </div>
             <div class="column">
-                <ul>
-                    <li>UI/UX Design</li>
-                    <li>RESTful APIs</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Git</li>
-                    <li>Docker</li>
-                    <li>InDesign</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                </ul>
+                <div><i class="fas fa-2x fa-database"></i> SQL</div>
+                <div><i class="fab fa-2x fa-github"></i> GitHub</div>
+                <div><i class="fab fa-2x fa-git-alt"></i> Git</div>
+                <div><i class="fab fa-2x fa-git-alt"></i> D3.js</div>
             </div>
             <div class="column">
-                <ul>
-                    <li>UI/UX Design</li>
-                    <li>RESTful APIs</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Git</li>
-                    <li>Docker</li>
-                    <li>InDesign</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                </ul>
+                <div><i class="fas fa-2x fa-database"></i> RESTful APIs</div>
+                <div><i class="fab fa-2x fa-github"></i> InDesign</div>
+                <div><i class="fab fa-2x fa-git-alt"></i> Photoshop</div>
+                <div><i class="fab fa-2x fa-git-alt"></i> Illustrator</div>
             </div>
         </div>
     </div>

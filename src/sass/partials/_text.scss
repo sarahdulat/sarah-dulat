@@ -84,8 +84,14 @@ h3 {
 	color: rgba(0,0,0,0.8);
 }
 #skills {
-	h3 {
-		color: #F93981;
+	.skills {
+		font-size: 22px;
+		.column {
+			div {
+				margin-bottom: 20px;
+				vertical-align: middle;
+			}
+		}
 	}
 }
 #contact {
