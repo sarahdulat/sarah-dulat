@@ -84,13 +84,10 @@ h3 {
 	color: rgba(0,0,0,0.8);
 }
 #skills {
-	.skills {
+	.skill {
 		font-size: 22px;
-		.column {
-			div {
-				margin-bottom: 20px;
-				vertical-align: middle;
-			}
+		i {
+			margin-right: 15px;
 		}
 	}
 }
