@@ -178,6 +178,9 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
+#about {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
 #about #values {
   font-family: "Arvo", serif;
   font-weight: 600;
