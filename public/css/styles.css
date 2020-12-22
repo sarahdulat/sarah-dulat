@@ -167,6 +167,7 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 #hero h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   letter-spacing: 1px;
   line-height: 40px;
   font-weight: 100;
@@ -178,9 +179,6 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#about {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
-}
 #about #values {
   font-family: "Arvo", serif;
   font-weight: 600;
@@ -192,10 +190,12 @@ h3 a:hover {
 #about #values #ui {
   font-size: 55px;
   color: #F16544;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 #about #values #responsive {
   font-size: 25px;
   color: #F16544;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 #about #values #layouts {
   font-size: 35px;
@@ -203,6 +203,7 @@ h3 a:hover {
 #about #values #organized {
   font-size: 27px;
   color: #F16544;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 #about #values #architecture {
   font-size: 20px;
@@ -210,6 +211,7 @@ h3 a:hover {
 #about p {
   font-size: 24px;
   text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 #about h1, #contact h1 {

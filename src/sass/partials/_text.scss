@@ -28,6 +28,7 @@ h3 {
 #hero {
 	color: rgba(255,255,255,0.9);
 	h2 {
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
         letter-spacing: 1px;
         line-height: 40px;
         font-weight: 100;
@@ -40,7 +41,6 @@ h3 {
 	}
 }
 #about {
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
 	#values {
 		font-family: 'Arvo', serif;
 		font-weight: 600;
@@ -51,10 +51,12 @@ h3 {
 		#ui {
 			font-size: 55px;
 			color: #F16544;
+			text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 		}
 		#responsive {
 			font-size: 25px;
 			color: #F16544;
+			text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 		}
 		#layouts {
 			font-size: 35px;
@@ -62,6 +64,7 @@ h3 {
 		#organized {
 			font-size: 27px;
 			color: #F16544;
+			text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 		}
 		#architecture {
 			font-size: 20px;
@@ -70,6 +73,7 @@ h3 {
 	p {
 		font-size: 24px;
         text-align: center;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 	}
 }
 #about, #contact {
