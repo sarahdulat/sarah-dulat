@@ -15,7 +15,6 @@ body {
 .container {
   margin: auto;
   padding: 0 50px;
-  align-content: center;
 }
 
 #hero {
@@ -31,12 +30,11 @@ body {
   height: 50vh;
   min-height: 400px;
 }
-#about #values {
-  align-items: center;
+#about .container {
+  padding: 0 100px;
 }
 
 #skills {
-  display: flex;
   height: 50vh;
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -45,8 +43,6 @@ body {
 }
 #skills .container .row .column .skill {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
 }
 
 #contact {
@@ -211,7 +207,7 @@ h3 a:hover {
 #about p {
   font-size: 24px;
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 #about h1, #contact h1 {
