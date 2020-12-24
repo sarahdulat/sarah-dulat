@@ -1,7 +1,10 @@
 <template>
   <div id="skills">
     <div class="container">
-        <div class="row">
+        <div class="row header">
+            <h1>TOOLBOX</h1>
+        </div>
+        <div class="row skill-list">
             <div class="column">
                 <div class="skill"><i class="fab fa-2x fa-vuejs"></i> VueJS</div>
                 <div class="skill"><i class="fab fa-2x fa-js"></i> JavaScript</div>

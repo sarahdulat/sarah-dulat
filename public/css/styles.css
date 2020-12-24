@@ -31,18 +31,22 @@ body {
   min-height: 400px;
 }
 #about .container {
-  padding: 0 100px;
+  padding: 0 150px;
+  margin-top: 0;
+}
+#about .container #values {
+  padding-top: 8%;
 }
 
 #skills {
   height: 50vh;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#skills .row {
+#skills .row.skill-list {
   align-items: flex-start;
-  padding-top: 12%;
+  padding-top: 4%;
 }
-#skills .row .skill {
+#skills .row.skill-list .skill {
   margin-bottom: 20px;
 }
 
@@ -52,10 +56,10 @@ body {
 #contact .container {
   height: 100%;
 }
-#contact .container .row {
-  height: 100%;
+#contact .container .row.contact {
+  padding-top: 6%;
 }
-#contact .container .row div.photo {
+#contact .container .row.contact div.photo {
   margin: 30px 0;
   height: 200px;
   width: 200px;
@@ -182,6 +186,16 @@ h3 a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
+#about .header {
+  margin-top: 0;
+}
+#about .header h1 {
+  margin-top: -27px;
+  color: #FFFFFF;
+  font-size: 58px;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
 #about #values {
   font-family: "Arvo", serif;
   font-weight: 600;
@@ -217,18 +231,20 @@ h3 a:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-#about h1, #contact h1 {
-  font-size: 58px;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  color: #F16544;
-  text-align: center;
-}
-
 #about, #skills, #contact {
   color: rgba(0, 0, 0, 0.8);
 }
 
+#skills .header {
+  margin-top: 0;
+}
+#skills .header h1 {
+  margin-top: -26px;
+  color: #FFFFFF;
+  font-size: 58px;
+  -webkit-text-stroke: 2px #F16544;
+  text-shadow: 2px 2px 1px #F16544;
+}
 #skills .skill {
   font-size: 22px;
 }
@@ -236,6 +252,16 @@ h3 a:hover {
   margin-right: 15px;
 }
 
+#contact .header {
+  margin-top: 0;
+}
+#contact .header h1 {
+  margin-top: -26px;
+  color: #FFFFFF;
+  font-size: 58px;
+  -webkit-text-stroke: 2px #F16544;
+  text-shadow: 2px 2px 1px #F16544;
+}
 #contact h2 {
   color: #F16544;
   margin-bottom: 0;

@@ -1,7 +1,10 @@
 <template>
   <div id="contact">
     <div class="container">
-        <div class="row">
+        <div class="row header">
+            <h1>CONTACT</h1>
+        </div>
+        <div class="row contact">
             <div class="column">
                 <div class="photo"></div>
             </div>
