@@ -38,17 +38,24 @@ body {
   height: 50vh;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#skills .container .row {
+#skills .row {
   align-items: flex-start;
+  padding-top: 12%;
 }
-#skills .container .row .column .skill {
+#skills .row .skill {
   margin-bottom: 20px;
 }
 
 #contact {
   height: 50vh;
 }
-#contact div.photo {
+#contact .container {
+  height: 100%;
+}
+#contact .container .row {
+  height: 100%;
+}
+#contact .container .row div.photo {
   margin: 30px 0;
   height: 200px;
   width: 200px;

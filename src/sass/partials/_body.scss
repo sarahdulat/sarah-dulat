@@ -31,24 +31,27 @@ body {
 #skills {
 	height: 50vh;
 	background-color: rgba(0,0,0,0.05);
-	.container {
-		.row {
-			align-items: flex-start;
-			.column {
-				.skill {
-					margin-bottom: 20px;
-				}
-			}
+	.row {
+		align-items: flex-start;
+		padding-top: 12%;
+		.skill {
+			margin-bottom: 20px;
 		}
 	}
 }
 #contact {
 	height: 50vh;
-	div.photo {
-		margin: 30px 0;
-		height: 200px;
-		width: 200px;
-		background-color: #F16544;
+	.container {
+		height: 100%;
+		.row {
+			height: 100%;
+			div.photo {
+				margin: 30px 0;
+				height: 200px;
+				width: 200px;
+				background-color: #F16544;
+			}
+		}
 	}
 }
 #footer {
