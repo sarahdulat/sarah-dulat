@@ -39,7 +39,9 @@ body {
 		align-items: flex-start;
 		padding-top: 4%;
 		.skill {
+			display: flex;
 			margin-bottom: 20px;
+			align-items: center;
 		}
 	}
 }

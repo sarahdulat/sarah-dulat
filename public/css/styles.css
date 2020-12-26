@@ -47,7 +47,9 @@ body {
   padding-top: 4%;
 }
 #skills .row.skill-list .skill {
+  display: flex;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 #contact {
