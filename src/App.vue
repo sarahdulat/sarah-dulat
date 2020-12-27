@@ -23,6 +23,12 @@ export default {
     Skills,
     Contact,
     Footer
+  },
+  methods: {
+    // elementInView () {
+    //   let element = document.getElementsByClassName('.header')
+    //   console.log(element.scrollIntoView())
+    // }
   }
 }
 </script>
