@@ -7,13 +7,17 @@
     }
     /* Medium Devices, Desktops */
     @media only all and (max-width : 992px) {
-	    
+    	#about {
+    		.container {
+    			padding: 0 50px 100px;
+    		}
+    	}
 	}
     /* Small Devices, Tablets */
     @media only all and (max-width : 768px) {
     	#about {
     		.container {
-    			padding: 0 50px 50px;
+    			padding: 0 50px 100px;
 				#values {
 					div.column {
 						margin-bottom: 20px;

@@ -36,6 +36,9 @@ body {
 #about .container #values {
   padding-top: 8%;
 }
+#about .container #values .column {
+  margin-right: 10px;
+}
 
 #skills {
   min-height: 50vh;
@@ -291,10 +294,15 @@ h3 a:hover {
   }
 }
 /* Medium Devices, Desktops */
+@media only all and (max-width: 992px) {
+  #about .container {
+    padding: 0 50px 100px;
+  }
+}
 /* Small Devices, Tablets */
 @media only all and (max-width: 768px) {
   #about .container {
-    padding: 0 50px 50px;
+    padding: 0 50px 100px;
   }
   #about .container #values div.column {
     margin-bottom: 20px;
