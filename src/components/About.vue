@@ -1,7 +1,7 @@
 <template>
     <div id="about">
         <div class="container">
-            <div class="row header">
+            <div class="row header fade-in">
                 <h1>ABOUT</h1>
             </div>
             <div class="row" id="values">
@@ -29,6 +29,11 @@
 
 <script>
 export default {
-  name: 'Work'
+    name: 'About',
+    created () {
+        let fadeInElements = document.getElementsByClassName('fade-in')
+        console.log(fadeInElements)
+    }
 }
+
 </script>
