@@ -25,10 +25,14 @@ export default {
         Footer
     },
     created () {
-        let fadeInElements = document.getElementsByClassName('fade-in')
-        document.addEventListener('scroll', this.handleScroll())
-        this.handleScroll(fadeInElements)
-        // console.log(fadeInElements)
+        // document.addEventListener('scroll', this.handleScroll())
+        // this.handleScroll(this.$store.state.fadeInElements)
+        console.log(this.fadeInElements)
+    },
+    computed: {
+        fadeInElements () {
+            return this.$store.state.fadeInElements
+        }
     },
     methods: {
         handleScroll (e) {
@@ -49,7 +53,7 @@ export default {
         }
     },
     destroyed () {
-        document.removeEventListener('scroll', this.handleScroll())
+        // document.removeEventListener('scroll', this.handleScroll())
     }
 }
 </script>

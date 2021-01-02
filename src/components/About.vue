@@ -31,8 +31,6 @@
 export default {
     name: 'About',
     created () {
-        let fadeInElements = document.getElementsByClassName('fade-in')
-        console.log(fadeInElements)
     }
 }
 
