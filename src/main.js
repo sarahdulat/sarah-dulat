@@ -13,10 +13,14 @@ new Vue({
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {
-    fadeInElements: document.getElementsByClassName('fade-in')
-  },
-  mutations: {
-    
-  }
+    state: {
+        fadeInElements: null
+    },
+    mutations: {
+        setFadeInElements (state, fadeInElements) {
+            state.fadeInElements = fadeInElements
+        }
+    }
 })
+
+export default new Vuex.Store(store)

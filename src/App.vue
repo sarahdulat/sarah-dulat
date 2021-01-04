@@ -25,8 +25,8 @@ export default {
         Footer
     },
     created () {
-        // document.addEventListener('scroll', this.handleScroll())
-        // this.handleScroll(this.$store.state.fadeInElements)
+        document.addEventListener('scroll', this.handleScroll())
+        this.handleScroll(this.fadeInElements)
         console.log(this.fadeInElements)
     },
     computed: {
@@ -53,7 +53,7 @@ export default {
         }
     },
     destroyed () {
-        // document.removeEventListener('scroll', this.handleScroll())
+        document.removeEventListener('scroll', this.handleScroll())
     }
 }
 </script>

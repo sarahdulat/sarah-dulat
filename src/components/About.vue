@@ -30,7 +30,9 @@
 <script>
 export default {
     name: 'About',
-    created () {
+    mounted () {
+        console.log(document.getElementsByClassName('fade-in'))
+        this.$store.mutations.setFadeInElements(document.getElementsByClassName('fade-in'))
     }
 }
 
