@@ -1,7 +1,7 @@
 <template>
     <div id="about">
         <div class="container">
-            <div class="row header fade-in">
+            <div class="row header">
                 <h1>ABOUT</h1>
             </div>
             <div class="row" id="values">
