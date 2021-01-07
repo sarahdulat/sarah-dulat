@@ -64,7 +64,7 @@ body {
   padding-top: 6%;
 }
 #contact .container .row.contact div.photo {
-  margin: 30px 0;
+  margin: 30px 20px 30px 0;
   height: 200px;
   width: 200px;
   background-color: #F16544;
