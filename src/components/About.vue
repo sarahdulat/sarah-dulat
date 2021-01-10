@@ -6,8 +6,8 @@
             </div>
             <div class="row" id="values">
                 <div class="column">
-                    <span id="responsive">RESPONSIVE</span>
-                    <span id="layouts">LAYOUTS</span>
+                    <span id="functional">FUNCTIONAL</span>
+                    <span id="components">COMPONENTS</span>
                 </div>
                 <div class="column">
                     <span id="intuitive">INTUITIVE</span>
