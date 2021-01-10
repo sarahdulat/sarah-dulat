@@ -64,10 +64,21 @@ body {
   padding-top: 5%;
 }
 #contact .container .row.contact div.photo {
+  position: relative;
   margin: 30px 20px 30px 0;
   height: 200px;
   width: 200px;
   background-color: #F16544;
+  border-radius: 50%;
+  border: 5px solid #F16544;
+  overflow: hidden;
+}
+#contact .container .row.contact div.photo img {
+  position: absolute;
+  top: -1%;
+  left: -10%;
+  height: 120%;
+  width: auto;
 }
 #contact .container .row.contact h2 {
   margin-top: 0;
@@ -203,7 +214,7 @@ h3 a:hover {
   margin-top: 0;
 }
 #about .header h1 {
-  margin-top: -27px;
+  margin-top: -28px;
   color: #FFFFFF;
   font-size: 58px;
   -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
@@ -243,6 +254,11 @@ h3 a:hover {
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
+#about img {
+  height: 35px;
+  width: 35px;
+  margin-bottom: -3px;
+}
 
 #about, #skills, #contact {
   color: rgba(0, 0, 0, 0.8);
@@ -252,7 +268,7 @@ h3 a:hover {
   margin-top: 0;
 }
 #skills .header h1 {
-  margin-top: -26px;
+  margin-top: -28px;
   color: #FFFFFF;
   font-size: 58px;
   -webkit-text-stroke: 2px #F16544;
@@ -269,7 +285,7 @@ h3 a:hover {
   margin-top: 0;
 }
 #contact .header h1 {
-  margin-top: -26px;
+  margin-top: -28px;
   color: #FFFFFF;
   font-size: 58px;
   -webkit-text-stroke: 2px #F16544;

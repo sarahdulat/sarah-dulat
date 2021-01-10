@@ -22,6 +22,9 @@
                 <p>
                     I'm passionate about intuitive UI/UX and creating highly responsive and performant apps. From mock ups to architecture I like organized and consistent structure that won't make a user second guess what to do next. I find there are always ways to speed things up and do regular refactors as I learn and grow.
                 </p>
+                <p>
+                    In my free time I stay active with yoga and ballet, learn new things (most recently Portuguese) and connect with friends by way of Among Us. <img class="among-us" src="http://www.sarahdulat.com/assets/among-us.png" />
+                </p>
             </div>
         </div>
     </div>

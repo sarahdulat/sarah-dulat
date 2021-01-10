@@ -54,10 +54,21 @@ body {
 		.row.contact {
 			padding-top: 5%;
 			div.photo {
+				position: relative;
 				margin: 30px 20px 30px 0;
 				height: 200px;
 				width: 200px;
 				background-color: #F16544;
+				border-radius: 50%;
+				border: 5px solid #F16544;
+				overflow: hidden;
+				img {
+					position: absolute;
+					top: -1%;
+					left: -10%;
+					height: 120%;
+					width: auto;
+				}
 			}
 			h2 {
 				margin-top: 0;
