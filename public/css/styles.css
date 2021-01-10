@@ -30,11 +30,11 @@ body {
   min-height: 50vh;
 }
 #about .container {
-  padding: 0 150px 8%;
+  padding: 0 25% 5%;
   margin-top: 0;
 }
 #about .container #values {
-  padding-top: 8%;
+  padding-top: 5%;
 }
 #about .container #values .column {
   margin-right: 10px;
@@ -255,9 +255,9 @@ h3 a:hover {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 #about img {
-  height: 35px;
-  width: 35px;
-  margin-bottom: -3px;
+  height: 32px;
+  width: 32px;
+  margin-bottom: -5px;
 }
 
 #about, #skills, #contact {
