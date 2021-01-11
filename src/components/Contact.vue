@@ -8,7 +8,8 @@
             <div class="column">
                 <div class="photo">
                     <img
-                        src="http://www.sarahdulat.com/assets/ProfilePic.jpg" />
+                        src="http://www.sarahdulat.com/assets/ProfilePic.jpg"
+                        alt="Photo of Sarah Dulat" />
                 </div>
             </div>
             <div class="column">
