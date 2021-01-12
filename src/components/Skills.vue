@@ -6,9 +6,9 @@
         </div>
         <div class="row skill-list">
             <div class="column">
-                <div class="skill"><i class="fab fa-2x fa-vuejs"></i> VueJS</div>
+                <div class="skill"><i class="fab fa-2x fa-vuejs"></i> Vue.js</div>
                 <div class="skill"><i class="fab fa-2x fa-js"></i> JavaScript</div>
-                <div class="skill"><i class="fab fa-2x fa-react"></i> React</div>
+                <div class="skill"><i class="fab fa-2x fa-react"></i> React.js</div>
             </div>
             <div class="column">
                 <div class="skill"><i class="fab fa-2x fa-sass"></i> Sass</div>
