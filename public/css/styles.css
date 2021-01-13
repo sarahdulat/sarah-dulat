@@ -46,7 +46,7 @@ body {
 }
 #skills .row.skill-list {
   align-items: flex-start;
-  padding-top: 4%;
+  padding-top: 10%;
 }
 #skills .row.skill-list .skill {
   display: flex;
