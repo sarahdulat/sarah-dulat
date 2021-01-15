@@ -61,7 +61,7 @@ body {
   height: 100%;
 }
 #contact .container .row.contact {
-  padding-top: 5%;
+  padding: 5% 0 15%;
 }
 #contact .container .row.contact div.photo {
   position: relative;
