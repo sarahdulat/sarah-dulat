@@ -24,7 +24,7 @@ body {
 	display: flex;
 	min-height: 50vh;
 	.container {
-		padding: 0 25% 5%;
+		padding: 0 20% 5%;
 		margin-top: 0;
 		#values {
 			padding-top: 5%;
@@ -39,7 +39,7 @@ body {
 	background-color: rgba(0,0,0,0.05);
 	.row.skill-list {
 		align-items: flex-start;
-		padding-top: 10%;
+		padding-top: 8%;
 		.skill {
 			display: flex;
 			margin-bottom: 20px;

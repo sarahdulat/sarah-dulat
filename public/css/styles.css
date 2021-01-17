@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
@@ -30,7 +31,7 @@ body {
   min-height: 50vh;
 }
 #about .container {
-  padding: 0 25% 5%;
+  padding: 0 20% 5%;
   margin-top: 0;
 }
 #about .container #values {
@@ -46,7 +47,7 @@ body {
 }
 #skills .row.skill-list {
   align-items: flex-start;
-  padding-top: 10%;
+  padding-top: 8%;
 }
 #skills .row.skill-list .skill {
   display: flex;
@@ -277,7 +278,7 @@ h3 a:hover {
 #skills .skill {
   font-size: 22px;
 }
-#skills .skill i {
+#skills .skill i, #skills .skill img {
   margin-right: 15px;
 }
 
@@ -377,6 +378,54 @@ h3 a:hover {
 #footer a:hover {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+}
+
+/*
+Flaticon icon font: Flaticon
+Creation date: 11/01/2021 03:41
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff2") format("woff2"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+.fi {
+  font-size: 1.7em;
+}
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.adobe-indesign:before {
+  content: "";
+}
+
+.adobe-photoshop:before {
+  content: "";
+}
+
+.adobe-illustrator:before {
+  content: "";
 }
 
 /*# sourceMappingURL=styles.css.map */
