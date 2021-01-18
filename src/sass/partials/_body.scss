@@ -2,6 +2,9 @@
 * {
 	box-sizing: border-box;
 }
+html, body {
+	height: 100%;
+}
 body {
 	background-color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
@@ -9,9 +12,26 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
 }
+.display-flex {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
 .container {
 	margin: auto;
 	padding: 0 50px;
+}
+.row {
+	@extend .display-flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.column {
+	@extend .display-flex;
+	flex-flow: column wrap;
 }
 #hero {
 	height: 100vh;
@@ -21,38 +41,68 @@ body {
 	}
 }
 #about {
-	display: flex;
+	height: 50vh;
 	min-height: 50vh;
+	.header {
+		height: 0;
+	}
 	.container {
-		padding: 0 20% 5%;
-		margin-top: 0;
-		#values {
-			padding-top: 5%;
+		height: 100%;
+		@extend .display-flex;
+		flex-direction: column;
+		align-items: center;
+	    justify-content: center;
+		#values, .row {
+			width: 75vw;
+			@extend .display-flex;
+			justify-content: space-evenly;
 			.column {
-				margin-right: 10px;
+				margin-right: 15px;
 			}
 		}
 	}
 }
 #skills {
+	height: 50vh;
 	min-height: 50vh;
 	background-color: rgba(0,0,0,0.05);
-	.row.skill-list {
-		align-items: flex-start;
-		padding-top: 8%;
-		.skill {
-			display: flex;
-			margin-bottom: 20px;
-			align-items: center;
+    .header {
+    	height: 0;
+    }
+	.container {
+		height: 100%;
+		@extend .display-flex;
+		align-items: center;
+	    justify-content: center;
+		.row {
+			width: 100vw;
+			@extend .display-flex;
+			justify-content: space-evenly;
+			.column {
+				.skill {
+					@extend .display-flex;
+					align-items: center;
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 }
 #contact {
 	height: 50vh;
+	min-height: 50vh;
+	.header {
+		height: 0;
+	}
 	.container {
 		height: 100%;
-		.row.contact {
-			padding: 5% 0 15%;
+		@extend .display-flex;
+		align-items: center;
+	    justify-content: center;
+		.row {
+			width: 50vw;
+			@extend .display-flex;
+			justify-content: space-evenly;
 			div.photo {
 				position: relative;
 				margin: 30px 20px 30px 0;
@@ -60,7 +110,7 @@ body {
 				width: 200px;
 				background-color: #F16544;
 				border-radius: 50%;
-				border: 5px solid #F16544;
+				border: 5px solid #FF7E61;
 				overflow: hidden;
 				img {
 					position: absolute;
@@ -80,14 +130,4 @@ body {
 	.row {
 		justify-content: space-between;
 	}
-}
-.row {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: center;
-}
-.column {
-	display: flex;
-	flex-flow: column wrap;
 }

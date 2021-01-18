@@ -14,12 +14,10 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        fadeInElements: null
+
     },
     mutations: {
-        setFadeInElements (state, fadeInElements) {
-            state.fadeInElements = fadeInElements
-        }
+
     }
 })
 

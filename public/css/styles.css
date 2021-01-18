@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: #FFFFFF;
   font-family: "Roboto", sans-serif;
@@ -13,9 +17,27 @@ body {
   margin: 0;
 }
 
+.display-flex, #contact .container .row, #contact .container, #skills .container .row .column .skill, #skills .container .row, #skills .container, #about .container #values, #about .container .row, #about .container, .column, .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 .container {
   margin: auto;
   padding: 0 50px;
+}
+
+.row {
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column {
+  flex-flow: column wrap;
 }
 
 #hero {
@@ -27,78 +49,87 @@ body {
 }
 
 #about {
-  display: flex;
+  height: 50vh;
   min-height: 50vh;
 }
+#about .header {
+  height: 0;
+}
 #about .container {
-  padding: 0 20% 5%;
-  margin-top: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#about .container #values {
-  padding-top: 5%;
+#about .container #values, #about .container .row {
+  width: 75vw;
+  justify-content: space-evenly;
 }
-#about .container #values .column {
-  margin-right: 10px;
+#about .container #values .column, #about .container .row .column {
+  margin-right: 15px;
 }
 
 #skills {
+  height: 50vh;
   min-height: 50vh;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#skills .row.skill-list {
-  align-items: flex-start;
-  padding-top: 8%;
+#skills .header {
+  height: 0;
 }
-#skills .row.skill-list .skill {
-  display: flex;
-  margin-bottom: 20px;
+#skills .container {
+  height: 100%;
   align-items: center;
+  justify-content: center;
+}
+#skills .container .row {
+  width: 100vw;
+  justify-content: space-evenly;
+}
+#skills .container .row .column .skill {
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 #contact {
   height: 50vh;
+  min-height: 50vh;
+}
+#contact .header {
+  height: 0;
 }
 #contact .container {
   height: 100%;
+  align-items: center;
+  justify-content: center;
 }
-#contact .container .row.contact {
-  padding: 5% 0 15%;
+#contact .container .row {
+  width: 50vw;
+  justify-content: space-evenly;
 }
-#contact .container .row.contact div.photo {
+#contact .container .row div.photo {
   position: relative;
   margin: 30px 20px 30px 0;
   height: 200px;
   width: 200px;
   background-color: #F16544;
   border-radius: 50%;
-  border: 5px solid #F16544;
+  border: 5px solid #FF7E61;
   overflow: hidden;
 }
-#contact .container .row.contact div.photo img {
+#contact .container .row div.photo img {
   position: absolute;
   top: -1%;
   left: -10%;
   height: 120%;
   width: auto;
 }
-#contact .container .row.contact h2 {
+#contact .container .row h2 {
   margin-top: 0;
 }
 
 #footer .row {
   justify-content: space-between;
-}
-
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.column {
-  display: flex;
-  flex-flow: column wrap;
 }
 
 .animated {
@@ -316,27 +347,11 @@ h3 a:hover {
 @media only all and (min-width: 1600px) {
   .container {
     margin: auto;
-    padding: 25px 25% 0;
   }
 }
 /* Medium Devices, Desktops */
-@media only all and (max-width: 992px) {
-  #about .container {
-    padding: 0 50px 100px;
-  }
-}
 /* Small Devices, Tablets */
 @media only all and (max-width: 768px) {
-  #about .container {
-    padding: 0 50px 100px;
-  }
-  #about .container #values div.column {
-    margin-bottom: 20px;
-  }
-
-  #skills .container {
-    padding-bottom: 100px;
-  }
   #skills .container .row.skill-list {
     justify-content: flex-start;
   }
