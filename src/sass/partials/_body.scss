@@ -100,9 +100,9 @@ body {
 		align-items: center;
 	    justify-content: center;
 		.row {
-			width: 50vw;
+			width: 100vw;
 			@extend .display-flex;
-			justify-content: space-evenly;
+			justify-content: center;
 			div.photo {
 				position: relative;
 				margin: 30px 20px 30px 0;

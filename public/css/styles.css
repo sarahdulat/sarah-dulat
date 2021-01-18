@@ -104,8 +104,8 @@ body {
   justify-content: center;
 }
 #contact .container .row {
-  width: 50vw;
-  justify-content: space-evenly;
+  width: 100vw;
+  justify-content: center;
 }
 #contact .container .row div.photo {
   position: relative;
@@ -282,7 +282,7 @@ h3 a:hover {
   font-size: 22px;
 }
 #about p {
-  font-size: 22px;
+  font-size: 1.25em;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
@@ -307,7 +307,7 @@ h3 a:hover {
   text-shadow: 2px 2px 1px #F16544;
 }
 #skills .skill {
-  font-size: 22px;
+  font-size: 1.25em;
 }
 #skills .skill i, #skills .skill img {
   margin-right: 15px;
@@ -328,7 +328,7 @@ h3 a:hover {
   margin-bottom: 0;
 }
 #contact p {
-  font-size: 18px;
+  font-size: 1.25em;
 }
 #contact p a {
   font-weight: 600;
@@ -350,8 +350,17 @@ h3 a:hover {
   }
 }
 /* Medium Devices, Desktops */
+@media only all and (max-width: 992px) {
+  #contact .column {
+    text-align: center;
+  }
+}
 /* Small Devices, Tablets */
 @media only all and (max-width: 768px) {
+  #about p {
+    font-size: 1em;
+  }
+
   #skills .container .row.skill-list {
     justify-content: flex-start;
   }
