@@ -273,13 +273,13 @@ h3 a:hover {
 #about #values #components {
   font-size: 27px;
 }
-#about #values #organized {
+#about #values #product {
   font-size: 30px;
   color: #F16544;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
-#about #values #architecture {
-  font-size: 22px;
+#about #values #focused {
+  font-size: 32px;
 }
 #about p {
   font-size: 1.25em;

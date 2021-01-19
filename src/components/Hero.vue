@@ -9,7 +9,7 @@
             <span class="name">Sarah Dulat</span>.
         </h1>
         <h2 class="animated hero-fade delay2">
-            I am a front end developer at <a href="http://www.reorg-research.com" target="_blank">Reorg</a> in NYC. Former designer turned developer who loves good <strong>UI/UX</strong>, clean architecture and <strong>VueJS</strong>.
+            I am a <strong>product-minded front end developer</strong> at <a href="http://www.reorg-research.com" target="_blank">Reorg</a> in NYC. Former designer turned developer who loves good UI/UX, clean architecture and VueJS.
         </h2>
     </div>
   </div>
