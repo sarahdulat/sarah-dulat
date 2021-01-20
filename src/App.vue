@@ -23,18 +23,6 @@ export default {
         Skills,
         Contact,
         Footer
-    },
-    created () {
-
-    },
-    computed: {
-
-    },
-    methods: {
-
-    },
-    destroyed () {
-
     }
 }
 </script>

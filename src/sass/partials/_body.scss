@@ -48,16 +48,19 @@ body {
 	}
 	.container {
 		height: 100%;
+		padding: 30px 0 50px;
 		@extend .display-flex;
 		flex-direction: column;
 		align-items: center;
 	    justify-content: center;
-		#values, .row {
+	    .row {
 			width: 75vw;
 			@extend .display-flex;
 			justify-content: space-evenly;
+	    }
+		#values {
 			.column {
-				margin-right: 15px;
+				width: 33%;
 			}
 		}
 	}

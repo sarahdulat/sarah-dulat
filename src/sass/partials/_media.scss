@@ -1,15 +1,27 @@
 /* Large Devices, Wide Screens */
     @media only all and (min-width : 1600px) {
-    	.container {
-			margin: auto;
-			// padding: 25px 25% 0;
+		#about {
+			.container {
+				#values, .row {
+					width: 50vw;
+				}
+			}
 		}
     }
     /* Medium Devices, Desktops */
     @media only all and (max-width : 992px) {
     	#about {
+			height: 100%;
     		.container {
-    			// padding: 0 50px 100px;
+    			.row {
+    				flex-flow: column;
+    			}
+	    		#values {
+	    			.column {
+		    			padding: 15px 0 0;
+		    			width: 100%;
+		    		}
+	    		}	
     		}
     	}
     	#contact {
@@ -21,17 +33,17 @@
     /* Small Devices, Tablets */
     @media only all and (max-width : 768px) {
     	#about {
-    		p {
-    			font-size: 1em;
+    		.container {
+	    		p {
+	    			font-size: 1em;
+	    		}	
     		}
     	}
     	#skills {
     		.container {
-    			// padding-bottom: 100px;
-	    		.row.skill-list {
-	    			justify-content: flex-start;
+	    		.row {
 	    			.column {
-	    				margin-right: 30px;
+	    				width: 145px;
 	    			}
 	    		}
     		}
