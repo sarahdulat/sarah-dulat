@@ -32,13 +32,6 @@
 	}
     /* Small Devices, Tablets */
     @media only all and (max-width : 768px) {
-    	#about {
-    		.container {
-	    		p {
-	    			font-size: 1em;
-	    		}	
-    		}
-    	}
     	#skills {
     		.container {
 	    		.row {
@@ -56,9 +49,12 @@
 			}
 		}
 		h2 {
-			font-size: 24px;
-			line-height: 24px;
+			font-size: 20px;
+			line-height: 22px;
 		}
+		p {
+			font-size: 1em;
+		}	
 	}
     /* Extra Small Devices, Phones */ 
     @media only all and (max-width : 480px) {
