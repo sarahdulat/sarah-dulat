@@ -186,7 +186,7 @@ body {
 /*BACKGROUND*/
 .sherbert {
   animation-name: sherbert;
-  animation-duration: 10s;
+  animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -194,12 +194,10 @@ body {
 
 @keyframes sherbert {
   0% {
-    background-position: 0% 50%;
     background: #F16544;
   }
   100% {
-    background-position: 100% 50%;
-    background: #6738F2;
+    background: #FF7E61;
   }
 }
 h1 {
