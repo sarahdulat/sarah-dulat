@@ -8,12 +8,12 @@
                 <div class="column">
                     <div class="skill"><i class="fab fa-2x fa-vuejs"></i> Vue.js</div>
                     <div class="skill"><i class="fab fa-2x fa-js"></i> JavaScript</div>
-                    <div class="skill"><i class="fab fa-2x fa-react"></i> React.js</div>
+                    <div class="skill"><i class="fa fa-2x fa-gem"></i> Ruby</div>
                 </div>
                 <div class="column">
                     <div class="skill"><i class="fab fa-2x fa-sass"></i> Sass</div>
                     <div class="skill"><i class="fab fa-2x fa-bootstrap"></i> Bootstrap</div>
-                    <div class="skill"><img src="http://www.sarahdulat.com/assets/d3.png" height="37" width="37" /> D3.js</div>
+                    <div class="skill"><img src="/assets/d3.png" height="37" width="37" /> D3.js</div>
                 </div>
                 <div class="column">
                     <div class="skill"><i class="fas fa-2x fa-database"></i> MySQL</div>

@@ -9,7 +9,7 @@
         <span class="name">Sarah Dulat</span>.
       </h1>
       <h2 class="animated hero-fade delay2">
-        I am a <strong>product-minded frontend engineer</strong> at <a href="http://www.brightfunds.org" target="_blank">Bright Funds</a>. Former designer turned developer who loves good UI/UX, clean architecture and VueJS.
+        I am a <strong>product-minded frontend engineer</strong> at <a href="http://www.brightfunds.org" target="_blank">Bright Funds</a>. Former designer turned developer who loves good UI/UX, clean architecture and VueJS (Stimulus is cool too).
       </h2>
     </div>
   </div>
