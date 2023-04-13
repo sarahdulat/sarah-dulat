@@ -7,7 +7,7 @@
             <div class="row" id="values">
                 <div class="column">
                    <span id="product">PRODUCT</span>
-                   <span id="focused">FOCUSED</span> 
+                   <span id="focused">FOCUSED</span>
                 </div>
                 <div class="column">
                     <span id="intuitive">INTUITIVE</span>
@@ -24,7 +24,7 @@
                         As a product-minded developer I am curious about seeking to understand the project in order to see all the options and edge cases before writing any code. From mock-ups to architecture I like organized and consistent structure that won't make a user second guess what to do next. I find there are always ways to speed things up and do regular refactors as I learn and grow.
                     </p>
                     <p>
-                        I am a digital nomad based in Chicago and Poland, working remotely full-time in beautiful places. My travels since June 2021 have included Malta, Egypt, Croatia, Portugal, Colombia, Mexico, Belize and Kenya. I love to snorkle and am working on getting my diving certification.
+                        I am a digital nomad based in South Dakota, working remotely full-time in beautiful places. My travels since June 2021 have included Malta, Egypt, Croatia, Portugal, Colombia, Mexico, Belize and Kenya, Spain, France and Italy. I love to snorkle and am working on getting my diving certification.
                     </p>
                 </div>
             </div>

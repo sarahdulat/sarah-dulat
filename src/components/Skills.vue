@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <div class="skill"><i class="fab fa-2x fa-vuejs"></i> Vue.js</div>
                     <div class="skill"><i class="fab fa-2x fa-js"></i> JavaScript</div>
+                    <div class="skill"><i class="fab fa-2x fa-vuejs"></i> Vue.js</div>
                     <div class="skill"><i class="fa fa-2x fa-gem"></i> Ruby</div>
                 </div>
                 <div class="column">
