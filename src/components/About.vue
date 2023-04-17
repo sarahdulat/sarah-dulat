@@ -21,10 +21,7 @@
             <div class="row">
                 <div class="column">
                     <p>
-                        As a product-minded developer I am curious about seeking to understand the project in order to see all the options and edge cases before writing any code. From mock-ups to architecture I like organized and consistent structure that won't make a user second guess what to do next. I find there are always ways to speed things up and do regular refactors as I learn and grow.
-                    </p>
-                    <p>
-                        I am a digital nomad based in South Dakota, working remotely full-time in beautiful places. My travels since June 2021 have included Malta, Egypt, Croatia, Portugal, Colombia, Mexico, Belize and Kenya, Spain, France and Italy. I love to snorkle and am working on getting my diving certification.
+                        I taught myself how to build websites with the help of "View Source" on GeoCities, detoured with an art & design degree, but finally made my way back to the web (don't ignore what you did for fun as a kid!). Now in my career, I'm able to use my design background to be a product-minded frontend software engineer.
                     </p>
                 </div>
             </div>
