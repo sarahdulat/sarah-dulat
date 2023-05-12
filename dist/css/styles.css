@@ -1,0 +1,459 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.display-flex, #contact .container .row, #contact .container, #skills .container .row .column .skill, #skills .container .row, #skills .container, #about .container .row, #about .container, .column, .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  padding: 0 50px;
+}
+
+.row {
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column {
+  flex-flow: column wrap;
+}
+
+#hero {
+  height: 100vh;
+  min-height: 400px;
+}
+#hero .container {
+  padding: 25px 30% 100% 50px;
+}
+
+#about {
+  height: 50vh;
+  min-height: 50vh;
+}
+#about .header {
+  height: 0;
+}
+#about .container {
+  height: 100%;
+  padding: 30px 50px 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#about .container .row {
+  width: 75vw;
+  justify-content: space-evenly;
+}
+#about .container #values .column {
+  width: 33%;
+}
+
+#skills {
+  height: 50vh;
+  min-height: 50vh;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#skills .header {
+  height: 0;
+}
+#skills .container {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px 75px;
+}
+#skills .container .row {
+  width: 100vw;
+  justify-content: space-evenly;
+}
+#skills .container .row .column .skill {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#contact {
+  height: 50vh;
+  min-height: 50vh;
+}
+#contact .header {
+  height: 0;
+}
+#contact .container {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px 40px;
+}
+#contact .container .row {
+  width: 100vw;
+  justify-content: center;
+}
+#contact .container .row div.photo {
+  position: relative;
+  margin: 0 20px 30px 0;
+  height: 200px;
+  width: 200px;
+  background-color: #F16544;
+  border-radius: 50%;
+  border: 5px solid #FF7E61;
+  overflow: hidden;
+}
+#contact .container .row div.photo img {
+  position: absolute;
+  top: -1%;
+  left: -10%;
+  height: 120%;
+  width: auto;
+}
+#contact .container .row h2 {
+  margin-top: 0;
+}
+
+#footer .row {
+  justify-content: space-between;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*FADE*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hero-fade {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: 0.3s all ease-out;
+  transform: scale(0.8);
+}
+
+/*DELAYS*/
+.delay1 {
+  -webkit-animation-delay: 0.5s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 1s;
+  /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+}
+
+/*BACKGROUND*/
+.sherbert {
+  animation-name: sherbert;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sherbert {
+  0% {
+    background: #F16544;
+  }
+  100% {
+    background: #FF7E61;
+  }
+}
+h1 {
+  font-family: "Arvo", serif;
+  letter-spacing: 1px;
+  line-height: 54px;
+  font-weight: 600;
+}
+h1 a {
+  text-decoration: underline;
+}
+h1 .name {
+  font-size: 58px;
+}
+
+h2 {
+  font-family: "Arvo", serif;
+  font-weight: 600;
+}
+
+h3 a {
+  text-decoration: none;
+}
+h3 a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+.header h1 {
+  margin-top: -28px;
+  color: #FFFFFF;
+  font-size: 58px;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+#hero {
+  color: rgba(255, 255, 255, 0.9);
+}
+#hero h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-weight: 100;
+}
+#hero a {
+  color: rgba(255, 255, 255, 0.9);
+}
+#hero a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#about {
+  text-align: center;
+}
+#about .header {
+  margin: 0 0 30px;
+}
+#about .header h1 {
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+#about #values {
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.25);
+}
+#about #values .primary-value, #about #values #product, #about #values #functional, #about #values #ui {
+  color: #F16544;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+#about #values #intuitive {
+  font-size: 30px;
+}
+#about #values #ui {
+  font-size: 55px;
+}
+#about #values #functional {
+  font-size: 30px;
+}
+#about #values #components {
+  font-size: 27px;
+}
+#about #values #product {
+  font-size: 30px;
+}
+#about #values #focused {
+  font-size: 32px;
+}
+#about img {
+  height: 26px;
+  width: 26px;
+  margin-bottom: -5px;
+}
+
+#about, #skills, #contact {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.header-stroke, #contact .header h1, #skills .header h1 {
+  -webkit-text-stroke: 2px #F16544;
+  text-shadow: 2px 2px 1px #F16544;
+}
+
+#skills .header {
+  margin: 30px 0 30px;
+}
+#skills .skill {
+  font-size: 1.25em;
+}
+#skills .skill i, #skills .skill img {
+  margin-right: 15px;
+}
+
+#contact .header {
+  margin: 0 0 30px;
+}
+#contact h2 {
+  color: #F16544;
+  margin-bottom: 0;
+}
+#contact p a {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+#contact p a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+#contact p i {
+  text-decoration: none;
+  color: #FF7E61;
+  margin: 0 0 0 5px;
+}
+
+/* Large Devices, Wide Screens */
+@media only all and (min-width: 1600px) {
+  #about .container #values, #about .container .row {
+    width: 50vw;
+  }
+}
+/* Medium Devices, Desktops */
+@media only all and (max-width: 992px) {
+  #about {
+    height: 100%;
+  }
+  #about .container .row {
+    flex-flow: column;
+  }
+  #about .container #values .column {
+    padding: 15px 0 0;
+    width: 100%;
+  }
+
+  #contact .column {
+    text-align: center;
+  }
+}
+/* Small Devices, Tablets */
+@media only all and (max-width: 768px) {
+  #skills .container .row .column {
+    width: 145px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 44px;
+  }
+  h1 .name {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: visible;
+  z-index: 99;
+  padding: 10px 15px 0;
+  background-color: #F16544;
+  height: 40px;
+}
+#footer .social, #footer span, #footer a {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+/*
+Flaticon icon font: Flaticon
+Creation date: 11/01/2021 03:41
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff2") format("woff2"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+.fi {
+  font-size: 1.7em;
+}
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.adobe-indesign:before {
+  content: "";
+}
+
+.adobe-photoshop:before {
+  content: "";
+}
+
+.adobe-illustrator:before {
+  content: "";
+}
+
+/*# sourceMappingURL=styles.css.map */
