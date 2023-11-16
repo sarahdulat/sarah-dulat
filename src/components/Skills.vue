@@ -1,7 +1,7 @@
 <template>
     <div id="skills">
         <div class="row header">
-            <h1>TOOLBOX</h1>
+            <h1>TOOLS</h1>
         </div>
         <div class="container">
             <div class="row">
