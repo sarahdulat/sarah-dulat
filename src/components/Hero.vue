@@ -9,7 +9,8 @@
         <span class="name">Sarah Dulat</span>.
       </h1>
       <h2 class="animated hero-fade delay2">
-        I am a <strong>product-minded frontend software engineer</strong> seeking a senior frontend role. Former designer turned developer who loves good UI/UX, clean architecture and VueJS (React is cool too).
+        I am a product-minded <strong>frontend software engineer</strong> seeking a senior frontend role. Former designer
+        turned developer who loves good UI/UX, clean architecture and VueJS.
       </h2>
     </div>
   </div>
