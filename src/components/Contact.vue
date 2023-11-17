@@ -1,17 +1,17 @@
 <template>
     <section>
         <div class="row header">
-            <h1>CONTACT</h1>
+            <h2 class="mt-0">CONTACT</h2>
         </div>
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <div class="photo">
+                    <div class="photo bg-primary">
                         <img src="/assets/ProfilePic.jpg" alt="Photo of Sarah Dulat" />
                     </div>
                 </div>
                 <div class="column">
-                    <h2>Thanks for stopping by.</h2>
+                    <h5 class="c-primary m-0">Thanks for stopping by.</h5>
                     <p>I am currently open to exploring new opportunities and expanding my professional horizons. Whether
                         it's full-time employment, freelance projects, or contract work, I am eager to contribute my skills
                         and expertise to innovative and impactful ventures. If you have exciting projects, job
@@ -20,7 +20,8 @@
                     <p>
                         Keep in <a href="mailto: hello@sarahdulat.com" target="_blank">touch</a>, find me on <a
                             href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> or take a look at my
-                        <a href="/assets/SarahDulat-Resume.pdf" target="_blank">resume<i class="fas fa-file-pdf"></i></a>.
+                        <a href="/assets/SarahDulat-Resume.pdf" target="_blank">resume<i
+                                class="fas fa-file-pdf ml-s c-primary"></i></a>.
                     </p>
                 </div>
             </div>
@@ -37,6 +38,8 @@ export default {
 <style scoped lang="scss">
 section {
     height: clamp(25vh, 50vh, 100%);
+    color: var(--text-body);
+    background-color: var(--color-white);
 
     .container {
         display: -webkit-box;
@@ -46,7 +49,8 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 50px 70px;
+        padding-bottom: 70px;
+        padding-top: 70px;
 
         .row {
             width: 100vw;
@@ -62,9 +66,8 @@ section {
                 margin: 0 20px 30px 0;
                 width: 200px;
                 aspect-ratio: 1 / 1;
-                background-color: #F16544;
                 border-radius: 50%;
-                border: 5px solid #FF7E61;
+                border: 5px solid var(--color-primary-light);
                 overflow: hidden;
 
                 img {
@@ -75,18 +78,7 @@ section {
                     width: auto;
                 }
             }
-
-            h2 {
-                margin-top: 0;
-            }
         }
-    }
-
-    color: rgba(0, 0, 0, 0.8);
-
-    h2 {
-        color: #F16544;
-        margin-bottom: 0;
     }
 
     p {
@@ -95,17 +87,11 @@ section {
 
         a {
             font-weight: 600;
-            color: rgba(0, 0, 0, 0.8);
+            color: var(--text-body);
         }
 
         a:hover {
-            color: rgba(0, 0, 0, 0.6);
-        }
-
-        i {
-            text-decoration: none;
-            color: #FF7E61;
-            margin: 0 0 0 5px;
+            color: var(--color-primary-light);
         }
     }
 }

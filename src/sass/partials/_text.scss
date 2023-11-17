@@ -1,41 +1,19 @@
+h1, h2, h3, h4, h5 {
+	font-family: 'Arvo', serif;
+}
 h1 {
-	font-family: 'Arvo', serif;
 	letter-spacing: 1px;
-	line-height: 54px;
 	font-weight: 600;
-	a {
-		text-decoration: underline;
-	}
-	.name {
-		font-size: 58px;
-	}
-}
-h2 {
-	font-family: 'Arvo', serif;
-	font-weight: 600;
-}
-h3 {
-	a {
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: none;
-	}
-}
-p {
-	font-size: 1.25em;
 }
 
 .header {
-	h1 {
-		margin-top: -26px;
+	h2 {
+		font-weight: 600;
+		margin-top: -30px;
 		margin-bottom: 0;
-		color: #FFFFFF;
-		font-size: 58px;
-		// -webkit-text-stroke: 2px rgba(0,0,0,0.4);
-		// text-shadow: 2px 2px 1px rgba(0,0,0,0.25);
-		-webkit-text-stroke: 2px #F16544;
-    text-shadow: 2px 2px 1px #F16544;
+		color: var(--color-white);
+		-webkit-text-stroke: 2px var(--color-primary);
+    text-shadow: 2px 2px 1px var(--color-primary);
 	}
 }
 .no-wrap {
@@ -55,7 +33,7 @@ p {
 		font-weight: 600;
 		color: rgba(0,0,0,0.25);
 		.primary-value {
-			color: #F16544;
+			color: var(--color-primary);
 			text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 		}
 		#intuitive {
@@ -86,12 +64,4 @@ p {
 		margin-bottom: -5px;
 	}
 	color: rgba(0,0,0,0.8);
-}
-
-@media (max-width: 768px) {
-	.header {
-		h1 {
-			margin-top: -26px;
-		}
-	}
 }

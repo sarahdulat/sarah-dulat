@@ -1,30 +1,30 @@
 <template>
     <section>
         <div class="row header">
-            <h1>TOOLS</h1>
+            <h2>TOOLS</h2>
         </div>
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <div class="skill"><img src="/assets/ts-logo-256.png" width="37" /> Typescript</div>
-                    <div class="skill"><i class="fab fa-2x fa-vuejs"></i> VueJS</div>
-                    <div class="skill"><i class="fab fa-2x fa-react"></i> React</div>
+                    <h6 class="skill"><img class="mr-l" src="/assets/ts-logo-256.png" width="37" /> Typescript</h6>
+                    <h6 class="skill"><i class="fab fa-2x fa-vuejs mr-l"></i> VueJS</h6>
+                    <h6 class="skill"><i class="fab fa-2x fa-react mr-l"></i> React</h6>
                 </div>
                 <div class="column">
-                    <div class="skill"><i class="fab fa-2x fa-js"></i> JavaScript</div>
-                    <div class="skill"><i class="fa fa-2x fa-html5"></i> HTML5</div>
-                    <div class="skill"><i class="fab fa-2x fa-css3-alt"></i> CSS3</div>
+                    <h6 class="skill"><i class="fab fa-2x fa-js mr-l"></i> JavaScript</h6>
+                    <h6 class="skill"><i class="fa fa-2x fa-html5 mr-l"></i> HTML5</h6>
+                    <h6 class="skill"><i class="fab fa-2x fa-css3-alt mr-l"></i> CSS3</h6>
                 </div>
                 <div class="column">
-                    <!-- <div class="skill"><i class="fas fa-2x fa-database"></i> MySQL</div> -->
-                    <div class="skill"><i class="fab fa-2x fa-figma"></i> Figma</div>
-                    <div class="skill"><i class="fab fa-2x fa-github"></i> GitHub</div>
-                    <div class="skill"><img src="/assets/d3.png" width="37" /> D3.js</div>
+                    <!-- <h6 class="skill"><i class="fas fa-2x fa-database mr-l"></i> MySQL</h6> -->
+                    <h6 class="skill"><i class="fab fa-2x fa-figma mr-l"></i> Figma</h6>
+                    <h6 class="skill"><i class="fab fa-2x fa-github mr-l"></i> GitHub</h6>
+                    <h6 class="skill"><img class="mr-l" src="/assets/d3.png" width="37" /> D3.js</h6>
                 </div>
                 <div class="column">
-                    <div class="skill"><i class="fi adobe-indesign"></i> InDesign</div>
-                    <div class="skill"><i class="fi adobe-photoshop"></i> Photoshop</div>
-                    <div class="skill"><i class="fi adobe-illustrator"></i> Illustrator</div>
+                    <h6 class="skill"><i class="fi adobe-indesign mr-l"></i> InDesign</h6>
+                    <h6 class="skill"><i class="fi adobe-photoshop mr-l"></i> Photoshop</h6>
+                    <h6 class="skill"><i class="fi adobe-illustrator mr-l"></i> Illustrator</h6>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@ export default {
 <style scoped lang="scss">
 section {
     height: clamp(100px, 50vh, 100%);
-    background-color: rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, 0.8);
+    background-color: var(--color-grey);
+    color: var(--text-body);
 
     .container {
         height: 100%;
@@ -52,7 +52,8 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 70px 50px;
+        padding-top: 50px;
+        padding-bottom: 80px;
 
         .row {
             width: 100vw;
@@ -62,7 +63,7 @@ section {
             display: -webkit-flex;
             display: flex;
             justify-content: space-evenly;
-            column-gap: 20px;
+            column-gap: 16px;
 
             .column {
                 .skill {
@@ -72,43 +73,12 @@ section {
                     display: -webkit-flex;
                     display: flex;
                     align-items: center;
-                    margin-bottom: 20px;
-                    font-size: 1.25em;
-
-                    i,
-                    img {
-                        margin-right: 15px;
-                    }
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                    font-weight: 400;
                 }
             }
         }
-    }
-}
-
-@media only all and (max-width : 768px) {
-    section {
-        .container {
-            .row {
-                .column {
-                    width: 145px;
-                }
-            }
-        }
-    }
-
-    h1 {
-        .name {
-            font-size: 44px;
-        }
-    }
-
-    h2 {
-        font-size: 20px;
-        line-height: 22px;
-    }
-
-    p {
-        font-size: 1em;
     }
 }
 </style>

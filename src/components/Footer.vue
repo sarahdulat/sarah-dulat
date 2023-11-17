@@ -1,12 +1,12 @@
 <template>
-    <section class="sherbert">
+    <section class="sherbert px-l py-m">
         <div class="row">
-            <span>© {{ currentYear }} Sarah Dulat</span>
-            <div class="social">
+            <small>© {{ currentYear }} Sarah Dulat</small>
+            <small>
                 <a href="https://github.com/sarahdulat" target="_blank">GitHub</a> | <a
                     href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> | <a
                     href="https://twitter.com/sarahdulat" target="_blank">Twitter</a>
-            </div>
+            </small>
         </div>
     </section>
 </template>
@@ -24,30 +24,26 @@ export default {
 
 <style scoped lang="scss">
 section {
-    .row {
-        justify-content: space-between;
-    }
-
     position: fixed;
     bottom: 0px;
     left: 0px;
     width: 100%;
     overflow: visible;
     z-index: 99;
-    padding: 10px 15px 0;
-    background-color: #F16544;
+    background-color: var(--color-primary);
     height: 40px;
 
-    .social,
-    span,
-    a {
-        color: #FFFFFF;
-        font-size: 12px;
-        text-decoration: none;
+    .row {
+        justify-content: space-between;
     }
+}
 
-    a:hover {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
+a,
+small {
+    color: var(--color-white);
+
+    &:hover {
+        color: var(--color-white-hover);
     }
-}</style>
+}
+</style>
