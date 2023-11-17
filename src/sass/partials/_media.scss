@@ -24,43 +24,4 @@
     		}	
 		}
 	}
-	#contact {
-		.column {
-			text-align: center;
-		}
-	}
-}
-/* Small Devices, Tablets */
-@media only all and (max-width : 768px) {
-	#skills {
-		.container {
-    		.row {
-    			.column {
-    				width: 145px;
-    			}
-    		}
-		}
-	}
-	h1 {
-		font-size: 24px;
-		line-height: 44px;
-		.name {
-			font-size: 44px;
-		}
-	}
-	h2 {
-		font-size: 20px;
-		line-height: 22px;
-	}
-	p {
-		font-size: 1em;
-	}	
-}
-/* Extra Small Devices, Phones */ 
-@media only all and (max-width : 480px) {
-
-}
-/* Custom, iPhone Retina */ 
-@media only all and (max-width : 320px) {
-    
 }

@@ -1,5 +1,5 @@
 <template>
-    <div id="contact">
+    <section>
         <div class="row header">
             <h1>CONTACT</h1>
         </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -33,3 +33,89 @@ export default {
     name: 'Contact'
 }
 </script>
+
+<style scoped lang="scss">
+section {
+    height: clamp(25vh, 50vh, 100%);
+
+    .container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px 70px;
+
+        .row {
+            width: 100vw;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: nowrap;
+
+            div.photo {
+                position: relative;
+                margin: 0 20px 30px 0;
+                width: 200px;
+                aspect-ratio: 1 / 1;
+                background-color: #F16544;
+                border-radius: 50%;
+                border: 5px solid #FF7E61;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    top: -1%;
+                    left: -10%;
+                    height: 120%;
+                    width: auto;
+                }
+            }
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    color: rgba(0, 0, 0, 0.8);
+
+    h2 {
+        color: #F16544;
+        margin-bottom: 0;
+    }
+
+    p {
+        max-width: 70ch;
+        word-break: break-word;
+
+        a {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        a:hover {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        i {
+            text-decoration: none;
+            color: #FF7E61;
+            margin: 0 0 0 5px;
+        }
+    }
+}
+
+@media only all and (max-width : 768px) {
+    section {
+        .row {
+            flex-wrap: wrap !important;
+            text-align: center;
+        }
+    }
+}
+</style>

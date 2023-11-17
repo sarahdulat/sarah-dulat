@@ -1,5 +1,5 @@
 <template>
-    <div id="skills">
+    <section>
         <div class="row header">
             <h1>TOOLS</h1>
         </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -36,3 +36,79 @@ export default {
     name: 'Skills'
 }
 </script>
+
+<style scoped lang="scss">
+section {
+    height: clamp(100px, 50vh, 100%);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+
+    .container {
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 70px 50px;
+
+        .row {
+            width: 100vw;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-evenly;
+            column-gap: 20px;
+
+            .column {
+                .skill {
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    font-size: 1.25em;
+
+                    i,
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only all and (max-width : 768px) {
+    section {
+        .container {
+            .row {
+                .column {
+                    width: 145px;
+                }
+            }
+        }
+    }
+
+    h1 {
+        .name {
+            font-size: 44px;
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+</style>
