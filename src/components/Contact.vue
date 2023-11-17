@@ -12,11 +12,11 @@
                 </div>
                 <div class="column">
                     <h5 class="c-primary m-0">Thanks for stopping by.</h5>
-                    <p>I am currently open to exploring new opportunities and expanding my professional horizons. Whether
-                        it's full-time employment, freelance projects, or contract work, I am eager to contribute my skills
-                        and expertise to innovative and impactful ventures. If you have exciting projects, job
-                        opportunities, or freelance collaborations that align with my skill set, I would be delighted to
-                        connect and discuss how I can contribute to the success of your team or project.</p>
+                    <p>I am currently open to exploring new opportunities. Whether it's full-time employment, freelance
+                        projects, or contract work, I am looking to contribute my skills and expertise to innovative and
+                        impactful ventures. If you have exciting projects, job opportunities, or freelance collaborations
+                        that align with my skill set, I would love to connect and discuss how I can contribute to the
+                        success of your team or project.</p>
                     <p>
                         Keep in <a href="mailto: hello@sarahdulat.com" target="_blank">touch</a>, find me on <a
                             href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> or take a look at my
@@ -49,8 +49,8 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 70px;
-        padding-top: 70px;
+        padding-top: 50px;
+        padding-bottom: 80px;
 
         .row {
             width: 100vw;

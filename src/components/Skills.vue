@@ -52,7 +52,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 50px;
+        padding-top: 30px;
         padding-bottom: 80px;
 
         .row {

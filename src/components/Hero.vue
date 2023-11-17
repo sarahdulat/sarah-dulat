@@ -5,7 +5,7 @@
         Started with GeoCities now I'm here.
       </h5>
       <div class="animated hero-fade delay1 no-wrap">
-        <h4 class="mb-l">Hi there, my name is</h4>
+        <h4 class="mb-m">Hi there, my name is</h4>
         <h1 class="mt-0">Sarah Dulat.</h1>
       </div>
       <h5 class="animated hero-fade delay2">
@@ -29,7 +29,7 @@ section {
   min-height: 400px;
 
   .container {
-    padding: 25px 30% 100% 50px;
+    padding: 25px 30% 100vh 50px;
   }
 
   h5 {
