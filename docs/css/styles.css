@@ -526,10 +526,10 @@ body {
 
 @keyframes sherbert {
   0% {
-    background: #F16544;
+    background: var(--color-primary);
   }
   100% {
-    background: #FF7E61;
+    background: var(--color-primary-light);
   }
 }
 h1, h2, h3, h4, h5 {
@@ -545,7 +545,7 @@ h1 {
   font-weight: 600;
   margin-top: -30px;
   margin-bottom: 0;
-  color: #FFFFFF;
+  color: white;
   -webkit-text-stroke: 2px var(--color-primary);
   text-shadow: 2px 2px 1px var(--color-primary);
 }
@@ -598,25 +598,6 @@ h1 {
   margin-bottom: -5px;
 }
 
-/* Large Devices, Wide Screens */
-@media only all and (min-width: 1600px) {
-  #about .container #values, #about .container .row {
-    width: 50vw;
-  }
-}
-/* Medium Devices, Desktops */
-@media only all and (max-width: 992px) {
-  #about {
-    height: 100%;
-  }
-  #about .container .row {
-    flex-flow: column;
-  }
-  #about .container #values .column {
-    padding: 15px 0 0;
-    width: 100%;
-  }
-}
 /*
 Flaticon icon font: Flaticon
 Creation date: 11/01/2021 03:41
