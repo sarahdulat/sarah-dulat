@@ -49,9 +49,9 @@
 }
 @keyframes sherbert {
    0% {
-    background: #F16544;
+    background: var(--color-primary);
    }
    100% {
-    background: #FF7E61;
+    background: var(--color-primary-light);
    }
 }
