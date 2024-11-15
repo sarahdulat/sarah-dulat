@@ -1,25 +1,20 @@
 <template>
-  <div id="work">
-    <div class="container">
-		<h1>Work</h1>
-		<div class="row">
-			<p>
-				I'm passionate about intuitive UI/UX and creating highly responsive and performant apps. From mock ups to architecture I like organized and consistant structure that won't make a user second guess what to do next. I find there are always ways to speed things up and do regular refactors as I learn and grow.
-			</p>
-		</div>
-		<div class="row">
-            <div class="column">
-                Projects
-            </div>
-            <div class="column">
-                RESPONSIVE LAYOUTS
-            </div>
-            <div class="column">
-               ORGANIZED ARCHITECTURE 
-            </div>
-        </div>
+  <section>
+    <div class="row header">
+      <h2>TOOLS</h2>
     </div>
-  </div>
+    <div class="container">
+      <h1>Work</h1>
+      <div class="row">
+
+      </div>
+      <div class="row">
+        <div class="column">
+          Projects
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -27,3 +22,7 @@ export default {
   name: 'Work'
 }
 </script>
+
+<!-- .frosty-glass {
+  backdrop-filter: blur(6px);
+} -->
