@@ -6,8 +6,8 @@ html, body {
 	height: 100%;
 }
 body {
-	background-color: var(--color-white);
-	font-family: 'Roboto', sans-serif;
+	background-color: var(--color-primary-light);
+	font-family: var(--font-family-neo-grotesque);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	margin: 0;

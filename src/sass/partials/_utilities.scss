@@ -92,11 +92,13 @@ h5 {
   font-size: var(--fontSize-l);
   line-height: var(--lineHeight-l);
   letter-spacing: var(--letterSpacing-l);
+  font-weight: 300;
 }
 h4 {
   font-size: var(--fontSize-xl);
   line-height: var(--lineHeight-xl);
   letter-spacing: var(--letterSpacing-xl);
+  font-weight: 300;
 }
 h3 {
   font-size: var(--fontSize-2xl);
@@ -112,10 +114,11 @@ h1 {
   font-size: var(--fontSize-4xl);
   line-height: var(--lineHeight-4xl);
   letter-spacing: var(--letterSpacing-4xl);
+  font-weight: 200;
 }
 
-.c-primary {color: var(--color-primary)}
-.c-primary-light {color: var(--color-primary-light)}
+.color-primary {color: var(--color-primary)}
+.color-primary-light {color: var(--color-primary-light)}
 .text-body {color: var(--text-body)}
 
 .bg-primary {background-color: var(--color-primary)}

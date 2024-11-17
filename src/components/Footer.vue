@@ -24,12 +24,12 @@ export default {
 
 <style scoped lang="scss">
 section {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    // position: fixed;
+    // bottom: 0px;
+    // left: 0px;
     width: 100%;
     overflow: visible;
-    z-index: 99;
+    // z-index: 99;
     background-color: var(--color-primary);
     height: 40px;
 

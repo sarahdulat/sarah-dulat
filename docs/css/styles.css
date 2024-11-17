@@ -383,11 +383,11 @@ h1 {
   letter-spacing: var(--letterSpacing-4xl);
 }
 
-.c-primary {
+.color-primary {
   color: var(--color-primary);
 }
 
-.c-primary-light {
+.color-primary-light {
   color: var(--color-primary-light);
 }
 
