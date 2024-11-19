@@ -1,12 +1,10 @@
 <template>
-    <section class="sherbert px-l py-m">
+    <section class="px-l py-m">
         <div class="row">
-            <small>© {{ currentYear }} Sarah Dulat</small>
+            <small>© {{ currentYear }} Sarah Dulat-Boussaid</small>
             <small>
                 <a href="https://github.com/sarahdulat" target="_blank">GitHub</a> | <a
-                    href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> | <a
-                    href="https://twitter.com/sarahdulat" target="_blank">Twitter</a>
-            </small>
+                    href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> </small>
         </div>
     </section>
 </template>

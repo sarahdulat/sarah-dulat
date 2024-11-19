@@ -1,13 +1,14 @@
 <template>
   <nav>
-    <div>
-      <h1 class="m-0 color-primary">Sarah Dulat-Boussaid</h1>
-      <h4 class="m-0">Design Engineer</h4>
-      <h5 class="m-0">
-        <a href="#" class="pr-m">Blog</a>
-        <a href="#">Resume</a>
-      </h5>
-
+    <div class="wrapper">
+      <div class="logo">
+        <h2 class="m-0 pr-xl color-primary">Sarah Dulat-Boussaid</h2>
+        <h5 class="m-0">Design Engineer</h5>
+      </div>
+      <h6 class="m-0">
+        <a href="#" class="mr-m">Blog</a>
+        <a href="#">Resume<i class="bi bi-arrow-down"></i></a>
+      </h6>
     </div>
   </nav>
 </template>
@@ -21,14 +22,28 @@ export default {
 <style scoped lang="scss">
 nav {
   padding: 30px;
-  text-transform: uppercase;
   font-family: var(--font-family-bebas-neue);
+  color: var(--color-dark);
 
-  div {
+  .wrapper {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    align-items: baseline;
+    border-bottom: 1px solid var(--color-text-body);
     width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+  }
+
+  i {
+    font-weight: 800;
+  }
+
+  a {
+    border-bottom: 2px solid var(--color-dark);
   }
 }
 </style>

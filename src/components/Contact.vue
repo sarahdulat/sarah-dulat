@@ -40,7 +40,7 @@ export default {
 <style scoped lang="scss">
 section {
     height: clamp(25vh, 50vh, 100%);
-    color: var(--text-body);
+    color: var(--color-dark);
     background-color: var(--color-white);
 
     .container {
@@ -89,7 +89,7 @@ section {
 
         a {
             font-weight: 600;
-            color: var(--text-body);
+            color: var(--color-dark);
         }
 
         a:hover {

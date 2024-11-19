@@ -3,8 +3,6 @@
     <Navbar />
     <Hero />
     <Work />
-    <Skills />
-    <Contact />
     <Footer />
   </div>
 </template>
@@ -13,8 +11,6 @@
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import Work from './components/Work.vue'
-import Skills from './components/Skills.vue'
-import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -23,8 +19,6 @@ export default {
     Navbar,
     Hero,
     Work,
-    Skills,
-    Contact,
     Footer
   }
 }
