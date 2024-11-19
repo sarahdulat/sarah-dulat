@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Navbar />
-    <Hero />
-    <Work />
+    <main>
+      <Hero />
+      <!-- <Work /> -->
+    </main>
     <Footer />
   </div>
 </template>
@@ -23,3 +25,9 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+#app {
+  margin: 0 10%;
+}
+</style>

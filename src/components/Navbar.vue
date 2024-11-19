@@ -7,7 +7,7 @@
       </div>
       <h6 class="m-0">
         <a href="#" class="mr-m">Blog</a>
-        <a href="#">Resume<i class="bi bi-arrow-down"></i></a>
+        <a href="/assets/SarahDulat-Resume.pdf">Resume<i class="bi bi-arrow-down"></i></a>
       </h6>
     </div>
   </nav>
@@ -21,7 +21,7 @@ export default {
 
 <style scoped lang="scss">
 nav {
-  padding: 30px;
+  margin-top: 5%;
   font-family: var(--font-family-bebas-neue);
   color: var(--color-dark);
 
@@ -29,7 +29,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px solid var(--color-text-body);
+    padding-bottom: var(--space-m);
+    border-bottom: 2px solid var(--color-dark);
     width: 100%;
   }
 
@@ -44,6 +45,11 @@ nav {
 
   a {
     border-bottom: 2px solid var(--color-dark);
+
+    &:hover {
+      color: var(--color-primary);
+      border-bottom: 2px solid var(--color-primary);
+    }
   }
 }
 </style>

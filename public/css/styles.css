@@ -427,6 +427,10 @@ h1 {
   border-color: var(--color-grey);
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 * {
   box-sizing: border-box;
 }

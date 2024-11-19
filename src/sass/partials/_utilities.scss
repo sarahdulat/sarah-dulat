@@ -133,3 +133,7 @@ h1 {
 
 .border-primary {border-color: var(--color-primary)}
 .border-grey {border-color: var(--color-grey)}
+
+.no-wrap {
+  white-space: nowrap;
+}

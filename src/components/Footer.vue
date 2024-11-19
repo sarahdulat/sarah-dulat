@@ -1,12 +1,12 @@
 <template>
-    <section class="px-l py-m">
+    <footer class="px-l py-m">
         <div class="row">
             <small>© {{ currentYear }} Sarah Dulat-Boussaid</small>
             <small>
                 <a href="https://github.com/sarahdulat" target="_blank">GitHub</a> | <a
                     href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> </small>
         </div>
-    </section>
+    </footer>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-section {
+footer {
     // position: fixed;
     // bottom: 0px;
     // left: 0px;
