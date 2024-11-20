@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" @click="handleClick">
+  <button ref="button" :class="buttonClass" @click="copy(value)">
     <slot></slot>
   </button>
 </template>
@@ -12,12 +12,26 @@ export default {
       type: String,
       default: "primary"
     },
+    value: {
+      type: String,
+      default: ""
+    },
   },
   computed: {
     buttonClass() {
       return `btn btn-${this.variant} no-wrap`;
     },
   },
+  methods: {
+    async copy(value) {
+      try {
+        await navigator.clipboard.writeText(value);
+        alert('Copied');
+      } catch ($e) {
+        alert('Cannot copy');
+      }
+    }
+  }
 }
 </script>
 
@@ -28,6 +42,7 @@ export default {
   border: none;
   font-family: Bebas Neue;
   font-size: var(--fontSize-m);
+  cursor: pointer;
   width: 200px;
 }
 

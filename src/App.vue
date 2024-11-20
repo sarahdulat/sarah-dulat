@@ -28,6 +28,6 @@ export default {
 
 <style scoped lang="scss">
 #app {
-  margin: 0 10%;
+  margin: 0 15%;
 }
 </style>

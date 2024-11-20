@@ -1,24 +1,27 @@
 <template>
   <section>
     <h5>
-      I am a product-minded <strong>frontend software engineer</strong> seeking a senior frontend role. Former
-      designer
-      turned developer who loves good UI/UX, clean architecture and VueJS.
+      As a designer/developer hybrid with over a decade of experience in startups and scaleups, I specialize in bridging
+      the gap between design and development. My expertise lies in owning the full lifecycle of design systems and
+      beyond, ensuring seamless integration and execution.
     </h5>
     <div>
-      <ButtonComponent variant="primary">Email<i class="bi bi-envelope pl-m"></i></ButtonComponent>
-      <ButtonComponent variant="outline">Let's Connect<i class="bi bi-linkedin pl-m"></i></ButtonComponent>
+      <Button variant="primary" value="sarah@sarahdulat.com">Email<i class="bi bi-envelope pl-m"></i>
+      </Button>
+      <a href="https://www.linkedin.com/in/sarahdulat/" target="_blank">
+        <Button variant="outline">Let's Connect<i class="bi bi-linkedin pl-m"></i></Button>
+      </a>
     </div>
   </section>
 </template>
 
 <script>
-import ButtonComponent from './ButtonComponent.vue';
+import Button from './Button.vue';
 
 export default {
   name: 'Hero',
   components: {
-    ButtonComponent
+    Button
   }
 }
 </script>

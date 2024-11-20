@@ -2,7 +2,7 @@
   <nav>
     <div class="wrapper">
       <div class="logo">
-        <h2 class="m-0 pr-xl color-primary">Sarah Dulat-Boussaid</h2>
+        <h2 class="m-0 pr-xl color-primary"><a href="/">Sarah Dulat-Boussaid</a></h2>
         <h5 class="m-0">Design Engineer</h5>
       </div>
       <h6 class="m-0">
@@ -43,7 +43,7 @@ nav {
     font-weight: 800;
   }
 
-  a {
+  h6 a {
     border-bottom: 2px solid var(--color-dark);
 
     &:hover {
