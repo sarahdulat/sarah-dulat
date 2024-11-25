@@ -6,8 +6,14 @@
       beyond, ensuring seamless integration and execution.
     </h5>
     <div>
-      <Button variant="primary" value="sarah@sarahdulat.com">Email<i class="bi bi-envelope pl-m"></i>
-      </Button>
+      <Tooltip position="top" @hideTooltip="tooltipContent = 'Click to Copy'">
+        <template #trigger>
+          <Button variant="primary" @click="copy()">Email<i class="bi bi-envelope pl-m"></i></Button>
+        </template>
+        <template #content>
+          {{ tooltipContent }}
+        </template>
+      </Tooltip>
       <a href="https://www.linkedin.com/in/sarahdulat/" target="_blank">
         <Button variant="outline">Let's Connect<i class="bi bi-linkedin pl-m"></i></Button>
       </a>
@@ -17,17 +23,30 @@
 
 <script>
 import Button from './Button.vue';
+import Tooltip from './Tooltip.vue';
 
 export default {
   name: 'Hero',
   components: {
-    Button
+    Button,
+    Tooltip
+  },
+  data() {
+    return {
+      tooltipContent: 'Click to Copy'
+    }
+  },
+  methods: {
+    copy() {
+      navigator.clipboard.writeText("sarah@sarahdulat.com");
+      this.tooltipContent = 'Copied!'
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
 section {
-  width: 75%;
+  margin: 0 15%;
 }
 </style>

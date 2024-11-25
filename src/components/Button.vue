@@ -1,5 +1,5 @@
 <template>
-  <button ref="button" :class="buttonClass" @click="copy(value)">
+  <button ref="button" :class="buttonClass" :v-bind="$attrs">
     <slot></slot>
   </button>
 </template>
@@ -23,14 +23,7 @@ export default {
     },
   },
   methods: {
-    async copy(value) {
-      try {
-        await navigator.clipboard.writeText(value);
-        alert('Copied');
-      } catch ($e) {
-        alert('Cannot copy');
-      }
-    }
+
   }
 }
 </script>
@@ -43,7 +36,7 @@ export default {
   font-family: Bebas Neue;
   font-size: var(--fontSize-m);
   cursor: pointer;
-  width: 200px;
+  width: 300px;
 }
 
 .btn-primary {

@@ -21,9 +21,10 @@ export default {
 
 <style scoped lang="scss">
 nav {
-  margin-top: 5%;
+  margin-top: 10%;
   font-family: var(--font-family-bebas-neue);
   color: var(--color-dark);
+  margin: 0 15%;
 
   .wrapper {
     display: flex;
