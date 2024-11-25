@@ -41,7 +41,7 @@ export default {
 section {
     height: clamp(25vh, 50vh, 100%);
     color: var(--color-dark);
-    background-color: var(--color-white);
+    background-color: var(--color-light);
 
     .container {
         display: -webkit-box;

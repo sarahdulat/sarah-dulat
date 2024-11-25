@@ -1,10 +1,7 @@
 <template>
-  <div id="app">
+  <div>
     <Navbar />
-    <main>
-      <Hero />
-      <!-- <Work /> -->
-    </main>
+    <Hero />
     <Footer />
   </div>
 </template>
@@ -12,7 +9,6 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
-import Work from './components/Work.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -20,10 +16,7 @@ export default {
   components: {
     Navbar,
     Hero,
-    Work,
     Footer
   }
 }
 </script>
-
-<style scoped lang="scss"></style>

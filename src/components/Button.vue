@@ -34,7 +34,7 @@ export default {
   margin-right: var(--space-l);
   border: none;
   font-family: Bebas Neue;
-  font-size: var(--fontSize-m);
+  font-size: var(--fontSize-l);
   cursor: pointer;
   width: 300px;
 }

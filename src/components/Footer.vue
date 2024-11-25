@@ -1,9 +1,9 @@
 <template>
     <footer class="px-l py-m">
         <div class="row">
-            <small>© {{ currentYear }} Sarah Dulat-Boussaid</small>
-            <small>Based in Basel, Switzerland. <i class="bi bi-globe"></i> Available globally.</small>
-            <small v-html="getAvailability"></small>
+            <span>© {{ currentYear }} Sarah Dulat-Boussaid</span>
+            <span>Based in Basel, Switzerland. <i class="bi bi-globe"></i> Available globally.</span>
+            <span v-html="getAvailability"></span>
         </div>
     </footer>
 </template>
@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             currentYear: new Date().getFullYear(),
-            availability: 0
+            availability: 1
         }
     },
     computed: {
@@ -39,20 +39,13 @@ footer {
     width: 100%;
     overflow: visible;
     z-index: 99;
-    background-color: var(--color-primary);
+    background-color: var(--color-dark);
     height: 40px;
+    color: var(--color-light);
+    font-weight: 500;
 
     .row {
         justify-content: space-between;
-    }
-}
-
-a,
-small {
-    color: var(--color-white);
-
-    &:hover {
-        color: var(--color-white-hover);
     }
 }
 </style>

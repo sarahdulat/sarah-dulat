@@ -43,6 +43,10 @@ nav {
     font-weight: 800;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   h6 a {
     border-bottom: 2px solid var(--color-dark);
 

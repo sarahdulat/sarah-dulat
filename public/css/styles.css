@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css");
 :root {
   --space-s: 4px;
@@ -47,18 +47,14 @@
 }
 
 :root {
-  --font-family-bebas-neue: Bebas Neue, Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
-  --font-family-neo-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  --font-family-bebas-neue: Bebas Neue, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  --font-family-neo-grotesque: Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 }
 
 :root {
   --color-primary: #F16544;
-  --color-primary-light: rgb(242, 227, 68, 0.1);
   --color-dark: #48403E;
-  --color-grey: rgba(0, 0, 0, 0.05);
-  --color-light: #FFFCFC;
-  --color-white: rgba(255, 255, 255, 0.9);
-  --color-white-hover: rgba(255, 255, 255, 0.8);
+  --color-light: #FDFCEB;
 }
 
 .m-0 {
@@ -349,7 +345,6 @@
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 p {
@@ -399,32 +394,20 @@ h1 {
   font-weight: 200;
 }
 
+.font-bebas {
+  font-family: var(--font-family-bebas-neue);
+}
+
 .color-primary {
   color: var(--color-primary);
 }
 
-.color-primary-light {
-  color: var(--color-primary-light);
+.color-light {
+  color: var(--color-light);
 }
 
 .text-body {
   color: var(--color-dark);
-}
-
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
-.bg-grey {
-  background-color: var(--color-grey);
-}
-
-.border-primary {
-  border-color: var(--color-primary);
-}
-
-.border-grey {
-  border-color: var(--color-grey);
 }
 
 .no-wrap {
@@ -440,7 +423,8 @@ html, body {
 }
 
 body {
-  background-color: var(--color-primary-light);
+  color: var(--color-dark);
+  background-color: var(--color-light);
   font-family: var(--font-family-neo-grotesque);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

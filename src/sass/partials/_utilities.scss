@@ -80,7 +80,6 @@
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 p {
@@ -124,15 +123,13 @@ h1 {
   font-weight: 200;
 }
 
+.font-bebas {
+  font-family: var(--font-family-bebas-neue);
+}
+
 .color-primary {color: var(--color-primary)}
-.color-primary-light {color: var(--color-primary-light)}
+.color-light {color: var(--color-light)}
 .text-body {color: var(--color-dark)}
-
-.bg-primary {background-color: var(--color-primary)}
-.bg-grey {background-color: var(--color-grey)}
-
-.border-primary {border-color: var(--color-primary)}
-.border-grey {border-color: var(--color-grey)}
 
 .no-wrap {
   white-space: nowrap;
