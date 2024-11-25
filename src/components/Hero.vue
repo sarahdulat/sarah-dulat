@@ -49,4 +49,8 @@ export default {
 section {
   margin: 0 15%;
 }
+
+h5 {
+  margin-right: 25%;
+}
 </style>
