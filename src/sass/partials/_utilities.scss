@@ -87,50 +87,11 @@ p {
   line-height: var(--lineHeight-s);
   letter-spacing: var(--letterSpacing-s);
 }
-h6 {
-  font-size: var(--fontSize-m);
-  line-height: var(--lineHeight-m);
-  letter-spacing: var(--letterSpacing-m);
-  font-weight: 300;
-}
-h5 {
-  font-size: var(--fontSize-l);
-  line-height: var(--lineHeight-l);
-  letter-spacing: var(--letterSpacing-l);
-  font-weight: 300;
-}
-h4 {
-  font-size: var(--fontSize-xl);
-  line-height: var(--lineHeight-xl);
-  letter-spacing: var(--letterSpacing-xl);
-  font-weight: 300;
-}
-h3 {
-  font-size: var(--fontSize-2xl);
-  line-height: var(--lineHeight-2xl);
-  letter-spacing: var(--letterSpacing-2xl);
-}
-h2 {
-  font-size: var(--fontSize-3xl);
-  line-height: var(--lineHeight-3xl);
-  letter-spacing: var(--letterSpacing-3xl);
-  font-weight: 300;
-}
-h1 {
-  font-size: var(--fontSize-4xl);
-  line-height: var(--lineHeight-4xl);
-  letter-spacing: var(--letterSpacing-4xl);
-  font-weight: 200;
-}
 
-.font-bebas {
-  font-family: var(--font-family-bebas-neue);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-header);
 }
-
-.color-primary {color: var(--color-primary)}
-.color-light {color: var(--color-light)}
-.text-body {color: var(--color-dark)}
 
 .no-wrap {
-  white-space: nowrap;
+  min-width: fit-content;
 }

@@ -47,8 +47,8 @@
 }
 
 :root {
-  --font-family-bebas-neue: Bebas Neue, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
-  --font-family-neo-grotesque: Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  --font-family-header: Bebas Neue, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  --font-family-body: Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 }
 
 :root {
@@ -353,65 +353,12 @@ p {
   letter-spacing: var(--letterSpacing-s);
 }
 
-h6 {
-  font-size: var(--fontSize-m);
-  line-height: var(--lineHeight-m);
-  letter-spacing: var(--letterSpacing-m);
-  font-weight: 300;
-}
-
-h5 {
-  font-size: var(--fontSize-l);
-  line-height: var(--lineHeight-l);
-  letter-spacing: var(--letterSpacing-l);
-  font-weight: 300;
-}
-
-h4 {
-  font-size: var(--fontSize-xl);
-  line-height: var(--lineHeight-xl);
-  letter-spacing: var(--letterSpacing-xl);
-  font-weight: 300;
-}
-
-h3 {
-  font-size: var(--fontSize-2xl);
-  line-height: var(--lineHeight-2xl);
-  letter-spacing: var(--letterSpacing-2xl);
-}
-
-h2 {
-  font-size: var(--fontSize-3xl);
-  line-height: var(--lineHeight-3xl);
-  letter-spacing: var(--letterSpacing-3xl);
-  font-weight: 300;
-}
-
-h1 {
-  font-size: var(--fontSize-4xl);
-  line-height: var(--lineHeight-4xl);
-  letter-spacing: var(--letterSpacing-4xl);
-  font-weight: 200;
-}
-
-.font-bebas {
-  font-family: var(--font-family-bebas-neue);
-}
-
-.color-primary {
-  color: var(--color-primary);
-}
-
-.color-light {
-  color: var(--color-light);
-}
-
-.text-body {
-  color: var(--color-dark);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-header);
 }
 
 .no-wrap {
-  white-space: nowrap;
+  min-width: fit-content;
 }
 
 * {
@@ -425,7 +372,7 @@ html, body {
 body {
   color: var(--color-dark);
   background-color: var(--color-light);
-  font-family: var(--font-family-neo-grotesque);
+  font-family: var(--font-family-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -439,11 +386,6 @@ body {
   display: flex;
 }
 
-.container {
-  margin: auto;
-  padding: 0 15%;
-}
-
 .row {
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -452,6 +394,7 @@ body {
 
 .column {
   flex-flow: column wrap;
+  width: 25%;
 }
 
 .animated {

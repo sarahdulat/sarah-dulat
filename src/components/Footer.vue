@@ -1,31 +1,44 @@
 <template>
-    <footer class="px-l py-m">
-        <div class="row">
-            <span>© {{ currentYear }} Sarah Dulat-Boussaid</span>
-            <span>Based in Basel, Switzerland. <i class="bi bi-globe"></i> Available globally.</span>
-            <span v-html="getAvailability"></span>
+    <footer class="px-l py-m row">
+        <!-- <div class="column">Sarah Dulat-Boussaid is a Design Engineer living and working in Basel, Switzerland.</div>
+        <div class="column"></div> -->
+        <div class="column">
+            <a href="">Blog</a>
+            <a href="">Resume</a>
+            <Tooltip position="top" @hideTooltip="tooltipContent = 'Click to Copy'">
+                <template #trigger>
+                    <span @click="copy()">sarah@sarahdulat.com</span>
+                </template>
+                <template #content>
+                    {{ tooltipContent }}
+                </template>
+            </Tooltip>
+        </div>
+        <div class="column">
+            <a href="" target="_blank">BlueSky</a>
+            <a href="" target="_blank">GitHub</a>
+            <a href="" target="_blank">LinkedIn</a>
         </div>
     </footer>
 </template>
 
 <script>
+import Tooltip from './Tooltip.vue';
+
 export default {
     name: 'Footer',
+    components: {
+        Tooltip
+    },
     data() {
         return {
-            currentYear: new Date().getFullYear(),
-            availability: 1
+            tooltipContent: 'Click to Copy'
         }
     },
-    computed: {
-        getAvailability() {
-            if (this.availability == 1) {
-                return '<i class="bi bi-circle-fill"></i> Available for new projects.'
-            } else if (this.availability == 0.5) {
-                return '<i class="bi bi-circle-half"></i> Limited availability, email for more info.'
-            } else if (this.availability == 0) {
-                return '<i class="bi bi-slash-circle"></i> Not currently available for new projects, <a href="#">join the waitlist</a>.'
-            }
+    methods: {
+        copy() {
+            navigator.clipboard.writeText("sarah@sarahdulat.com");
+            this.tooltipContent = 'Copied!'
         }
     }
 }
@@ -33,19 +46,15 @@ export default {
 
 <style scoped lang="scss">
 footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
-    overflow: visible;
-    z-index: 99;
     background-color: var(--color-dark);
-    height: 40px;
+    height: 200px;
     color: var(--color-light);
     font-weight: 500;
 
-    .row {
-        justify-content: space-between;
+    span {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
 </style>
