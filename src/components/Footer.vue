@@ -1,23 +1,30 @@
 <template>
-    <footer class="px-l py-m row">
-        <!-- <div class="column">Sarah Dulat-Boussaid is a Design Engineer living and working in Basel, Switzerland.</div>
-        <div class="column"></div> -->
-        <div class="column">
-            <a href="">Blog</a>
-            <a href="">Resume</a>
-            <Tooltip position="top" @hideTooltip="tooltipContent = 'Click to Copy'">
-                <template #trigger>
-                    <span @click="copy()">sarah@sarahdulat.com</span>
-                </template>
-                <template #content>
-                    {{ tooltipContent }}
-                </template>
-            </Tooltip>
-        </div>
-        <div class="column">
-            <a href="" target="_blank">BlueSky</a>
-            <a href="" target="_blank">GitHub</a>
-            <a href="" target="_blank">LinkedIn</a>
+    <footer class="px-l py-m">
+        <span class="name">Sarah Dulat-Boussaid</span>
+        <div class="row">
+            <div class="column">
+                <p class="mt-0">Colophon</p> <span>Built in VueJS. Header font is <a href="">Bebas Neue</a>. Body font
+                    is <a href="">Roboto</a>.</span>
+            </div>
+            <div class="column"></div>
+            <div class="column">
+                <a href="">Blog</a>
+                <a href="">Resume</a>
+                <Tooltip position="top" @hideTooltip="tooltipContent = 'Click to Copy'">
+                    <template #trigger>
+                        <span class="email" @click="copy()">sarah@sarahdulat.com</span>
+                    </template>
+                    <template #content>
+                        {{ tooltipContent }}
+                    </template>
+                </Tooltip>
+            </div>
+            <div class="column">
+                <a href="" target="_blank">BlueSky</a>
+                <a href="" target="_blank">GitHub</a>
+                <a href="" target="_blank">LinkedIn</a>
+            </div>
+
         </div>
     </footer>
 </template>
@@ -48,11 +55,18 @@ export default {
 footer {
     width: 100%;
     background-color: var(--color-dark);
-    height: 200px;
+    height: 400px;
     color: var(--color-light);
     font-weight: 500;
+    padding-bottom: 40px;
 
-    span {
+    .name {
+        font-size: clamp(var(--fontSize-xl), 10vw, 200px);
+        color: var(--color-primary);
+        font-family: var(--font-family-header);
+    }
+
+    .email {
         text-decoration: underline;
         cursor: pointer;
     }
