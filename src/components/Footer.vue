@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 section {
     position: fixed;
     bottom: 0px;

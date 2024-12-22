@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 section {
     height: clamp(100px, 50vh, 100%);
     background-color: var(--color-grey);

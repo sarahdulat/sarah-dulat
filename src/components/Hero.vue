@@ -9,7 +9,8 @@
         <h1 class="mt-0">Sarah Dulat.</h1>
       </div>
       <h5 class="animated hero-fade delay2">
-        I am a product-minded <strong>frontend software engineer</strong> seeking a senior frontend role. Former designer
+        I am a product-minded <strong>frontend software engineer</strong> seeking a senior frontend role. Former
+        designer
         turned developer who loves good UI/UX, clean architecture and VueJS.
       </h5>
     </div>
@@ -22,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 section {
   color: var(--color-white);
   height: 100svh;
