@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="column">
-                    <h5 class="c-primary m-0">Thanks for stopping by.</h5>
+                    <h5 class="color-primary m-0">Thanks for stopping by.</h5>
                     <p>I am currently open to exploring new opportunities. Whether it's full-time employment, freelance
                         projects, or contract work, I am looking to contribute my skills and expertise to innovative and
                         impactful ventures. If you have exciting projects, job opportunities, or freelance
@@ -23,7 +23,7 @@
                             href="https://www.linkedin.com/in/sarahdulat/" target="_blank">LinkedIn</a> or take a look
                         at my
                         <a href="/assets/SarahDulat-Resume.pdf" target="_blank">resume<i
-                                class="fas fa-file-pdf ml-s c-primary"></i></a>.
+                                class="fas fa-file-pdf ml-s color-primary"></i></a>.
                     </p>
                 </div>
             </div>
@@ -40,8 +40,8 @@ export default {
 <style scoped>
 section {
     height: clamp(25vh, 50vh, 100%);
-    color: var(--text-body);
-    background-color: var(--color-white);
+    color: var(--color-dark);
+    background-color: var(--color-light);
 
     .container {
         display: -webkit-box;
@@ -89,7 +89,7 @@ section {
 
         a {
             font-weight: 600;
-            color: var(--text-body);
+            color: var(--color-dark);
         }
 
         a:hover {

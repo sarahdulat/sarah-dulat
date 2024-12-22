@@ -1,51 +1,55 @@
 <template>
-  <section class="sherbert">
-    <div class="container">
-      <h5 class="animated hero-fade">
-        Started with GeoCities now I'm here.
-      </h5>
-      <div class="animated hero-fade delay1 no-wrap">
-        <h4 class="mb-m">Hi there, my name is</h4>
-        <h1 class="mt-0">Sarah Dulat.</h1>
-      </div>
-      <h5 class="animated hero-fade delay2">
-        I am a product-minded <strong>frontend software engineer</strong> seeking a senior frontend role. Former
-        designer
-        turned developer who loves good UI/UX, clean architecture and VueJS.
-      </h5>
+  <section class="pb-xl">
+    <p>
+      As a designer/developer hybrid with over a decade of experience in startups and scaleups, I specialize in
+      bridging the gap between design and development. My expertise lies in owning the full lifecycle of design
+      systems and beyond, ensuring seamless integration and execution.
+    </p>
+    <div>
+      <Tooltip position="top" @hideTooltip="tooltipContent = 'Click to Copy'">
+        <template #trigger>
+          <Button variant="primary" @click="copy()">Email<i class="bi bi-envelope pl-m"></i></Button>
+        </template>
+        <template #content>
+          {{ tooltipContent }}
+        </template>
+      </Tooltip>
+      <a href="https://www.linkedin.com/in/sarahdulat/" target="_blank">
+        <Button variant="outline">Let's Connect<i class="bi bi-linkedin pl-m"></i></Button>
+      </a>
     </div>
   </section>
 </template>
 
 <script>
+import Button from './Button.vue';
+import Tooltip from './Tooltip.vue';
+
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  components: {
+    Button,
+    Tooltip
+  },
+  data() {
+    return {
+      tooltipContent: 'Click to Copy'
+    }
+  },
+  methods: {
+    copy() {
+      navigator.clipboard.writeText("sarah@sarahdulat.com");
+      this.tooltipContent = 'Copied!'
+    }
+  }
 }
 </script>
 
-<style scoped>
-section {
-  color: var(--color-white);
-  height: 100svh;
-  min-height: 400px;
-
-  .container {
-    padding: 25px 30% 100vh 50px;
-  }
-
-  h5 {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-    letter-spacing: 1px;
-    font-weight: 100;
-    max-width: 70ch;
-  }
-
-  a {
-    color: var(--color-white);
-  }
-
-  a:hover {
-    color: var(--color-white-hover);
-  }
+<style scoped lang="scss">
+p {
+  margin-right: 25%;
+  font-size: var(--fontSize-m);
+  line-height: var(--lineHeight-m);
+  letter-spacing: var(--letterSpacing-m);
 }
 </style>
