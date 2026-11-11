@@ -37,4 +37,11 @@ describe('portfolio home', () => {
     expect(callsToAction.every((link) => Boolean(link.attributes('href')))).toBe(true)
     expect(wrapper.find('a[href="mailto:hello@sarahdulat.com"]').exists()).toBe(true)
   })
+
+  it('reuses the ambient glow in the hero and footer', () => {
+    const wrapper = mount(App)
+
+    expect(wrapper.findAll('.ambient-glow')).toHaveLength(2)
+    expect(wrapper.find('.ambient-glow--footer').exists()).toBe(true)
+  })
 })

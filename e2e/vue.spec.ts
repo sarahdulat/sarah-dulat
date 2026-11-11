@@ -15,14 +15,18 @@ test('shows the complete portfolio homepage', async ({ page }) => {
   )
 })
 
-test('lets selected work peek into a typical desktop viewport', async ({ page }) => {
+test('lets the selected work images peek into a typical desktop viewport', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/')
 
   const workHeading = page.getByRole('heading', { name: 'Selected work' })
   const headingBox = await workHeading.boundingBox()
+  const firstProjectImage = await page.locator('.project-placeholder').first().boundingBox()
 
   expect(headingBox).not.toBeNull()
   expect(headingBox!.y).toBeLessThan(900)
-  expect(headingBox!.y).toBeGreaterThan(720)
+  expect(headingBox!.y).toBeGreaterThan(640)
+  expect(firstProjectImage).not.toBeNull()
+  expect(firstProjectImage!.y).toBeLessThan(900)
+  expect(firstProjectImage!.y).toBeGreaterThan(760)
 })
