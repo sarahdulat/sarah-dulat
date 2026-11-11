@@ -29,6 +29,28 @@ export default defineComponent({
 </template>
 
 <style scoped>
+:global(:root) {
+  --page-padding: max(24px, calc((100vw - 1296px) / 2));
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 80px;
+  --space-9: 96px;
+  --space-10: 112px;
+  --space-11: 128px;
+  --space-12: 160px;
+  --font-label: 16px;
+  --font-body: 20px;
+  --font-body-large: 22px;
+  --font-project-title: 32px;
+  --font-contact-title: 36px;
+  --font-link: 20px;
+}
+
 :global(*) {
   box-sizing: border-box;
 }
@@ -72,6 +94,17 @@ export default defineComponent({
 @media (prefers-reduced-motion: reduce) {
   :global(html) {
     scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  :global(:root) {
+    --font-label: 13px;
+    --font-body: 17px;
+    --font-body-large: 18px;
+    --font-project-title: 24px;
+    --font-contact-title: 28px;
+    --font-link: 18px;
   }
 }
 </style>
