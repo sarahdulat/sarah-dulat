@@ -9,9 +9,11 @@ test('shows the complete portfolio homepage', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Selected work' })).toBeVisible()
   await expect(page.locator('.project-card')).toHaveCount(2)
   await expect(page.getByRole('heading', { name: 'Have something in mind?' })).toBeVisible()
-  await expect(page.getByRole('link', { name: 'Let’s Talk' })).toHaveAttribute(
+  await expect(page.getByRole('button', { name: 'Copy hello@sarahdulat.com' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'View case study' })).toHaveCount(2)
+  await expect(page.getByRole('link', { name: 'View case study' }).first()).toHaveAttribute(
     'href',
-    'mailto:hello@sarahdulat.com',
+    '/case-studies/the-skin-routine',
   )
 })
 

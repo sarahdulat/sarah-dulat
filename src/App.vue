@@ -1,35 +1,38 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-
-import AboutSection from './components/AboutSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import HeroSection from './components/HeroSection.vue'
-import SelectedWork from './components/SelectedWork.vue'
+import { RouterView } from 'vue-router'
 
 export default defineComponent({
-  name: 'PortfolioHome',
+  name: 'PortfolioApp',
   components: {
-    AboutSection,
-    ContactSection,
-    HeroSection,
-    SelectedWork,
+    RouterView,
   },
 })
 </script>
 
 <template>
   <div class="site-shell">
-    <main id="top">
-      <HeroSection />
-      <SelectedWork />
-      <AboutSection />
-      <ContactSection />
-    </main>
+    <RouterView />
   </div>
 </template>
 
 <style scoped>
 :global(:root) {
+  --color-background: #fcf8f6;
+  --color-text: #36373b;
+  --color-heading: #0e0e10;
+  --color-selection-text: #28292c;
+  --color-accent: #ff664d;
+  --color-accent-soft: #f8c5b8;
+  --color-border: rgba(54, 55, 59, 0.65);
+  --color-border-accent: rgba(255, 102, 77, 0.55);
+  --color-text-muted: rgba(54, 55, 59, 0.62);
+  --color-underline: rgba(54, 55, 59, 0.35);
+  --color-placeholder: #d9d9d9;
+  --color-placeholder-text: #6d6d6d;
+  --color-glow-coral: rgba(245, 145, 119, 0.72);
+  --color-glow-lavender: rgba(188, 164, 234, 0.66);
+  --color-glow-gold: rgba(255, 215, 119, 0.68);
   --page-padding: max(24px, calc((100vw - 1296px) / 2));
   --space-1: 8px;
   --space-2: 16px;
@@ -63,9 +66,9 @@ export default defineComponent({
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
-  background: #fcf8f6;
-  color: #36373b;
-  font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Manrope Variable', Manrope, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
   text-rendering: optimizeLegibility;
@@ -77,12 +80,12 @@ export default defineComponent({
 }
 
 :global(::selection) {
-  background: #f8c5b8;
-  color: #28292c;
+  background: var(--color-accent-soft);
+  color: var(--color-selection-text);
 }
 
 :global(:focus-visible) {
-  outline: 2px solid #ff664d;
+  outline: 2px solid var(--color-accent);
   outline-offset: 5px;
 }
 
