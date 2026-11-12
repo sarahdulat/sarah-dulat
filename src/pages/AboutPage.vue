@@ -1,44 +1,29 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import AmbientGlow from '../components/AmbientGlow.vue'
 import ContactSection from '../components/ContactSection.vue'
-import PortfolioLink from '../components/PortfolioLink.vue'
+import InteriorHero from '../components/InteriorHero.vue'
 
 export default defineComponent({
   name: 'AboutPage',
   components: {
-    AmbientGlow,
     ContactSection,
-    PortfolioLink,
+    InteriorHero,
   },
 })
 </script>
 
 <template>
   <main id="top" class="about-page">
-    <section class="about-hero" aria-labelledby="about-title">
-      <AmbientGlow />
-      <header class="page-header">
-        <PortfolioLink href="/" variant="nav">Sarah Dulat-Boussaid</PortfolioLink>
-        <nav aria-label="Primary navigation">
-          <PortfolioLink href="/#work" variant="nav">Work</PortfolioLink
-          ><span aria-hidden="true">/</span
-          ><PortfolioLink href="/about" variant="nav">About</PortfolioLink
-          ><span aria-hidden="true">/</span
-          ><PortfolioLink href="#contact" variant="nav">Contact</PortfolioLink>
-        </nav>
-      </header>
-      <div class="about-intro">
-        <p class="section-label">About</p>
-        <h1 id="about-title">Design and engineering, together.</h1>
-        <p>
-          I’m a design engineer with 12+ years of experience across design and front-end
-          development. I bring a design-first perspective to engineering, creating intuitive,
-          accessible interfaces that balance aesthetics with functionality.
-        </p>
-      </div>
-    </section>
+    <InteriorHero labelledby="about-title">
+      <p class="section-label">About</p>
+      <h1 id="about-title">Design and engineering, together.</h1>
+      <p class="about-description">
+        I’m a design engineer with 12+ years of experience across design and front-end development.
+        I bring a design-first perspective to engineering, creating intuitive, accessible interfaces
+        that balance aesthetics with functionality.
+      </p>
+    </InteriorHero>
 
     <section class="about-details" aria-label="Expertise and tools">
       <div>
@@ -66,37 +51,6 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.about-hero {
-  position: relative;
-  min-height: 640px;
-  padding: 72px var(--page-padding) var(--space-10);
-  isolation: isolate;
-}
-
-.page-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-4);
-  align-items: center;
-}
-
-nav {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-nav > span {
-  color: var(--color-text-muted);
-}
-
-.about-intro {
-  max-width: 800px;
-  margin-top: var(--space-9);
-}
-
 .section-label,
 h2 {
   margin: 0;
@@ -116,7 +70,7 @@ h1 {
   line-height: 1.05;
 }
 
-.about-intro > p:last-child {
+.about-description {
   max-width: 680px;
   margin: 0;
   font-size: var(--font-body-large);
@@ -141,19 +95,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .about-hero {
-    min-height: auto;
-    padding: var(--space-5) var(--page-padding) var(--space-9);
-  }
-
-  .about-intro {
-    margin-top: var(--space-8);
-  }
-
-  .page-header {
-    align-items: flex-start;
-  }
-
   h1 {
     margin: var(--space-3) 0;
     font-size: 36px;

@@ -52,6 +52,14 @@ export default defineComponent({
   --font-project-title: 32px;
   --font-contact-title: 36px;
   --font-link: 20px;
+  --font-hero: clamp(24px, 2.5vw, 36px);
+  --font-weight-hero: 800;
+  --letter-spacing-hero: -0.025em;
+  --line-height-hero: 1.34;
+  --font-brand: clamp(20px, 1.8vw, 28px);
+  --font-weight-brand: 700;
+  --letter-spacing-brand: -0.02em;
+  --line-height-brand: 1.3;
 }
 
 :global(*) {
@@ -108,6 +116,9 @@ export default defineComponent({
     --font-project-title: 24px;
     --font-contact-title: 28px;
     --font-link: 18px;
+    --font-hero: clamp(21px, 6.2vw, 28px);
+    --line-height-hero: 1.33;
+    --font-brand: clamp(18px, 5vw, 22px);
   }
 }
 </style>

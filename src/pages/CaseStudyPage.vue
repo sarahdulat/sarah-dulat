@@ -2,8 +2,9 @@
 import type { PropType } from 'vue'
 import { defineComponent } from 'vue'
 
-import AmbientGlow from '../components/AmbientGlow.vue'
 import ContactSection from '../components/ContactSection.vue'
+import EditorialFigure from '../components/EditorialFigure.vue'
+import InteriorHero from '../components/InteriorHero.vue'
 import PortfolioLink from '../components/PortfolioLink.vue'
 
 interface CaseStudy {
@@ -13,7 +14,11 @@ interface CaseStudy {
   figmaUrl?: string
 }
 
-const caseStudies: Record<string, CaseStudy> = {
+type CaseStudySlug = 'the-skin-routine' | 'jest-halny'
+
+const caseStudyOrder: CaseStudySlug[] = ['the-skin-routine', 'jest-halny']
+
+const caseStudies: Record<CaseStudySlug, CaseStudy> = {
   'the-skin-routine': {
     title: 'The Skin Routine',
     summary: 'A personal project exploring skincare with a D3 chart of routines to choose from.',
@@ -23,19 +28,21 @@ const caseStudies: Record<string, CaseStudy> = {
     title: 'Jest Halny?',
     summary:
       'A personal project exploring weather data to determine whether the Halny wind is blowing.',
+    liveUrl: 'https://jest-halny.vercel.app/en',
   },
 }
 
 export default defineComponent({
   name: 'CaseStudyPage',
   components: {
-    AmbientGlow,
     ContactSection,
+    EditorialFigure,
+    InteriorHero,
     PortfolioLink,
   },
   props: {
     slug: {
-      type: String as PropType<keyof typeof caseStudies>,
+      type: String as PropType<CaseStudySlug>,
       required: true,
     },
   },
@@ -48,65 +55,40 @@ export default defineComponent({
         }
       )
     },
+    nextProject(): { slug: CaseStudySlug; title: string } {
+      const currentIndex = caseStudyOrder.indexOf(this.slug)
+      const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % caseStudyOrder.length : 0
+      const slug = caseStudyOrder[nextIndex] ?? 'the-skin-routine'
+
+      return {
+        slug,
+        title: caseStudies[slug].title,
+      }
+    },
   },
 })
 </script>
 
 <template>
   <main id="top" class="case-study-page">
-    <section class="case-study-hero" aria-labelledby="case-study-title">
-      <AmbientGlow />
-      <header class="page-header">
-        <PortfolioLink href="/" variant="nav">Sarah Dulat-Boussaid</PortfolioLink>
-        <nav aria-label="Primary navigation">
-          <PortfolioLink href="/#work" variant="nav">Work</PortfolioLink
-          ><span aria-hidden="true">/</span
-          ><PortfolioLink href="/about" variant="nav">About</PortfolioLink
-          ><span aria-hidden="true">/</span
-          ><PortfolioLink href="#contact" variant="nav">Contact</PortfolioLink>
-        </nav>
-      </header>
-
-      <div class="case-study-intro">
-        <p class="section-label">Case study</p>
-        <h1 id="case-study-title">{{ caseStudy.title }}</h1>
-        <p class="summary">{{ caseStudy.summary }}</p>
-        <div class="intro-links">
-          <PortfolioLink
-            v-if="caseStudy.liveUrl"
-            :href="caseStudy.liveUrl"
-            variant="utility"
-            icon="external"
-            external
-            >Visit live site</PortfolioLink
-          >
-          <span v-else>Live site link coming soon</span>
-          <PortfolioLink
-            v-if="caseStudy.figmaUrl"
-            :href="caseStudy.figmaUrl"
-            variant="utility"
-            icon="external"
-            external
-            >View designs in Figma</PortfolioLink
-          >
-          <span v-else>Figma link coming soon</span>
-        </div>
-        <PortfolioLink class="back-link" href="/#work" variant="utility"
-          >Back to selected work</PortfolioLink
-        >
+    <InteriorHero labelledby="case-study-title">
+      <PortfolioLink class="back-link" href="/#work" variant="utility">Back to selected work</PortfolioLink>
+      <p class="section-label">Case study</p>
+      <h1 id="case-study-title">{{ caseStudy.title }}</h1>
+      <p class="summary">{{ caseStudy.summary }}</p>
+      <div class="intro-links">
+        <PortfolioLink v-if="caseStudy.liveUrl" :href="caseStudy.liveUrl" variant="utility" icon="external" external>
+          Visit live site</PortfolioLink>
+        <!-- <span v-else>Live site link coming soon</span> -->
+        <PortfolioLink v-if="caseStudy.figmaUrl" :href="caseStudy.figmaUrl" variant="utility" icon="external" external>
+          View designs in Figma</PortfolioLink>
+        <!-- <span v-else>Figma link coming soon</span> -->
       </div>
-    </section>
+    </InteriorHero>
 
-    <figure class="hero-figure">
-      <div
-        class="image-placeholder image-placeholder--hero"
-        role="img"
-        :aria-label="`${caseStudy.title} opening case study image coming soon`"
-      >
-        <span>Opening project image coming soon</span>
-      </div>
-      <figcaption>Opening view of {{ caseStudy.title }}</figcaption>
-    </figure>
+    <EditorialFigure variant="hero" label="Opening project image coming soon"
+      :accessible-label="`${caseStudy.title} opening case study image coming soon`"
+      :caption="`Opening view of ${caseStudy.title}`" />
 
     <article class="case-study-article" aria-label="Case study notes">
       <div class="article-copy">
@@ -122,12 +104,8 @@ export default defineComponent({
         </p>
       </div>
 
-      <figure class="editorial-figure">
-        <div class="image-placeholder" role="img" aria-label="Project detail image coming soon">
-          <span>Project detail image coming soon</span>
-        </div>
-        <figcaption>An early detail, reference, or moment from the work</figcaption>
-      </figure>
+      <EditorialFigure label="Project detail image coming soon" accessible-label="Project detail image coming soon"
+        caption="An early detail, reference, or moment from the work" />
 
       <div class="article-copy article-copy--offset">
         <p>
@@ -141,12 +119,8 @@ export default defineComponent({
         </p>
       </div>
 
-      <figure class="editorial-figure editorial-figure--inset">
-        <div class="image-placeholder" role="img" aria-label="Process image coming soon">
-          <span>Process image coming soon</span>
-        </div>
-        <figcaption>A prototype, interaction, or implementation detail</figcaption>
-      </figure>
+      <EditorialFigure variant="inset" label="Process image coming soon" accessible-label="Process image coming soon"
+        caption="A prototype, interaction, or implementation detail" />
 
       <div class="article-copy">
         <p>
@@ -156,50 +130,22 @@ export default defineComponent({
         </p>
       </div>
 
-      <figure class="editorial-figure">
-        <div class="image-placeholder" role="img" aria-label="Final project image coming soon">
-          <span>Final project image coming soon</span>
-        </div>
-        <figcaption>A final view or detail from {{ caseStudy.title }}</figcaption>
-      </figure>
+      <EditorialFigure label="Final project image coming soon" accessible-label="Final project image coming soon"
+        :caption="`A final view or detail from ${caseStudy.title}`" />
     </article>
+
+    <section class="next-project" aria-labelledby="next-project-label">
+      <p id="next-project-label" class="section-label">Next project</p>
+      <PortfolioLink class="next-project-link" :href="`/case-studies/${nextProject.slug}`" variant="cta" icon="arrow">
+        {{ nextProject.title }}
+      </PortfolioLink>
+    </section>
 
     <ContactSection />
   </main>
 </template>
 
 <style scoped>
-.case-study-hero {
-  position: relative;
-  min-height: 640px;
-  padding: 72px var(--page-padding) var(--space-10);
-  isolation: isolate;
-}
-
-.page-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-4);
-  align-items: center;
-}
-
-nav {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-nav > span {
-  color: var(--color-text-muted);
-}
-
-.case-study-intro {
-  max-width: 800px;
-  margin-top: var(--space-9);
-}
-
 .section-label {
   margin: 0;
   font-size: var(--font-label);
@@ -230,45 +176,16 @@ h1 {
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
   align-items: center;
-  margin-bottom: var(--space-4);
 }
 
-.intro-links > span {
+.intro-links>span {
   color: var(--color-text-muted);
   font-size: 16px;
 }
 
 .back-link {
   color: var(--color-text-muted);
-}
-
-.hero-figure {
-  margin: 0 var(--page-padding) var(--space-11);
-}
-
-.image-placeholder {
-  display: grid;
-  min-height: 560px;
-  place-items: center;
-  border-radius: 24px;
-  background: var(--color-placeholder);
-  color: var(--color-placeholder-text);
-}
-
-.image-placeholder--hero {
-  min-height: 640px;
-}
-
-.image-placeholder span {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-figcaption {
-  margin-top: var(--space-2);
-  color: var(--color-text-muted);
-  font-size: 14px;
+  margin-bottom: var(--space-4);
 }
 
 .case-study-article {
@@ -291,42 +208,24 @@ figcaption {
   line-height: 1.5;
 }
 
-.editorial-figure {
-  margin: 0 0 var(--space-11);
+.next-project {
+  margin: 0 var(--page-padding);
+  padding: var(--space-8) 0 var(--space-11);
+  text-align: right;
 }
 
-.editorial-figure--inset {
-  max-width: 960px;
+.next-project-link {
+  margin-top: var(--space-4);
   margin-left: auto;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 
 @media (max-width: 768px) {
-  .case-study-hero {
-    min-height: auto;
-    padding: var(--space-5) var(--page-padding) var(--space-9);
-  }
-
-  .page-header {
-    align-items: flex-start;
-  }
-
-  .case-study-intro {
-    margin-top: var(--space-8);
-  }
-
   h1 {
     margin: var(--space-3) 0;
     font-size: 40px;
-  }
-
-  .hero-figure {
-    margin-bottom: var(--space-9);
-  }
-
-  .image-placeholder,
-  .image-placeholder--hero {
-    min-height: 360px;
-    border-radius: 16px;
   }
 
   .case-study-article {
@@ -340,8 +239,8 @@ figcaption {
     margin-left: 0;
   }
 
-  .editorial-figure {
-    margin-bottom: var(--space-9);
+  .next-project {
+    padding: var(--space-7) 0 var(--space-9);
   }
 }
 </style>

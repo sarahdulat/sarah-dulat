@@ -102,6 +102,16 @@ describe('portfolio home', () => {
     expect(wrapper.find('.case-study-article').exists()).toBe(true)
     expect(wrapper.findAll('figure')).toHaveLength(4)
     expect(wrapper.find('a[href="https://www.theskinroutine.com"]').exists()).toBe(true)
-    expect(wrapper.text()).toContain('Figma link coming soon')
+    expect(wrapper.find('a[href="/case-studies/jest-halny"]').text()).toContain('Jest Halny?')
+  })
+
+  it('cycles from the second case study back to the first project', () => {
+    const wrapper = mount(CaseStudyPage, {
+      props: { slug: 'jest-halny' },
+    })
+
+    expect(wrapper.find('a[href="/case-studies/the-skin-routine"]').text()).toContain(
+      'The Skin Routine',
+    )
   })
 })

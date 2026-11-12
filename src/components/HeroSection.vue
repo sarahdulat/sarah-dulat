@@ -2,13 +2,13 @@
 import { defineComponent } from 'vue'
 
 import AmbientGlow from './AmbientGlow.vue'
-import PortfolioLink from './PortfolioLink.vue'
+import PrimaryNavigation from './PrimaryNavigation.vue'
 
 export default defineComponent({
   name: 'HeroSection',
   components: {
     AmbientGlow,
-    PortfolioLink,
+    PrimaryNavigation,
   },
 })
 </script>
@@ -21,13 +21,7 @@ export default defineComponent({
         Sarah Dulat-Boussaid — Design Engineer. I design what I build. From product design to
         front-end engineering, from concept to production.
       </h1>
-      <nav aria-label="Primary navigation">
-        <PortfolioLink href="#work" variant="nav">Work</PortfolioLink
-        ><span aria-hidden="true">/</span>
-        <PortfolioLink href="/about" variant="nav">About</PortfolioLink
-        ><span aria-hidden="true">/</span>
-        <PortfolioLink href="#contact" variant="nav">Contact</PortfolioLink>
-      </nav>
+      <PrimaryNavigation class="hero-navigation" work-href="#work" contact-href="#contact" />
     </header>
   </section>
 </template>
@@ -39,15 +33,8 @@ export default defineComponent({
   max-width: 1160px;
 }
 
-nav {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+.hero-navigation {
   margin-top: 32px;
-}
-
-nav > span {
-  color: var(--color-text-muted);
 }
 
 .hero {
@@ -60,15 +47,14 @@ nav > span {
 h1 {
   max-width: 1160px;
   margin: 0;
-  font-size: clamp(24px, 2.5vw, 36px);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.34;
+  font-size: var(--font-hero);
+  font-weight: var(--font-weight-hero);
+  letter-spacing: var(--letter-spacing-hero);
+  line-height: var(--line-height-hero);
 }
 
 @media (max-width: 768px) {
-  nav {
-    gap: 16px;
+  .hero-navigation {
     margin-top: 24px;
   }
 
@@ -79,8 +65,6 @@ h1 {
 
   h1 {
     max-width: 34rem;
-    font-size: clamp(21px, 6.2vw, 28px);
-    line-height: 1.33;
   }
 }
 
