@@ -1,8 +1,8 @@
 <script lang="ts">
-import type { PropType } from 'vue'
 import { defineComponent } from 'vue'
+import type { PropType } from 'vue'
 
-type FigureVariant = 'default' | 'hero' | 'inset'
+import type { FigureAlignment, FigureWidth } from '../types/caseStudy'
 
 export default defineComponent({
   name: 'EditorialFigure',
@@ -19,16 +19,31 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    variant: {
-      type: String as PropType<FigureVariant>,
-      default: 'default',
+    alignment: {
+      type: String as PropType<FigureAlignment>,
+      default: 'left',
+    },
+    width: {
+      type: String as PropType<FigureWidth>,
+      default: 'full',
+    },
+    hero: {
+      type: Boolean,
+      default: false,
     },
   },
 })
 </script>
 
 <template>
-  <figure class="editorial-figure" :class="`editorial-figure--${variant}`">
+  <figure
+    class="editorial-figure"
+    :class="[
+      `editorial-figure--align-${alignment}`,
+      `editorial-figure--width-${width}`,
+      { 'editorial-figure--hero': hero },
+    ]"
+  >
     <div class="image-placeholder" role="img" :aria-label="accessibleLabel">
       <span>{{ label }}</span>
     </div>
@@ -38,17 +53,46 @@ export default defineComponent({
 
 <style scoped>
 .editorial-figure {
+  width: 100%;
   margin: 0 0 var(--space-11);
 }
 
-.editorial-figure--hero {
-  margin-right: var(--page-padding);
-  margin-left: var(--page-padding);
+.editorial-figure--align-left {
+  margin-right: auto;
+  margin-left: 0;
 }
 
-.editorial-figure--inset {
-  max-width: 960px;
+.editorial-figure--align-center {
+  margin-right: auto;
   margin-left: auto;
+}
+
+.editorial-figure--align-right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.editorial-figure--width-small {
+  max-width: 640px;
+}
+
+.editorial-figure--width-medium {
+  max-width: 960px;
+}
+
+.editorial-figure--width-large {
+  max-width: 1120px;
+}
+
+.editorial-figure--width-full {
+  max-width: none;
+}
+
+.editorial-figure--hero {
+  width: auto;
+  max-width: none;
+  margin-right: var(--page-padding);
+  margin-left: var(--page-padding);
 }
 
 .image-placeholder {
@@ -62,6 +106,14 @@ export default defineComponent({
 
 .editorial-figure--hero .image-placeholder {
   min-height: 640px;
+}
+
+.editorial-figure--width-small:not(.editorial-figure--hero) .image-placeholder {
+  min-height: 420px;
+}
+
+.editorial-figure--width-medium:not(.editorial-figure--hero) .image-placeholder {
+  min-height: 500px;
 }
 
 .image-placeholder span {

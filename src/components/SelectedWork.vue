@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { caseStudies } from '../content/caseStudies'
 import ProjectCard from './ProjectCard.vue'
 
 interface Project {
@@ -18,22 +19,12 @@ export default defineComponent({
   },
   data(): { projects: Project[] } {
     return {
-      projects: [
-        {
-          title: 'The Skin Routine',
-          description:
-            'A personal project exploring skincare with a D3 chart of routines to choose from.',
-          href: '/case-studies/the-skin-routine',
-          linkLabel: 'View case study',
-        },
-        {
-          title: 'Jest Halny?',
-          description:
-            'A personal project exploring weather data to determine whether the Halny wind is blowing.',
-          href: '/case-studies/jest-halny',
-          linkLabel: 'View case study',
-        },
-      ],
+      projects: caseStudies.map((caseStudy) => ({
+        title: caseStudy.title,
+        description: caseStudy.summary,
+        href: `/case-studies/${caseStudy.slug}`,
+        linkLabel: 'View case study',
+      })),
     }
   },
 })
@@ -43,15 +34,9 @@ export default defineComponent({
   <section id="work" class="work-section" aria-labelledby="work-heading">
     <h2 id="work-heading">Selected work</h2>
     <div class="project-grid">
-      <ProjectCard
-        v-for="project in projects"
-        :key="project.title"
-        :title="project.title"
-        :description="project.description"
-        :href="project.href"
-        :link-label="project.linkLabel"
-        :external="project.external"
-      />
+      <ProjectCard v-for="project in projects" :key="project.title" :title="project.title"
+        :description="project.description" :href="project.href" :link-label="project.linkLabel"
+        :external="project.external" />
     </div>
   </section>
 </template>

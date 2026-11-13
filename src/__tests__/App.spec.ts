@@ -14,7 +14,7 @@ describe('portfolio home', () => {
     )
     expect(wrapper.findAll('.project-card')).toHaveLength(2)
     expect(wrapper.text()).toContain('The Skin Routine')
-    expect(wrapper.text()).toContain('Jest Halny?')
+    expect(wrapper.text()).toContain('Is it Halny?')
   })
 
   it('links the primary navigation to homepage sections', () => {
@@ -93,16 +93,21 @@ describe('portfolio home', () => {
     ])
   })
 
-  it('renders project-specific case study placeholders', () => {
+  it('renders the Skin Routine case study and image placeholders', () => {
     const wrapper = mount(CaseStudyPage, {
       props: { slug: 'the-skin-routine' },
     })
 
     expect(wrapper.get('h1').text()).toBe('The Skin Routine')
     expect(wrapper.find('.case-study-article').exists()).toBe(true)
-    expect(wrapper.findAll('figure')).toHaveLength(4)
+    expect(wrapper.text()).toContain('From spreadsheet to skincare guide')
+    expect(wrapper.text()).toContain('Making a growing chart usable')
+    expect(wrapper.text()).toContain('An ongoing experiment')
+    expect(wrapper.findAll('figure')).toHaveLength(5)
+    expect(wrapper.find('.editorial-figure--align-right').exists()).toBe(true)
+    expect(wrapper.find('.editorial-figure--width-medium').exists()).toBe(true)
     expect(wrapper.find('a[href="https://www.theskinroutine.com"]').exists()).toBe(true)
-    expect(wrapper.find('a[href="/case-studies/jest-halny"]').text()).toContain('Jest Halny?')
+    expect(wrapper.find('a[href="/case-studies/jest-halny"]').text()).toContain('Is it Halny?')
   })
 
   it('cycles from the second case study back to the first project', () => {
