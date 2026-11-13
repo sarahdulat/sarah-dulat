@@ -13,6 +13,11 @@ describe('portfolio home', () => {
       'Sarah Dulat-Boussaid — Design Engineer. I design what I build.',
     )
     expect(wrapper.findAll('.project-card')).toHaveLength(2)
+    expect(wrapper.findAll('.project-thumbnail')).toHaveLength(1)
+    expect(wrapper.get('.project-thumbnail').attributes('alt')).toContain(
+      'cost and time commitment',
+    )
+    expect(wrapper.findAll('.project-placeholder')).toHaveLength(1)
     expect(wrapper.text()).toContain('The Skin Routine')
     expect(wrapper.text()).toContain('Is it Halny?')
   })

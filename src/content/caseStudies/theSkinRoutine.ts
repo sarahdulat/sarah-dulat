@@ -4,6 +4,7 @@ import { filteredImage } from '../../assets/case-studies/the-skin-routine/filter
 import { googleSheetImage } from '../../assets/case-studies/the-skin-routine/google-sheet'
 import { homepageImage } from '../../assets/case-studies/the-skin-routine/homepage'
 import { reviewImage } from '../../assets/case-studies/the-skin-routine/review'
+import { thumbnailImage } from '../../assets/case-studies/the-skin-routine/thumbnail'
 
 export const theSkinRoutine: CaseStudy = {
   slug: 'the-skin-routine',
@@ -11,6 +12,10 @@ export const theSkinRoutine: CaseStudy = {
   eyebrow: 'Personal project · Product design · Front-end development · Vue · TypeScript · D3',
   summary:
     'An interactive skincare guide designed and built around the idea that the best routine is one that fits your life.',
+  thumbnail: {
+    image: thumbnailImage,
+    alt: 'The Skin Routine homepage showing routines plotted by cost and time commitment',
+  },
   liveUrl: 'https://www.theskinroutine.com',
   heroFigure: {
     alignment: 'center',
@@ -43,7 +48,7 @@ export const theSkinRoutine: CaseStudy = {
       type: 'copy',
       paragraphs: [
         'My first solution was an exhaustive Google Sheet. It contained products, instructions, alternatives, and links, but it also raised new questions: What if someone had less time, a smaller budget, or different skin concerns?',
-        'I imagined a four-quadrant chart that plotted routines by cost and time commitment. Instead of scrolling through endless recommendations, visitors could compare their options at a glance, choose a routine that fit their life, and explore its steps beside the chart.',
+        'The vision was very clear, I imagined a four-quadrant chart that plotted routines by cost and time commitment. Instead of scrolling through endless recommendations, visitors could compare their options at a glance, choose a routine that fit their life, and explore its steps beside the chart.',
       ],
     },
     {

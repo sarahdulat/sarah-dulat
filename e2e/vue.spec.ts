@@ -23,7 +23,7 @@ test('lets the selected work images peek into a typical desktop viewport', async
 
   const workHeading = page.getByRole('heading', { name: 'Selected work' })
   const headingBox = await workHeading.boundingBox()
-  const firstProjectImage = await page.locator('.project-placeholder').first().boundingBox()
+  const firstProjectImage = await page.locator('.project-media').first().boundingBox()
 
   expect(headingBox).not.toBeNull()
   expect(headingBox!.y).toBeLessThan(900)

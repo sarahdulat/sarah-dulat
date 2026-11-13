@@ -13,6 +13,11 @@ export interface ResponsiveImage {
   height: number
 }
 
+export interface ProjectThumbnail {
+  image: ResponsiveImage
+  alt: string
+}
+
 export interface CaseStudyFigure {
   type: 'figure'
   label: string
@@ -37,6 +42,7 @@ export interface CaseStudy {
   title: string
   eyebrow?: string
   summary: string
+  thumbnail?: ProjectThumbnail
   liveUrl?: string
   figmaUrl?: string
   heroFigure: Omit<CaseStudyFigure, 'type'>

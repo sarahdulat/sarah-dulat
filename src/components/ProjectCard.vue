@@ -1,6 +1,7 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 
+import type { ProjectThumbnail } from '../types/caseStudy'
 import PortfolioLink from './PortfolioLink.vue'
 
 export default defineComponent({
@@ -25,6 +26,10 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    thumbnail: {
+      type: Object as PropType<ProjectThumbnail>,
+      default: undefined,
+    },
     external: {
       type: Boolean,
       default: false,
@@ -35,7 +40,24 @@ export default defineComponent({
 
 <template>
   <article class="project-card">
-    <div class="project-placeholder" role="img" :aria-label="`${title} project image coming soon`">
+    <img
+      v-if="thumbnail"
+      class="project-media project-thumbnail"
+      :src="thumbnail.image.src"
+      :srcset="thumbnail.image.srcset.map((source) => `${source.src} ${source.width}w`).join(', ')"
+      sizes="(max-width: 768px) calc(100vw - 48px), 624px"
+      :width="thumbnail.image.width"
+      :height="thumbnail.image.height"
+      :alt="thumbnail.alt"
+      loading="lazy"
+      decoding="async"
+    />
+    <div
+      v-else
+      class="project-media project-placeholder"
+      role="img"
+      :aria-label="`${title} project image coming soon`"
+    >
       <span>Image coming soon</span>
     </div>
     <h3>{{ title }}</h3>
@@ -57,13 +79,24 @@ export default defineComponent({
   min-width: 0;
 }
 
+.project-media {
+  width: 100%;
+  aspect-ratio: 1.29 / 1;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+}
+
+.project-thumbnail {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-placeholder {
   display: grid;
-  width: 100%;
-  aspect-ratio: 1.55 / 1;
   place-items: center;
-  overflow: hidden;
-  border-radius: 24px;
   background: var(--color-placeholder);
   color: var(--color-placeholder-text);
 }
@@ -102,7 +135,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .project-placeholder {
+  .project-media {
     border-radius: 16px;
   }
 

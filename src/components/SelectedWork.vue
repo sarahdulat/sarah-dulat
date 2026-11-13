@@ -2,6 +2,7 @@
 import { defineComponent } from 'vue'
 
 import { caseStudies } from '../content/caseStudies'
+import type { ProjectThumbnail } from '../types/caseStudy'
 import ProjectCard from './ProjectCard.vue'
 
 interface Project {
@@ -9,6 +10,7 @@ interface Project {
   description: string
   href: string
   linkLabel: string
+  thumbnail?: ProjectThumbnail
   external?: boolean
 }
 
@@ -24,6 +26,7 @@ export default defineComponent({
         description: caseStudy.summary,
         href: `/case-studies/${caseStudy.slug}`,
         linkLabel: 'View case study',
+        thumbnail: caseStudy.thumbnail,
       })),
     }
   },
@@ -34,9 +37,16 @@ export default defineComponent({
   <section id="work" class="work-section" aria-labelledby="work-heading">
     <h2 id="work-heading">Selected work</h2>
     <div class="project-grid">
-      <ProjectCard v-for="project in projects" :key="project.title" :title="project.title"
-        :description="project.description" :href="project.href" :link-label="project.linkLabel"
-        :external="project.external" />
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.title"
+        :title="project.title"
+        :description="project.description"
+        :href="project.href"
+        :link-label="project.linkLabel"
+        :thumbnail="project.thumbnail"
+        :external="project.external"
+      />
     </div>
   </section>
 </template>
