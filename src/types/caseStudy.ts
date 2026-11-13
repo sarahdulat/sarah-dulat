@@ -1,11 +1,24 @@
 export type FigureAlignment = 'left' | 'center' | 'right'
 export type FigureWidth = 'small' | 'medium' | 'large' | 'full'
 
+export interface ResponsiveImageSource {
+  src: string
+  width: number
+}
+
+export interface ResponsiveImage {
+  src: string
+  srcset: ResponsiveImageSource[]
+  width: number
+  height: number
+}
+
 export interface CaseStudyFigure {
   type: 'figure'
   label: string
   accessibleLabel: string
   caption: string
+  image?: ResponsiveImage
   alignment?: FigureAlignment
   width?: FigureWidth
 }

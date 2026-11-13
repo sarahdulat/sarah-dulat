@@ -1,4 +1,9 @@
 import type { CaseStudy } from '../../types/caseStudy'
+import { clustersImage } from '../../assets/case-studies/the-skin-routine/clusters'
+import { filteredImage } from '../../assets/case-studies/the-skin-routine/filtered'
+import { googleSheetImage } from '../../assets/case-studies/the-skin-routine/google-sheet'
+import { homepageImage } from '../../assets/case-studies/the-skin-routine/homepage'
+import { reviewImage } from '../../assets/case-studies/the-skin-routine/review'
 
 export const theSkinRoutine: CaseStudy = {
   slug: 'the-skin-routine',
@@ -10,14 +15,16 @@ export const theSkinRoutine: CaseStudy = {
   heroFigure: {
     alignment: 'center',
     width: 'full',
+    image: homepageImage,
     label: 'Homepage screenshot placeholder',
-    accessibleLabel: 'The Skin Routine opening case study image placeholder',
+    accessibleLabel:
+      'The Skin Routine homepage showing the routine chart and Sarah’s selected routine',
     caption: 'The Skin Routine homepage and interactive routine finder',
   },
   blocks: [
     {
       type: 'copy',
-      heading: 'From spreadsheet to skincare guide',
+      heading: 'From spreadsheet to interactive chart',
       paragraphs: [
         'The Skin Routine started with a familiar conversation. Friends and family would ask about my skincare routine, I would enthusiastically explain every step and product, and eventually someone would ask me to write it all down.',
       ],
@@ -27,7 +34,9 @@ export const theSkinRoutine: CaseStudy = {
       label: 'Original Google Sheet placeholder',
       alignment: 'right',
       width: 'medium',
-      accessibleLabel: 'Placeholder for the original skincare routine Google Sheet',
+      image: googleSheetImage,
+      accessibleLabel:
+        'The original Google Sheet showing Sarah’s detailed morning and evening skincare routines and product recommendations',
       caption: 'The detailed spreadsheet that inspired a more flexible way to explore routines',
     },
     {
@@ -40,7 +49,7 @@ export const theSkinRoutine: CaseStudy = {
     {
       type: 'copy',
       offset: true,
-      heading: 'Designing for complexity',
+      heading: 'Designing for ease of use',
       paragraphs: [
         'The chart was the starting point, but the interface became more crowded as I added routines. Celebrity routines revealed an unexpected pattern: many landed in the expensive, low-time-commitment corner, while my own, more completely documented routine became an outlier.',
         'Filters and keyword search help visitors narrow the field by concern, product, or person without losing the broader overview. The chart scales down on smaller screens so the same mental model carries across devices.',
@@ -48,15 +57,18 @@ export const theSkinRoutine: CaseStudy = {
     },
     {
       type: 'figure',
-      label: 'Selected routine chart placeholder',
+      label: 'Filtered routine chart placeholder',
       alignment: 'center',
-      width: 'full',
-      accessibleLabel: 'Placeholder for the four-quadrant chart with a skincare routine selected',
-      caption: 'The four-quadrant chart with step-by-step routine details open alongside it',
+      width: 'large',
+      image: filteredImage,
+      accessibleLabel:
+        'The routine chart filtered to people in their 20s with acne-prone skin, with Sabrina Carpenter’s routine selected',
+      caption:
+        'Filters and keyword search help visitors narrow a crowded chart to routines that fit their needs',
     },
     {
       type: 'copy',
-      heading: 'Making a growing chart usable',
+      heading: 'Handling complexity',
       paragraphs: [
         "I built custom proximity-based clustering around the points' rendered positions. When routines appear close together, they collapse into an interactive group that opens a popover for individual selection.",
         'The distance threshold adapts to the available space, preserving more individual points on desktop while grouping more aggressively on mobile. It was a useful reminder that an interface designed around a small dataset has to evolve with its content.',
@@ -67,8 +79,9 @@ export const theSkinRoutine: CaseStudy = {
       alignment: 'right',
       width: 'medium',
       label: 'Responsive cluster interaction placeholder',
+      image: clustersImage,
       accessibleLabel:
-        'Placeholder showing clustered routine points and their expanded popover on desktop and mobile',
+        'A close-up of clustered routine points with a popover listing three individual routines',
       caption: 'Nearby routines group responsively, then expand into a popover for selection',
     },
     {
@@ -84,7 +97,9 @@ export const theSkinRoutine: CaseStudy = {
       label: 'Reviews and related routines placeholder',
       alignment: 'left',
       width: 'large',
-      accessibleLabel: 'Placeholder for a product review connected to related skincare routines',
+      image: reviewImage,
+      accessibleLabel:
+        'A product review page with featured products, related routines, and the review archive',
       caption:
         'Product reviews and routines link to one another to create a connected browsing experience',
     },

@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
 
-import type { FigureAlignment, FigureWidth } from '../types/caseStudy'
+import type { FigureAlignment, FigureWidth, ResponsiveImage } from '../types/caseStudy'
 
 export default defineComponent({
   name: 'EditorialFigure',
@@ -19,6 +19,10 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    image: {
+      type: Object as PropType<ResponsiveImage>,
+      default: undefined,
+    },
     alignment: {
       type: String as PropType<FigureAlignment>,
       default: 'left',
@@ -30,6 +34,22 @@ export default defineComponent({
     hero: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    imageSrcset(): string | undefined {
+      return this.image?.srcset.map(({ src, width }) => `${src} ${width}w`).join(', ')
+    },
+    imageSizes(): string {
+      const maximumWidths: Record<FigureWidth, number> = {
+        small: 640,
+        medium: 960,
+        large: 1120,
+        full: 1296,
+      }
+      const maximumWidth = maximumWidths[this.width]
+
+      return `(max-width: ${maximumWidth + 48}px) calc(100vw - 48px), ${maximumWidth}px`
     },
   },
 })
@@ -44,7 +64,20 @@ export default defineComponent({
       { 'editorial-figure--hero': hero },
     ]"
   >
-    <div class="image-placeholder" role="img" :aria-label="accessibleLabel">
+    <img
+      v-if="image"
+      class="project-image"
+      :src="image.src"
+      :srcset="imageSrcset"
+      :sizes="imageSizes"
+      :width="image.width"
+      :height="image.height"
+      :alt="accessibleLabel"
+      :loading="hero ? 'eager' : 'lazy'"
+      :fetchpriority="hero ? 'high' : undefined"
+      decoding="async"
+    />
+    <div v-else class="image-placeholder" role="img" :aria-label="accessibleLabel">
       <span>{{ label }}</span>
     </div>
     <figcaption>{{ caption }}</figcaption>
@@ -104,6 +137,14 @@ export default defineComponent({
   color: var(--color-placeholder-text);
 }
 
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+}
+
 .editorial-figure--hero .image-placeholder {
   min-height: 640px;
 }
@@ -136,6 +177,10 @@ figcaption {
   .image-placeholder,
   .editorial-figure--hero .image-placeholder {
     min-height: 360px;
+    border-radius: 16px;
+  }
+
+  .project-image {
     border-radius: 16px;
   }
 }

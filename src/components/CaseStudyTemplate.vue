@@ -40,34 +40,68 @@ export default defineComponent({
       <p class="summary">{{ caseStudy.summary }}</p>
       <p v-if="caseStudy.eyebrow" class="project-meta">{{ caseStudy.eyebrow }}</p>
       <div class="intro-links">
-        <PortfolioLink v-if="caseStudy.liveUrl" :href="caseStudy.liveUrl" variant="utility" icon="external" external>
+        <PortfolioLink
+          v-if="caseStudy.liveUrl"
+          :href="caseStudy.liveUrl"
+          variant="utility"
+          icon="external"
+          external
+        >
           Visit live site
         </PortfolioLink>
-        <PortfolioLink v-if="caseStudy.figmaUrl" :href="caseStudy.figmaUrl" variant="utility" icon="external" external>
+        <PortfolioLink
+          v-if="caseStudy.figmaUrl"
+          :href="caseStudy.figmaUrl"
+          variant="utility"
+          icon="external"
+          external
+        >
           View designs in Figma
         </PortfolioLink>
       </div>
     </InteriorHero>
 
-    <EditorialFigure hero :alignment="caseStudy.heroFigure.alignment" :width="caseStudy.heroFigure.width"
-      :label="caseStudy.heroFigure.label" :accessible-label="caseStudy.heroFigure.accessibleLabel"
-      :caption="caseStudy.heroFigure.caption" />
+    <EditorialFigure
+      hero
+      :alignment="caseStudy.heroFigure.alignment"
+      :width="caseStudy.heroFigure.width"
+      :image="caseStudy.heroFigure.image"
+      :label="caseStudy.heroFigure.label"
+      :accessible-label="caseStudy.heroFigure.accessibleLabel"
+      :caption="caseStudy.heroFigure.caption"
+    />
 
     <article class="case-study-article" :aria-label="`${caseStudy.title} case study`">
       <template v-for="(block, index) in caseStudy.blocks" :key="`${block.type}-${index}`">
-        <div v-if="block.type === 'copy'" class="article-copy" :class="{ 'article-copy--offset': block.offset }">
+        <div
+          v-if="block.type === 'copy'"
+          class="article-copy"
+          :class="{ 'article-copy--offset': block.offset }"
+        >
           <h2 v-if="block.heading">{{ block.heading }}</h2>
           <p v-for="paragraph in block.paragraphs" :key="paragraph">{{ paragraph }}</p>
         </div>
 
-        <EditorialFigure v-else :alignment="block.alignment" :width="block.width" :label="block.label"
-          :accessible-label="block.accessibleLabel" :caption="block.caption" />
+        <EditorialFigure
+          v-else
+          :alignment="block.alignment"
+          :width="block.width"
+          :image="block.image"
+          :label="block.label"
+          :accessible-label="block.accessibleLabel"
+          :caption="block.caption"
+        />
       </template>
     </article>
 
     <section class="next-project" aria-labelledby="next-project-label">
       <p id="next-project-label" class="section-label">Next project</p>
-      <PortfolioLink class="next-project-link" :href="`/case-studies/${nextProject.slug}`" variant="cta" icon="arrow">
+      <PortfolioLink
+        class="next-project-link"
+        :href="`/case-studies/${nextProject.slug}`"
+        variant="cta"
+        icon="arrow"
+      >
         {{ nextProject.title }}
       </PortfolioLink>
     </section>

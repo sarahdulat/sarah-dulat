@@ -93,17 +93,28 @@ describe('portfolio home', () => {
     ])
   })
 
-  it('renders the Skin Routine case study and image placeholders', () => {
+  it('renders the Skin Routine case study with responsive images and placeholders', () => {
     const wrapper = mount(CaseStudyPage, {
       props: { slug: 'the-skin-routine' },
     })
 
     expect(wrapper.get('h1').text()).toBe('The Skin Routine')
     expect(wrapper.find('.case-study-article').exists()).toBe(true)
-    expect(wrapper.text()).toContain('From spreadsheet to skincare guide')
-    expect(wrapper.text()).toContain('Making a growing chart usable')
+    expect(wrapper.text()).toContain('From spreadsheet to interactive chart')
+    expect(wrapper.text()).toContain('Handling complexity')
     expect(wrapper.text()).toContain('An ongoing experiment')
     expect(wrapper.findAll('figure')).toHaveLength(5)
+    expect(wrapper.findAll('.project-image')).toHaveLength(5)
+    expect(wrapper.findAll('.image-placeholder')).toHaveLength(0)
+    expect(wrapper.get('.project-image').attributes('srcset')).toContain('640w')
+    expect(wrapper.get('.project-image').attributes('srcset')).toContain('2560w')
+    expect(wrapper.get('.project-image').attributes('loading')).toBe('eager')
+    expect(
+      wrapper
+        .findAll('.project-image')
+        .slice(1)
+        .every((image) => image.attributes('loading') === 'lazy'),
+    ).toBe(true)
     expect(wrapper.find('.editorial-figure--align-right').exists()).toBe(true)
     expect(wrapper.find('.editorial-figure--width-medium').exists()).toBe(true)
     expect(wrapper.find('a[href="https://www.theskinroutine.com"]').exists()).toBe(true)
