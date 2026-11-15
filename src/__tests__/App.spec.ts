@@ -8,16 +8,16 @@ import HomePage from '../pages/HomePage.vue'
 describe('portfolio home', () => {
   it('renders the homepage content and both projects', () => {
     const wrapper = mount(HomePage)
+    const thumbnails = wrapper.findAll('.project-thumbnail')
 
     expect(wrapper.get('h1').text()).toContain(
       'Sarah Dulat-Boussaid — Design Engineer. I design what I build.',
     )
     expect(wrapper.findAll('.project-card')).toHaveLength(2)
-    expect(wrapper.findAll('.project-thumbnail')).toHaveLength(1)
-    expect(wrapper.get('.project-thumbnail').attributes('alt')).toContain(
-      'cost and time commitment',
-    )
-    expect(wrapper.findAll('.project-placeholder')).toHaveLength(1)
+    expect(thumbnails).toHaveLength(2)
+    expect(thumbnails[0]!.attributes('alt')).toContain('cost and time commitment')
+    expect(thumbnails[1]!.attributes('alt')).toContain('maybe result')
+    expect(wrapper.findAll('.project-placeholder')).toHaveLength(0)
     expect(wrapper.text()).toContain('The Skin Routine')
     expect(wrapper.text()).toContain('Is it Halny?')
   })
@@ -36,12 +36,12 @@ describe('portfolio home', () => {
     expect(wrapper.find('#contact').exists()).toBe(true)
   })
 
-  it('gives every orange call to action a real destination', () => {
+  it('gives every homepage content link a real destination', () => {
     const wrapper = mount(HomePage)
-    const callsToAction = wrapper.findAll('.portfolio-link--cta')
+    const contentLinks = wrapper.findAll('.project-link, .about-section .portfolio-link')
 
-    expect(callsToAction).toHaveLength(3)
-    expect(callsToAction.every((link) => Boolean(link.attributes('href')))).toBe(true)
+    expect(contentLinks).toHaveLength(3)
+    expect(contentLinks.every((link) => Boolean(link.attributes('href')))).toBe(true)
     expect(wrapper.find('a[href="/case-studies/the-skin-routine"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/case-studies/jest-halny"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/about"]').exists()).toBe(true)
@@ -51,8 +51,8 @@ describe('portfolio home', () => {
     const wrapper = mount(HomePage)
 
     expect(wrapper.findAll('.portfolio-link--nav')).toHaveLength(3)
-    expect(wrapper.findAll('.portfolio-link--cta')).toHaveLength(3)
-    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(3)
+    expect(wrapper.findAll('.portfolio-link--cta')).toHaveLength(0)
+    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(6)
   })
 
   it('reuses the ambient glow in the hero and footer', () => {
@@ -108,8 +108,8 @@ describe('portfolio home', () => {
     expect(wrapper.text()).toContain('From spreadsheet to interactive chart')
     expect(wrapper.text()).toContain('Handling complexity')
     expect(wrapper.text()).toContain('An ongoing experiment')
-    expect(wrapper.findAll('figure')).toHaveLength(5)
-    expect(wrapper.findAll('.project-image')).toHaveLength(5)
+    expect(wrapper.findAll('figure')).toHaveLength(6)
+    expect(wrapper.findAll('.project-image')).toHaveLength(6)
     expect(wrapper.findAll('.image-placeholder')).toHaveLength(0)
     expect(wrapper.get('.project-image').attributes('srcset')).toContain('640w')
     expect(wrapper.get('.project-image').attributes('srcset')).toContain('2560w')
@@ -131,6 +131,22 @@ describe('portfolio home', () => {
       props: { slug: 'jest-halny' },
     })
 
+    expect(wrapper.text()).toContain('What makes it Halny?')
+    expect(wrapper.text()).toContain('Turning weather into an indicator')
+    expect(wrapper.text()).toContain('Simplifying the interface')
+    expect(wrapper.text()).toContain('Building the experience')
+    expect(wrapper.text()).toContain('What I would improve')
+    expect(wrapper.find('iframe').exists()).toBe(false)
+    expect(wrapper.get('.article-side-figure img').attributes('alt')).toContain(
+      'six individual weather condition cards',
+    )
+    expect(
+      wrapper
+        .find(
+          'a[href="https://aerapa.conference.ubbcluj.ro/2015/PDF/15_SLIWINSKA_CIARANEK_109_116.pdf"]',
+        )
+        .exists(),
+    ).toBe(true)
     expect(wrapper.find('a[href="/case-studies/the-skin-routine"]').text()).toContain(
       'The Skin Routine',
     )

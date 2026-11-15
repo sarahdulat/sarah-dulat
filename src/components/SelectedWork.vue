@@ -35,18 +35,10 @@ export default defineComponent({
 
 <template>
   <section id="work" class="work-section" aria-labelledby="work-heading">
-    <h2 id="work-heading">Selected work</h2>
     <div class="project-grid">
-      <ProjectCard
-        v-for="project in projects"
-        :key="project.title"
-        :title="project.title"
-        :description="project.description"
-        :href="project.href"
-        :link-label="project.linkLabel"
-        :thumbnail="project.thumbnail"
-        :external="project.external"
-      />
+      <ProjectCard v-for="project in projects" :key="project.title" :title="project.title"
+        :description="project.description" :href="project.href" :link-label="project.linkLabel"
+        :thumbnail="project.thumbnail" :external="project.external" />
     </div>
   </section>
 </template>

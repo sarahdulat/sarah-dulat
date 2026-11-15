@@ -32,6 +32,18 @@ export interface CaseStudyCopy {
   type: 'copy'
   heading?: string
   paragraphs: string[]
+  sideFigure?: Omit<CaseStudyFigure, 'type' | 'alignment' | 'width'>
+  embed?: {
+    src: string
+    title: string
+    caption?: string
+    width: number
+    height: number
+  }
+  links?: Array<{
+    label: string
+    href: string
+  }>
   offset?: boolean
 }
 

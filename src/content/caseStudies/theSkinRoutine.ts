@@ -1,10 +1,10 @@
 import type { CaseStudy } from '../../types/caseStudy'
+import { chartMockupImage } from '../../assets/case-studies/the-skin-routine/chart-mockup'
 import { clustersImage } from '../../assets/case-studies/the-skin-routine/clusters'
 import { filteredImage } from '../../assets/case-studies/the-skin-routine/filtered'
 import { googleSheetImage } from '../../assets/case-studies/the-skin-routine/google-sheet'
 import { homepageImage } from '../../assets/case-studies/the-skin-routine/homepage'
 import { reviewImage } from '../../assets/case-studies/the-skin-routine/review'
-import { thumbnailImage } from '../../assets/case-studies/the-skin-routine/thumbnail'
 
 export const theSkinRoutine: CaseStudy = {
   slug: 'the-skin-routine',
@@ -13,7 +13,7 @@ export const theSkinRoutine: CaseStudy = {
   summary:
     'An interactive skincare guide designed and built around the idea that the best routine is one that fits your life.',
   thumbnail: {
-    image: thumbnailImage,
+    image: homepageImage,
     alt: 'The Skin Routine homepage showing routines plotted by cost and time commitment',
   },
   liveUrl: 'https://www.theskinroutine.com',
@@ -21,7 +21,7 @@ export const theSkinRoutine: CaseStudy = {
     alignment: 'center',
     width: 'full',
     image: homepageImage,
-    label: 'Homepage screenshot placeholder',
+    label: 'Homepage screenshot',
     accessibleLabel:
       'The Skin Routine homepage showing the routine chart and Sarah’s selected routine',
     caption: 'The Skin Routine homepage and interactive routine finder',
@@ -31,12 +31,12 @@ export const theSkinRoutine: CaseStudy = {
       type: 'copy',
       heading: 'From spreadsheet to interactive chart',
       paragraphs: [
-        'The Skin Routine started with a familiar conversation. Friends and family would ask about my skincare routine, I would enthusiastically explain every step and product, and eventually someone would ask me to write it all down.',
+        'The Skin Routine started with a familiar conversation. Friends and family would ask about my skincare routine. I would enthusiastically explain every step and product, and eventually, someone would ask me to write it all down.',
       ],
     },
     {
       type: 'figure',
-      label: 'Original Google Sheet placeholder',
+      label: 'Original Google Sheet',
       alignment: 'right',
       width: 'medium',
       image: googleSheetImage,
@@ -48,21 +48,32 @@ export const theSkinRoutine: CaseStudy = {
       type: 'copy',
       paragraphs: [
         'My first solution was an exhaustive Google Sheet. It contained products, instructions, alternatives, and links, but it also raised new questions: What if someone had less time, a smaller budget, or different skin concerns?',
-        'The vision was very clear, I imagined a four-quadrant chart that plotted routines by cost and time commitment. Instead of scrolling through endless recommendations, visitors could compare their options at a glance, choose a routine that fit their life, and explore its steps beside the chart.',
+        'The vision was clear: I imagined a four-quadrant chart that plotted routines by cost and time commitment. Instead of scrolling through endless recommendations, visitors could compare their options at a glance, choose a routine that fit their life, and explore its steps beside the chart.',
       ],
+    },
+    {
+      type: 'figure',
+      label: 'Early chart mockup',
+      alignment: 'center',
+      width: 'small',
+      image: chartMockupImage,
+      accessibleLabel:
+        'An early four-quadrant chart mockup plotting skincare routines by cost and time, with Sarah’s routine selected',
+      caption:
+        'The early chart concept organized routines by cost and time commitment before the interface was built',
     },
     {
       type: 'copy',
       offset: true,
       heading: 'Designing for ease of use',
       paragraphs: [
-        'The chart was the starting point, but the interface became more crowded as I added routines. Celebrity routines revealed an unexpected pattern: many landed in the expensive, low-time-commitment corner, while my own, more completely documented routine became an outlier.',
+        'The chart was the starting point, but the interface became more crowded as I added routines. Celebrity routines revealed an unexpected pattern: many landed in the expensive, low-time-commitment corner, while my own, more thoroughly documented routine became an outlier.',
         'Filters and keyword search help visitors narrow the field by concern, product, or person without losing the broader overview. The chart scales down on smaller screens so the same mental model carries across devices.',
       ],
     },
     {
       type: 'figure',
-      label: 'Filtered routine chart placeholder',
+      label: 'Filtered routine chart',
       alignment: 'center',
       width: 'large',
       image: filteredImage,
@@ -75,15 +86,15 @@ export const theSkinRoutine: CaseStudy = {
       type: 'copy',
       heading: 'Handling complexity',
       paragraphs: [
-        "I built custom proximity-based clustering around the points' rendered positions. When routines appear close together, they collapse into an interactive group that opens a popover for individual selection.",
+        "I built a custom proximity-based clustering system using the points' rendered positions. When routines appear close together, they collapse into an interactive group that opens a popover for individual selection.",
         'The distance threshold adapts to the available space, preserving more individual points on desktop while grouping more aggressively on mobile. It was a useful reminder that an interface designed around a small dataset has to evolve with its content.',
       ],
     },
     {
       type: 'figure',
-      alignment: 'right',
+      alignment: 'center',
       width: 'medium',
-      label: 'Responsive cluster interaction placeholder',
+      label: 'Responsive cluster interaction',
       image: clustersImage,
       accessibleLabel:
         'A close-up of clustered routine points with a popover listing three individual routines',
@@ -91,7 +102,6 @@ export const theSkinRoutine: CaseStudy = {
     },
     {
       type: 'copy',
-      offset: true,
       heading: 'Building a connected experience',
       paragraphs: [
         'Celebrity routines helped populate the early chart and introduced a playful, curiosity-driven way to explore skincare. As the site grew, I added product reviews and connected them to related routines. Reviews link back to routines, while routines surface relevant reviews, giving visitors more than one path through the content.',
@@ -99,8 +109,8 @@ export const theSkinRoutine: CaseStudy = {
     },
     {
       type: 'figure',
-      label: 'Reviews and related routines placeholder',
-      alignment: 'left',
+      label: 'Reviews and related routines',
+      alignment: 'right',
       width: 'large',
       image: reviewImage,
       accessibleLabel:
@@ -111,7 +121,7 @@ export const theSkinRoutine: CaseStudy = {
     {
       type: 'copy',
       paragraphs: [
-        'I designed and developed the project from concept to launch using Vue, TypeScript, and D3. It also gave me space to explore Playwright and to build the interface with scoped CSS, choosing tools and patterns that suited the product rather than following a trend.',
+        'I designed and developed the project from concept to launch using Vue, TypeScript, and D3. It also gave me space to explore end-to-end testing with Playwright and build the interface with scoped CSS, choosing tools and patterns that suited the product rather than following a trend.',
       ],
     },
     {

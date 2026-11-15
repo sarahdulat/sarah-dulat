@@ -20,7 +20,7 @@ export default defineComponent({
         I bring a design-first perspective to engineering, creating intuitive, accessible interfaces
         that balance aesthetics with functionality.
       </p>
-      <PortfolioLink href="/about" variant="cta" icon="arrow">More about me</PortfolioLink>
+      <PortfolioLink href="/about" variant="utility" icon="arrow">More about me</PortfolioLink>
     </div>
 
     <div class="expertise">

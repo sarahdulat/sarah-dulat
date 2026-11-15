@@ -65,7 +65,7 @@ export default defineComponent({
     <PortfolioLink
       class="project-link"
       :href="href"
-      variant="cta"
+      variant="utility"
       :icon="external ? 'external' : 'arrow'"
       :external="external"
       :aria-label="linkLabel"
@@ -81,7 +81,6 @@ export default defineComponent({
 
 .project-media {
   width: 100%;
-  aspect-ratio: 1.29 / 1;
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 24px;
@@ -90,8 +89,6 @@ export default defineComponent({
 .project-thumbnail {
   display: block;
   height: auto;
-  object-fit: cover;
-  object-position: center;
 }
 
 .project-placeholder {
