@@ -7,6 +7,7 @@
     "dev": "vite",
     "optimize-image": "node scripts/optimize-case-study-image.mjs",
     "build": "run-p type-check \"build-only {@}\" --",
+    "postbuild": "node scripts/create-spa-fallback.mjs",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",

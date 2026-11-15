@@ -4,6 +4,7 @@ import { mount } from '@vue/test-utils'
 import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
+import NotFoundPage from '../pages/NotFoundPage.vue'
 
 describe('portfolio home', () => {
   it('renders the homepage content and both projects', () => {
@@ -150,5 +151,18 @@ describe('portfolio home', () => {
     expect(wrapper.find('a[href="/case-studies/the-skin-routine"]').text()).toContain(
       'The Skin Routine',
     )
+  })
+
+  it('renders a useful not-found page for unknown routes and case studies', () => {
+    const pageWrapper = mount(NotFoundPage)
+    const caseStudyWrapper = mount(CaseStudyPage, {
+      props: { slug: 'missing-project' },
+    })
+
+    expect(pageWrapper.get('h1').text()).toBe('Page not found.')
+    expect(pageWrapper.find('a[href="/"]').exists()).toBe(true)
+    expect(pageWrapper.find('a[href="/case-studies/the-skin-routine"]').exists()).toBe(true)
+    expect(pageWrapper.find('a[href="/case-studies/jest-halny"]').exists()).toBe(true)
+    expect(caseStudyWrapper.get('h1').text()).toBe('Page not found.')
   })
 })
