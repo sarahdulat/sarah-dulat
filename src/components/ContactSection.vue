@@ -12,17 +12,36 @@ export default defineComponent({
   },
   data() {
     return {
+      baselTime: '',
+      clockTimer: undefined as number | undefined,
       copied: false,
       copyResetTimer: undefined as number | undefined,
       email: 'hello@sarahdulat.com',
     }
   },
+  mounted() {
+    this.updateBaselTime()
+    this.clockTimer = window.setInterval(this.updateBaselTime, 60_000)
+  },
   beforeUnmount() {
+    if (this.clockTimer) {
+      window.clearInterval(this.clockTimer)
+    }
+
     if (this.copyResetTimer) {
       window.clearTimeout(this.copyResetTimer)
     }
   },
   methods: {
+    updateBaselTime() {
+      this.baselTime = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/Zurich',
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23',
+        timeZoneName: 'short',
+      }).format(new Date())
+    },
     async copyEmail() {
       try {
         await navigator.clipboard.writeText(this.email)
@@ -57,30 +76,25 @@ export default defineComponent({
       <p>I’m open to full-time opportunities, freelance projects, and collaborations.</p>
       <div class="footer-actions" aria-label="Contact links">
         <span class="copy-action">
-          <PortfolioLink
-            variant="utility"
-            button
-            :aria-label="copied ? 'Email copied' : `Copy ${email}`"
-            @click="copyEmail"
-          >
+          <PortfolioLink variant="utility" button :aria-label="copied ? 'Email copied' : `Copy ${email}`"
+            @click="copyEmail">
             {{ email }}
           </PortfolioLink>
-          <span class="copy-tooltip" :class="{ 'copy-tooltip--visible': copied }" aria-hidden="true"
-            >Copied</span
-          >
+          <span class="copy-tooltip" :class="{ 'copy-tooltip--visible': copied }" aria-hidden="true">Copied</span>
         </span>
-        <PortfolioLink
-          href="https://www.linkedin.com/in/sarahdulat/"
-          variant="utility"
-          icon="external"
-          external
-          >LinkedIn</PortfolioLink
-        >
-        <PortfolioLink href="/SarahDulat-Resume.pdf" variant="utility" icon="external" external
-          >Résumé</PortfolioLink
-        >
+        <PortfolioLink href="https://www.linkedin.com/in/sarahdulat/" variant="utility" icon="external" external>
+          LinkedIn</PortfolioLink>
+        <PortfolioLink href="/SarahDulat-Resume.pdf" variant="utility" icon="external" external>Résumé</PortfolioLink>
       </div>
       <span class="copy-status" aria-live="polite">{{ copied ? 'Email copied' : '' }}</span>
+    </div>
+    <div class="footer-meta">
+      <p>
+        <span>Basel, Switzerland</span>
+        <span class="footer-meta__separator" aria-hidden="true">·</span>
+        <span aria-label="Current local time in Basel">{{ baselTime }}</span>
+      </p>
+      <p>Working remotely across time zones</p>
     </div>
   </footer>
 </template>
@@ -118,6 +132,28 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-4);
+}
+
+.footer-meta {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  /* border-top: 1px solid var(--color-border); */
+  color: var(--color-text-muted);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.footer-meta p {
+  margin: 0;
+}
+
+.footer-meta__separator {
+  margin: 0 0.55em;
 }
 
 .copy-action {
@@ -182,9 +218,18 @@ h2 {
   .footer-actions {
     gap: var(--space-2) var(--space-3);
   }
+
+  .footer-meta {
+    flex-direction: column;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+    padding-top: var(--space-3);
+    font-size: 13px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

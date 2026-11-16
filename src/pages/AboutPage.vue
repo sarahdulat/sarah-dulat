@@ -3,12 +3,14 @@ import { defineComponent } from 'vue'
 
 import ContactSection from '../components/ContactSection.vue'
 import InteriorHero from '../components/InteriorHero.vue'
+import PortfolioLink from '../components/PortfolioLink.vue'
 
 export default defineComponent({
   name: 'AboutPage',
   components: {
     ContactSection,
     InteriorHero,
+    PortfolioLink,
   },
 })
 </script>
@@ -24,6 +26,91 @@ export default defineComponent({
         that balance aesthetics with functionality.
       </p>
     </InteriorHero>
+
+    <article class="about-story">
+      <section aria-labelledby="about-me-heading">
+        <h2 id="about-me-heading">About me</h2>
+        <div class="about-story__copy">
+          <p>
+            I’ve been designing and building websites since I was 14, back when that meant creating
+            bitmap graphics in MS Paint, publishing pages on GeoCities, and using HTML, inline CSS,
+            and copied-and-pasted JavaScript to make it snow on the page or have stars follow your cursor.
+          </p>
+          <p>
+            Even then, I was equally interested in how websites looked and how they worked. There’s
+            something incredibly satisfying about writing code and immediately seeing it come to
+            life on screen. That instant feedback and freedom to experiment and iterate is still one
+            of my favorite things about development.
+          </p>
+          <p>
+            I’m a first-generation American, born and raised in Chicago. I studied Art &amp; Art
+            History at DePaul University, choosing art over computer science because I wanted to
+            stay close to the creative side of the web.
+          </p>
+          <p>
+            After college, I moved to New York City, where I spent nine years building my career. I
+            started in graphic and production design before completing a coding bootcamp in 2016
+            and landing my first professional front-end development role at Reorg.
+          </p>
+          <p>
+            Every role since has embraced both sides of my background. Eventually, I realized I
+            didn’t have to choose between being a designer and a developer. The title Design
+            Engineer finally gave a name to what I’d been doing all along.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="how-i-work-heading">
+        <h2 id="how-i-work-heading">How I work</h2>
+        <div class="about-story__copy">
+          <p>
+            I like to understand the problem before jumping into a solution. One of my greatest
+            strengths is asking good questions, which is why I love a project kickoff. I want to
+            understand the bigger picture, challenge assumptions, and make sure we’re solving the
+            right problem.
+          </p>
+          <p>
+            I particularly enjoy taking complicated data, workflows, or content and finding the
+            clearest, most intuitive way to communicate it to users.
+          </p>
+          <p>
+            I ask a lot of questions upfront so I can move confidently once it’s time to build. I
+            have strong opinions, but I believe good ideas should hold up to scrutiny, including my
+            own. I welcome thoughtful feedback and ground my design decisions in user needs,
+            evidence, and established principles like those found in
+            <PortfolioLink href="https://lawsofux.com/" variant="utility" external
+              aria-label="Laws of UX (opens in a new tab)">
+              Laws of UX</PortfolioLink>.
+          </p>
+          <p>
+            The work is about more than completing a ticket. Design consistency, intuitive user flows,
+            technical feasibility, and the final implementation all matter to me. I believe in
+            shipping thoughtful MVPs and knowing what can wait for phase two.
+          </p>
+          <p>
+            I thrive in small, collaborative teams that value autonomy, ownership, and action. I
+            enjoy helping shape a product, making decisions, and seeing ideas through from concept
+            to production.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="beyond-screen-heading">
+        <h2 id="beyond-screen-heading">Beyond the screen</h2>
+        <div class="about-story__copy">
+          <p>
+            When the pandemic opened the door to remote work, I took the opportunity to travel.
+            Along the way, I met the man who is now my husband. We settled briefly in Berlin before
+            moving to Basel, Switzerland, where we’re now raising our son.
+          </p>
+          <p>Becoming a mother has been the greatest honor of my life and a whole new adventure.</p>
+          <p>
+            Outside of work and motherhood, I love traveling, practicing yoga and Pilates, and building whatever project
+            comes to mind, just for fun. Sometimes, it feels like a superpower.
+          </p>
+        </div>
+      </section>
+    </article>
 
     <section class="about-details" aria-label="Expertise and tools">
       <div>
@@ -77,13 +164,44 @@ h1 {
   line-height: 1.45;
 }
 
+.about-story {
+  margin: 0 var(--page-padding);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-story section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.45fr) minmax(0, 1fr);
+  gap: var(--space-7);
+  padding: var(--space-9) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-story__copy {
+  max-width: 760px;
+}
+
+.about-story__copy p {
+  margin: 0 0 var(--space-5);
+  font-size: var(--font-body);
+  line-height: 1.65;
+}
+
+.about-story__copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-story__copy :deep(.portfolio-link) {
+  display: inline-flex;
+  vertical-align: baseline;
+}
+
 .about-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-7);
   margin: 0 var(--page-padding);
   padding: var(--space-8) 0 var(--space-11);
-  border-top: 1px solid var(--color-border);
 }
 
 .about-details ul {
@@ -104,6 +222,12 @@ h1 {
     grid-template-columns: 1fr;
     gap: var(--space-7);
     padding: var(--space-7) 0 var(--space-9);
+  }
+
+  .about-story section {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-7) 0;
   }
 }
 </style>

@@ -73,6 +73,8 @@ describe('portfolio home', () => {
 
     expect(wrapper.find('a[href="https://www.linkedin.com/in/sarahdulat/"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/SarahDulat-Resume.pdf"]').exists()).toBe(true)
+    expect(wrapper.text()).toContain('Basel, Switzerland')
+    expect(wrapper.text()).toContain('Working remotely across time zones')
 
     await wrapper.get('button[aria-label="Copy hello@sarahdulat.com"]').trigger('click')
 
@@ -90,7 +92,11 @@ describe('portfolio home', () => {
 
     expect(wrapper.get('h1').text()).toBe('Design and engineering, together.')
     expect(wrapper.text()).toContain('12+ years of experience')
+    expect(wrapper.text()).toContain('I’ve been designing and building websites since I was 14')
+    expect(wrapper.text()).toContain('How I work')
+    expect(wrapper.text()).toContain('Beyond the screen')
     expect(wrapper.text()).toContain('Product Design & UX')
+    expect(wrapper.find('a[href="https://lawsofux.com/"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/"]').exists()).toBe(true)
     expect(navigationLinks.map((link) => link.attributes('href'))).toEqual([
       '/#work',
