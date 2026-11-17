@@ -1,6 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import mountains1200 from '../assets/about/mountains-1200.webp'
+import mountains480 from '../assets/about/mountains-480.webp'
+import mountains800 from '../assets/about/mountains-800.webp'
+import portrait480 from '../assets/about/portrait-480.webp'
+import portrait800 from '../assets/about/portrait-800.webp'
 import ContactSection from '../components/ContactSection.vue'
 import InteriorHero from '../components/InteriorHero.vue'
 import PortfolioLink from '../components/PortfolioLink.vue'
@@ -11,6 +16,14 @@ export default defineComponent({
     ContactSection,
     InteriorHero,
     PortfolioLink,
+  },
+  data() {
+    return {
+      mountains1200,
+      mountainsSrcset: `${mountains480} 480w, ${mountains800} 800w, ${mountains1200} 1200w`,
+      portrait800,
+      portraitSrcset: `${portrait480} 480w, ${portrait800} 800w`,
+    }
   },
 })
 </script>
@@ -30,33 +43,47 @@ export default defineComponent({
     <article class="about-story">
       <section aria-labelledby="about-me-heading">
         <h2 id="about-me-heading">About me</h2>
-        <div class="about-story__copy">
-          <p>
-            I’ve been designing and building websites since I was 14, back when that meant creating
-            bitmap graphics in MS Paint, publishing pages on GeoCities, and using HTML, inline CSS,
-            and copied-and-pasted JavaScript to make it snow on the page or have stars follow your cursor.
-          </p>
-          <p>
-            Even then, I was equally interested in how websites looked and how they worked. There’s
-            something incredibly satisfying about writing code and immediately seeing it come to
-            life on screen. That instant feedback and freedom to experiment and iterate is still one
-            of my favorite things about development.
-          </p>
-          <p>
-            I’m a first-generation American, born and raised in Chicago. I studied Art &amp; Art
-            History at DePaul University, choosing art over computer science because I wanted to
-            stay close to the creative side of the web.
-          </p>
-          <p>
-            After college, I moved to New York City, where I spent nine years building my career. I
-            started in graphic and production design before completing a coding bootcamp in 2016
-            and landing my first professional front-end development role at Reorg.
-          </p>
-          <p>
-            Every role since has embraced both sides of my background. Eventually, I realized I
-            didn’t have to choose between being a designer and a developer. The title Design
-            Engineer finally gave a name to what I’d been doing all along.
-          </p>
+        <div class="about-story__entry">
+          <div class="about-story__copy">
+            <p>
+              I’ve been designing and building websites since I was 14, back when that meant
+              creating bitmap graphics in MS Paint, publishing pages on GeoCities, and using HTML,
+              inline CSS, and copied-and-pasted JavaScript to make it snow on the page or have stars
+              follow your cursor.
+            </p>
+            <p>
+              Even then, I was equally interested in how websites looked and how they worked.
+              There’s something incredibly satisfying about writing code and immediately seeing it
+              come to life on screen. That instant feedback and freedom to experiment and iterate is
+              still one of my favorite things about development.
+            </p>
+            <figure class="about-figure about-figure--portrait">
+              <img
+                :src="portrait800"
+                :srcset="portraitSrcset"
+                sizes="(max-width: 768px) 100vw, 32vw"
+                width="800"
+                height="1200"
+                loading="lazy"
+                alt="Sarah Dulat-Boussaid seated indoors"
+              />
+            </figure>
+            <p>
+              I’m a first-generation American, born and raised in Chicago. I studied Art &amp; Art
+              History at DePaul University, choosing art over computer science because I wanted to
+              stay close to the creative side of the web.
+            </p>
+            <p>
+              After college, I moved to New York City, where I spent nine years building my career.
+              I started in graphic and production design before completing a coding bootcamp in 2016
+              and landing my first professional front-end development role at Reorg.
+            </p>
+            <p>
+              Every role since has embraced both sides of my background. Eventually, I realized I
+              didn’t have to choose between being a designer and a developer. The title Design
+              Engineer finally gave a name to what I’d been doing all along.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -78,14 +105,19 @@ export default defineComponent({
             have strong opinions, but I believe good ideas should hold up to scrutiny, including my
             own. I welcome thoughtful feedback and ground my design decisions in user needs,
             evidence, and established principles like those found in
-            <PortfolioLink href="https://lawsofux.com/" variant="utility" external
-              aria-label="Laws of UX (opens in a new tab)">
-              Laws of UX</PortfolioLink>.
+            <PortfolioLink
+              href="https://lawsofux.com/"
+              variant="utility"
+              external
+              aria-label="Laws of UX (opens in a new tab)"
+            >
+              Laws of UX</PortfolioLink
+            >.
           </p>
           <p>
-            The work is about more than completing a ticket. Design consistency, intuitive user flows,
-            technical feasibility, and the final implementation all matter to me. I believe in
-            shipping thoughtful MVPs and knowing what can wait for phase two.
+            The work is about more than completing a ticket. Design consistency, intuitive user
+            flows, technical feasibility, and the final implementation all matter to me. I believe
+            in shipping thoughtful MVPs and knowing what can wait for phase two.
           </p>
           <p>
             I thrive in small, collaborative teams that value autonomy, ownership, and action. I
@@ -97,17 +129,33 @@ export default defineComponent({
 
       <section aria-labelledby="beyond-screen-heading">
         <h2 id="beyond-screen-heading">Beyond the screen</h2>
-        <div class="about-story__copy">
-          <p>
-            When the pandemic opened the door to remote work, I took the opportunity to travel.
-            Along the way, I met the man who is now my husband. We settled briefly in Berlin before
-            moving to Basel, Switzerland, where we’re now raising our son.
-          </p>
-          <p>Becoming a mother has been the greatest honor of my life and a whole new adventure.</p>
-          <p>
-            Outside of work and motherhood, I love traveling, practicing yoga and Pilates, and building whatever project
-            comes to mind, just for fun. Sometimes, it feels like a superpower.
-          </p>
+        <div class="about-story__entry about-story__entry--with-image">
+          <div class="about-story__copy">
+            <p>
+              When the pandemic opened the door to remote work, I took the opportunity to travel.
+              Along the way, I met the man who is now my husband. We settled briefly in Berlin
+              before moving to Basel, Switzerland, where we’re now raising our son.
+            </p>
+            <p>
+              Becoming a mother has been the greatest honor of my life and a whole new adventure.
+            </p>
+            <p>
+              Outside of work and motherhood, I love traveling, practicing yoga and Pilates, and
+              building whatever project comes to mind, just for fun. Sometimes, it feels like a
+              superpower.
+            </p>
+          </div>
+          <figure class="about-figure about-figure--travel">
+            <img
+              :src="mountains1200"
+              :srcset="mountainsSrcset"
+              sizes="(max-width: 768px) 100vw, 32vw"
+              width="1200"
+              height="1600"
+              loading="lazy"
+              alt="Sarah at a mountain viewpoint at sunset"
+            />
+          </figure>
         </div>
       </section>
     </article>
@@ -181,6 +229,38 @@ h1 {
   max-width: 760px;
 }
 
+.about-story__entry--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.52fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.about-figure {
+  margin: 0;
+}
+
+.about-figure--portrait {
+  float: right;
+  width: min(42%, 320px);
+  margin: 0 0 var(--space-5) var(--space-7);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.about-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
+.about-figure--portrait img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .about-story__copy p {
   margin: 0 0 var(--space-5);
   font-size: var(--font-body);
@@ -228,6 +308,21 @@ h1 {
     grid-template-columns: 1fr;
     gap: var(--space-5);
     padding: var(--space-7) 0;
+  }
+
+  .about-story__entry--with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .about-figure--portrait {
+    float: none;
+    width: 100%;
+    margin: 0 0 var(--space-5);
+  }
+
+  .about-figure--portrait,
+  .about-figure--travel {
+    max-width: 520px;
   }
 }
 </style>

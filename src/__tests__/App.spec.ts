@@ -98,6 +98,10 @@ describe('portfolio home', () => {
     expect(wrapper.text()).toContain('Beyond the screen')
     expect(wrapper.text()).toContain('Product Design & UX')
     expect(wrapper.find('a[href="https://lawsofux.com/"]').exists()).toBe(true)
+    expect(wrapper.findAll('.about-figure img')).toHaveLength(2)
+    expect(wrapper.findAll('.about-figure img').every((image) => image.attributes('srcset'))).toBe(
+      true,
+    )
     expect(wrapper.find('a[href="/"]').exists()).toBe(true)
     expect(navigationLinks.map((link) => link.attributes('href'))).toEqual([
       '/#work',
