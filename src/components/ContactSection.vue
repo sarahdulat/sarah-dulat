@@ -73,7 +73,7 @@ export default defineComponent({
     <AmbientGlow placement="footer" />
     <h2 id="contact-heading">Have something in mind?</h2>
     <div class="contact-copy">
-      <p>I’m open to full-time opportunities, freelance projects, and collaborations.</p>
+      <p>I’m open to full-time roles, as well as contract and project-based work.</p>
       <div class="footer-actions" aria-label="Contact links">
         <span class="copy-action">
           <PortfolioLink variant="utility" button :aria-label="copied ? 'Email copied' : `Copy ${email}`"
@@ -141,7 +141,6 @@ h2 {
   gap: var(--space-3);
   margin-top: var(--space-4);
   padding-top: var(--space-3);
-  /* border-top: 1px solid var(--color-border); */
   color: var(--color-text-muted);
   font-size: 14px;
   letter-spacing: 0.02em;

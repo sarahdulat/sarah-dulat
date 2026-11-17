@@ -73,6 +73,7 @@ describe('portfolio home', () => {
 
     expect(wrapper.find('a[href="https://www.linkedin.com/in/sarahdulat/"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/SarahDulat-Resume.pdf"]').exists()).toBe(true)
+    expect(wrapper.text()).toContain('contract and project-based work')
     expect(wrapper.text()).toContain('Basel, Switzerland')
     expect(wrapper.text()).toContain('Working remotely across time zones')
 
