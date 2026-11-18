@@ -7,9 +7,13 @@ import {
   setAnalyticsConsent,
   trackPageView,
 } from '../lib/analytics'
+import PortfolioLink from './PortfolioLink.vue'
 
 export default defineComponent({
   name: 'AnalyticsConsent',
+  components: {
+    PortfolioLink,
+  },
   data() {
     return {
       isVisible: false,
@@ -52,7 +56,8 @@ export default defineComponent({
       <h2 id="analytics-consent-title">Optional analytics</h2>
       <p id="analytics-consent-description">
         I’d like to use Google Analytics to understand where visitors are coming from. It will only
-        load if you allow it.
+        load if you allow it. Read the
+        <PortfolioLink href="/privacy" variant="utility">Privacy Policy</PortfolioLink>.
       </p>
     </div>
     <div class="analytics-consent__actions">
@@ -101,6 +106,12 @@ p {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
+}
+
+p :deep(.portfolio-link) {
+  display: inline-flex;
+  font-size: inherit;
+  vertical-align: baseline;
 }
 
 .analytics-consent__actions {

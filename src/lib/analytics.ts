@@ -45,6 +45,29 @@ export function setAnalyticsConsent(consent: Exclude<AnalyticsConsent, null>) {
 
   const disableKey = `ga-disable-${ANALYTICS_MEASUREMENT_ID}`
   ;(window as unknown as Record<string, unknown>)[disableKey] = consent === 'denied'
+
+  if (consent === 'denied') {
+    deleteAnalyticsCookies()
+  }
+}
+
+function deleteAnalyticsCookies() {
+  const cookieNames = document.cookie
+    .split(';')
+    .map((cookie) => cookie.trim().split('=')[0])
+    .filter((name): name is string => Boolean(name?.startsWith('_ga')))
+  const hostname = window.location.hostname
+  const hostnameParts = hostname.split('.')
+  const registrableDomain =
+    hostnameParts.length > 1 ? `.${hostnameParts.slice(-2).join('.')}` : undefined
+  const domains = [undefined, hostname, `.${hostname}`, registrableDomain]
+
+  for (const name of cookieNames) {
+    for (const domain of domains) {
+      const domainAttribute = domain ? `; domain=${domain}` : ''
+      document.cookie = `${name}=; Max-Age=0; path=/${domainAttribute}`
+    }
+  }
 }
 
 function initializeDataLayer() {

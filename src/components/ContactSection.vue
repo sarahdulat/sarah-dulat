@@ -113,9 +113,12 @@ export default defineComponent({
         <span aria-label="Current local time in Basel">{{ baselTime }}</span>
       </p>
       <p>Working remotely across time zones</p>
-      <PortfolioLink variant="utility" button @click="openAnalyticsPreferences">
-        Analytics settings
-      </PortfolioLink>
+      <div class="footer-meta__links">
+        <PortfolioLink href="/privacy" variant="utility">Privacy Policy</PortfolioLink>
+        <PortfolioLink variant="utility" button @click="openAnalyticsPreferences">
+          Analytics settings
+        </PortfolioLink>
+      </div>
     </div>
   </footer>
 </template>
@@ -181,6 +184,12 @@ h2 {
 
 .footer-meta__separator {
   margin: 0 0.55em;
+}
+
+.footer-meta__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
 }
 
 .copy-action {

@@ -6,6 +6,7 @@ import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
+import PrivacyPage from '../pages/PrivacyPage.vue'
 
 const siteName = 'Sarah Dulat-Boussaid'
 const defaultTitle = `${siteName} — Design Engineer`
@@ -57,6 +58,10 @@ function updatePageMetadata(route: RouteLocationNormalized) {
     title = `About — ${siteName}`
     description =
       'Learn about Sarah Dulat-Boussaid’s experience across product design, front-end engineering, design systems, accessibility, and interaction design.'
+  } else if (route.name === 'privacy') {
+    title = `Privacy Policy — ${siteName}`
+    description =
+      'Learn how this portfolio handles website hosting data, optional analytics, consent preferences, and privacy rights.'
   } else if (caseStudy) {
     title = `${caseStudy.title} Case Study — ${siteName}`
     description = caseStudy.summary
@@ -107,6 +112,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutPage,
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: PrivacyPage,
     },
     {
       path: '/case-studies/:slug',

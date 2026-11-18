@@ -7,6 +7,7 @@ import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
+import PrivacyPage from '../pages/PrivacyPage.vue'
 
 describe('portfolio home', () => {
   it('renders the homepage content and both projects', () => {
@@ -55,7 +56,7 @@ describe('portfolio home', () => {
 
     expect(wrapper.findAll('.portfolio-link--nav')).toHaveLength(3)
     expect(wrapper.findAll('.portfolio-link--cta')).toHaveLength(0)
-    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(7)
+    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(8)
   })
 
   it('reuses the ambient glow in the hero and footer', () => {
@@ -79,6 +80,7 @@ describe('portfolio home', () => {
     expect(wrapper.text()).toContain('Basel, Switzerland')
     expect(wrapper.text()).toContain('Working remotely across time zones')
     expect(wrapper.text()).toContain('Analytics settings')
+    expect(wrapper.find('a[href="/privacy"]').exists()).toBe(true)
 
     await wrapper.get('button[aria-label="Copy hello@sarahdulat.com"]').trigger('click')
 
@@ -159,6 +161,18 @@ describe('portfolio home', () => {
       '/about',
       '#contact',
     ])
+  })
+
+  it('renders a privacy policy tailored to the portfolio services', () => {
+    const wrapper = mount(PrivacyPage)
+
+    expect(wrapper.get('h1').text()).toBe('Privacy Policy')
+    expect(wrapper.text()).toContain('GitHub Pages')
+    expect(wrapper.text()).toContain('Google Analytics 4')
+    expect(wrapper.text()).toContain('does not load until you select “Allow analytics.”')
+    expect(wrapper.text()).toContain('Your rights')
+    expect(wrapper.find('a[href="mailto:hello@sarahdulat.com"]').exists()).toBe(true)
+    expect(wrapper.find('a[href="/privacy"]').exists()).toBe(true)
   })
 
   it('renders the Skin Routine case study with responsive images and placeholders', () => {
