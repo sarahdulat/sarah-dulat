@@ -59,7 +59,7 @@ h1 {
   }
 
   .hero {
-    min-height: clamp(560px, calc(100svh - 72px), 768px);
+    min-height: clamp(500px, calc(100svh - 200px), 680px);
     padding: 40px var(--page-padding) var(--space-8);
   }
 

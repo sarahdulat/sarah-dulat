@@ -50,7 +50,12 @@ export default defineComponent({
       <slot />
     </span>
     <span v-if="icon === 'arrow'" class="portfolio-link__icon" aria-hidden="true">→</span>
-    <span v-else-if="icon === 'external'" class="portfolio-link__icon" aria-hidden="true">↗</span>
+    <span
+      v-else-if="icon === 'external'"
+      class="portfolio-link__icon portfolio-link__icon--external"
+      aria-hidden="true"
+      >↗︎</span
+    >
   </button>
   <a
     v-else
@@ -65,7 +70,12 @@ export default defineComponent({
       <slot />
     </span>
     <span v-if="icon === 'arrow'" class="portfolio-link__icon" aria-hidden="true">→</span>
-    <span v-else-if="icon === 'external'" class="portfolio-link__icon" aria-hidden="true">↗</span>
+    <span
+      v-else-if="icon === 'external'"
+      class="portfolio-link__icon portfolio-link__icon--external"
+      aria-hidden="true"
+      >↗︎</span
+    >
   </a>
 </template>
 
@@ -97,6 +107,12 @@ export default defineComponent({
   flex: none;
   line-height: 1;
   transition: transform 180ms ease;
+}
+
+.portfolio-link__icon--external {
+  font-family: Arial, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-variant-emoji: text;
 }
 
 .portfolio-link--nav {
