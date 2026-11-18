@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 
 import { mount } from '@vue/test-utils'
+import AnalyticsConsent from '../components/AnalyticsConsent.vue'
 import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
@@ -53,7 +54,7 @@ describe('portfolio home', () => {
 
     expect(wrapper.findAll('.portfolio-link--nav')).toHaveLength(3)
     expect(wrapper.findAll('.portfolio-link--cta')).toHaveLength(0)
-    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(6)
+    expect(wrapper.findAll('.portfolio-link--utility')).toHaveLength(7)
   })
 
   it('reuses the ambient glow in the hero and footer', () => {
@@ -76,6 +77,7 @@ describe('portfolio home', () => {
     expect(wrapper.text()).toContain('contract and project-based work')
     expect(wrapper.text()).toContain('Basel, Switzerland')
     expect(wrapper.text()).toContain('Working remotely across time zones')
+    expect(wrapper.text()).toContain('Analytics settings')
 
     await wrapper.get('button[aria-label="Copy hello@sarahdulat.com"]').trigger('click')
 
@@ -85,6 +87,38 @@ describe('portfolio home', () => {
     )
     expect(wrapper.get('.copy-tooltip').classes()).toContain('copy-tooltip--visible')
     expect(wrapper.get('.copy-status').text()).toBe('Email copied')
+  })
+
+  it('keeps Google Analytics unloaded when analytics consent is declined', async () => {
+    window.localStorage.removeItem('analytics-consent')
+    document.getElementById('google-analytics-script')?.remove()
+    const wrapper = mount(AnalyticsConsent)
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.text()).toContain('Optional analytics')
+    expect(document.getElementById('google-analytics-script')).toBeNull()
+
+    await wrapper.get('button').trigger('click')
+
+    expect(window.localStorage.getItem('analytics-consent')).toBe('denied')
+    expect(document.getElementById('google-analytics-script')).toBeNull()
+    wrapper.unmount()
+  })
+
+  it('loads Google Analytics only after analytics consent is allowed', async () => {
+    window.localStorage.removeItem('analytics-consent')
+    document.getElementById('google-analytics-script')?.remove()
+    const wrapper = mount(AnalyticsConsent)
+    await wrapper.vm.$nextTick()
+
+    await wrapper.get('.analytics-consent__button--primary').trigger('click')
+
+    expect(window.localStorage.getItem('analytics-consent')).toBe('granted')
+    expect(document.getElementById('google-analytics-script')?.getAttribute('src')).toContain(
+      'G-1PVLS4K203',
+    )
+    wrapper.unmount()
+    document.getElementById('google-analytics-script')?.remove()
   })
 
   it('renders the internal about page', () => {

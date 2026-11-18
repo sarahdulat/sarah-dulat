@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { ANALYTICS_PREFERENCES_EVENT } from '../lib/analytics'
 import AmbientGlow from './AmbientGlow.vue'
 import PortfolioLink from './PortfolioLink.vue'
 
@@ -33,6 +34,9 @@ export default defineComponent({
     }
   },
   methods: {
+    openAnalyticsPreferences() {
+      window.dispatchEvent(new Event(ANALYTICS_PREFERENCES_EVENT))
+    },
     updateBaselTime() {
       this.baselTime = new Intl.DateTimeFormat('en-GB', {
         timeZone: 'Europe/Zurich',
@@ -76,15 +80,29 @@ export default defineComponent({
       <p>I’m open to full-time roles, as well as contract and project-based work.</p>
       <div class="footer-actions" aria-label="Contact links">
         <span class="copy-action">
-          <PortfolioLink variant="utility" button :aria-label="copied ? 'Email copied' : `Copy ${email}`"
-            @click="copyEmail">
+          <PortfolioLink
+            variant="utility"
+            button
+            :aria-label="copied ? 'Email copied' : `Copy ${email}`"
+            @click="copyEmail"
+          >
             {{ email }}
           </PortfolioLink>
-          <span class="copy-tooltip" :class="{ 'copy-tooltip--visible': copied }" aria-hidden="true">Copied</span>
+          <span class="copy-tooltip" :class="{ 'copy-tooltip--visible': copied }" aria-hidden="true"
+            >Copied</span
+          >
         </span>
-        <PortfolioLink href="https://www.linkedin.com/in/sarahdulat/" variant="utility" icon="external" external>
-          LinkedIn</PortfolioLink>
-        <PortfolioLink href="/SarahDulat-Resume.pdf" variant="utility" icon="external" external>Résumé</PortfolioLink>
+        <PortfolioLink
+          href="https://www.linkedin.com/in/sarahdulat/"
+          variant="utility"
+          icon="external"
+          external
+        >
+          LinkedIn</PortfolioLink
+        >
+        <PortfolioLink href="/SarahDulat-Resume.pdf" variant="utility" icon="external" external
+          >Résumé</PortfolioLink
+        >
       </div>
       <span class="copy-status" aria-live="polite">{{ copied ? 'Email copied' : '' }}</span>
     </div>
@@ -95,6 +113,9 @@ export default defineComponent({
         <span aria-label="Current local time in Basel">{{ baselTime }}</span>
       </p>
       <p>Working remotely across time zones</p>
+      <PortfolioLink variant="utility" button @click="openAnalyticsPreferences">
+        Analytics settings
+      </PortfolioLink>
     </div>
   </footer>
 </template>
@@ -228,7 +249,6 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {

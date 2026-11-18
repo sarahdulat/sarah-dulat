@@ -2,9 +2,12 @@
 import { defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
 
+import AnalyticsConsent from './components/AnalyticsConsent.vue'
+
 export default defineComponent({
   name: 'PortfolioApp',
   components: {
+    AnalyticsConsent,
     RouterView,
   },
 })
@@ -13,6 +16,7 @@ export default defineComponent({
 <template>
   <div class="site-shell">
     <RouterView />
+    <AnalyticsConsent />
   </div>
 </template>
 

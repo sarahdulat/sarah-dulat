@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 
 import { caseStudies, getCaseStudy } from '../content/caseStudies'
+import { trackPageView } from '../lib/analytics'
 import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
@@ -128,6 +129,9 @@ const router = createRouter({
   },
 })
 
-router.afterEach(updatePageMetadata)
+router.afterEach((route) => {
+  updatePageMetadata(route)
+  trackPageView(route.fullPath)
+})
 
 export default router
