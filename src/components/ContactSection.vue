@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import { ANALYTICS_PREFERENCES_EVENT } from '../lib/analytics'
+import { openAnalyticsPreferences } from '../lib/analytics'
 import AmbientGlow from './AmbientGlow.vue'
 import PortfolioLink from './PortfolioLink.vue'
 
@@ -35,7 +35,7 @@ export default defineComponent({
   },
   methods: {
     openAnalyticsPreferences() {
-      window.dispatchEvent(new Event(ANALYTICS_PREFERENCES_EVENT))
+      openAnalyticsPreferences()
     },
     updateBaselTime() {
       this.baselTime = new Intl.DateTimeFormat('en-GB', {
@@ -170,6 +170,13 @@ h2 {
 
 .footer-meta p {
   margin: 0;
+}
+
+.footer-meta :deep(.portfolio-link) {
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
 }
 
 .footer-meta__separator {

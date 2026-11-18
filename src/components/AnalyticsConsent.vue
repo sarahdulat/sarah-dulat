@@ -2,8 +2,8 @@
 import { defineComponent } from 'vue'
 
 import {
-  ANALYTICS_PREFERENCES_EVENT,
   getAnalyticsConsent,
+  registerAnalyticsPreferences,
   setAnalyticsConsent,
   trackPageView,
 } from '../lib/analytics'
@@ -13,14 +13,15 @@ export default defineComponent({
   data() {
     return {
       isVisible: false,
+      unregisterPreferences: undefined as (() => void) | undefined,
     }
   },
   mounted() {
     this.isVisible = getAnalyticsConsent() === null
-    window.addEventListener(ANALYTICS_PREFERENCES_EVENT, this.openPreferences)
+    this.unregisterPreferences = registerAnalyticsPreferences(this.openPreferences)
   },
   beforeUnmount() {
-    window.removeEventListener(ANALYTICS_PREFERENCES_EVENT, this.openPreferences)
+    this.unregisterPreferences?.()
   },
   methods: {
     openPreferences() {

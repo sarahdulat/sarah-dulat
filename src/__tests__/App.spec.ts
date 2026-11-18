@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import AnalyticsConsent from '../components/AnalyticsConsent.vue'
+import ContactSection from '../components/ContactSection.vue'
 import AboutPage from '../pages/AboutPage.vue'
 import CaseStudyPage from '../pages/CaseStudyPage.vue'
 import HomePage from '../pages/HomePage.vue'
@@ -119,6 +120,22 @@ describe('portfolio home', () => {
     )
     wrapper.unmount()
     document.getElementById('google-analytics-script')?.remove()
+  })
+
+  it('reopens analytics preferences from the footer', async () => {
+    window.localStorage.setItem('analytics-consent', 'denied')
+    const wrapper = mount({
+      components: { AnalyticsConsent, ContactSection },
+      template: '<AnalyticsConsent /><ContactSection />',
+    })
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.find('[role="dialog"]').exists()).toBe(false)
+
+    await wrapper.get('.footer-meta button').trigger('click')
+
+    expect(wrapper.get('[role="dialog"]').text()).toContain('Optional analytics')
+    wrapper.unmount()
   })
 
   it('renders the internal about page', () => {
