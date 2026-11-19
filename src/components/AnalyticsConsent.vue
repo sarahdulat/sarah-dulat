@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 
 import {
-  analyticsPreferencesEvent,
+  analyticsPreferencesVisible,
   getAnalyticsConsent,
   setAnalyticsConsent,
   trackPageView,
@@ -14,21 +14,14 @@ export default defineComponent({
   components: {
     PortfolioLink,
   },
-  data() {
+  setup() {
+    analyticsPreferencesVisible.value = getAnalyticsConsent() === null
+
     return {
-      isVisible: getAnalyticsConsent() === null,
+      isVisible: analyticsPreferencesVisible,
     }
   },
-  mounted() {
-    window.addEventListener(analyticsPreferencesEvent, this.openPreferences)
-  },
-  beforeUnmount() {
-    window.removeEventListener(analyticsPreferencesEvent, this.openPreferences)
-  },
   methods: {
-    openPreferences() {
-      this.isVisible = true
-    },
     allowAnalytics() {
       setAnalyticsConsent('granted')
       this.isVisible = false

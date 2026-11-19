@@ -1,13 +1,16 @@
+import { ref } from 'vue'
+
 export const ANALYTICS_MEASUREMENT_ID = 'G-ZZ6FNTXG7H'
 
 const consentStorageKey = 'analytics-consent'
 const analyticsScriptId = 'google-analytics-script'
-export const analyticsPreferencesEvent = 'analytics-preferences:open'
 
 export type AnalyticsConsent = 'granted' | 'denied' | null
 
+export const analyticsPreferencesVisible = ref(getAnalyticsConsent() === null)
+
 export function openAnalyticsPreferences() {
-  window.dispatchEvent(new Event(analyticsPreferencesEvent))
+  analyticsPreferencesVisible.value = true
 }
 
 declare global {
