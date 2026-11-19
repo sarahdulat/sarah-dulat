@@ -46,7 +46,7 @@ export default defineComponent({
         <div class="about-story__entry">
           <div class="about-story__copy">
             <p>
-              I’ve been designing and building websites since I was 14, back when that meant
+              I’ve been designing and building websites since I was 12, back when that meant
               creating bitmap graphics in MS Paint, publishing pages on GeoCities, and using HTML,
               inline CSS, and copied-and-pasted JavaScript to make it snow on the page or have stars
               follow your cursor.
@@ -58,15 +58,8 @@ export default defineComponent({
               still one of my favorite things about development.
             </p>
             <figure class="about-figure about-figure--portrait">
-              <img
-                :src="portrait800"
-                :srcset="portraitSrcset"
-                sizes="(max-width: 768px) 100vw, 32vw"
-                width="800"
-                height="1200"
-                loading="lazy"
-                alt="Sarah Dulat-Boussaid seated indoors"
-              />
+              <img :src="portrait800" :srcset="portraitSrcset" sizes="(max-width: 768px) 100vw, 32vw" width="800"
+                height="1200" loading="lazy" alt="Sarah Dulat-Boussaid seated indoors" />
             </figure>
             <p>
               I’m a first-generation American, born and raised in Chicago. I studied Art &amp; Art
@@ -105,14 +98,9 @@ export default defineComponent({
             have strong opinions, but I believe good ideas should hold up to scrutiny, including my
             own. I welcome thoughtful feedback and ground my design decisions in user needs,
             evidence, and established principles like those found in
-            <PortfolioLink
-              href="https://lawsofux.com/"
-              variant="utility"
-              external
-              aria-label="Laws of UX (opens in a new tab)"
-            >
-              Laws of UX</PortfolioLink
-            >.
+            <PortfolioLink href="https://lawsofux.com/" variant="utility" external
+              aria-label="Laws of UX (opens in a new tab)">
+              Laws of UX</PortfolioLink>.
           </p>
           <p>
             The work is about more than completing a ticket. Design consistency, intuitive user
@@ -146,15 +134,8 @@ export default defineComponent({
             </p>
           </div>
           <figure class="about-figure about-figure--travel">
-            <img
-              :src="mountains1200"
-              :srcset="mountainsSrcset"
-              sizes="(max-width: 768px) 100vw, 32vw"
-              width="1200"
-              height="1600"
-              loading="lazy"
-              alt="Sarah at a mountain viewpoint at sunset"
-            />
+            <img :src="mountains1200" :srcset="mountainsSrcset" sizes="(max-width: 768px) 100vw, 32vw" width="1200"
+              height="1600" loading="lazy" alt="Sarah at a mountain viewpoint at sunset" />
           </figure>
         </div>
       </section>

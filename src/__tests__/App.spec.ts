@@ -124,6 +124,15 @@ describe('portfolio home', () => {
     document.getElementById('google-analytics-script')?.remove()
   })
 
+  it('does not render the consent panel on the first frame when consent is already saved', () => {
+    window.localStorage.setItem('analytics-consent', 'granted')
+
+    const wrapper = mount(AnalyticsConsent)
+
+    expect(wrapper.find('[role="dialog"]').exists()).toBe(false)
+    wrapper.unmount()
+  })
+
   it('reopens analytics preferences from the footer', async () => {
     window.localStorage.setItem('analytics-consent', 'denied')
     const wrapper = mount({

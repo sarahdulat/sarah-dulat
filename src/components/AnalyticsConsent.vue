@@ -16,12 +16,11 @@ export default defineComponent({
   },
   data() {
     return {
-      isVisible: false,
+      isVisible: getAnalyticsConsent() === null,
       unregisterPreferences: undefined as (() => void) | undefined,
     }
   },
   mounted() {
-    this.isVisible = getAnalyticsConsent() === null
     this.unregisterPreferences = registerAnalyticsPreferences(this.openPreferences)
   },
   beforeUnmount() {
