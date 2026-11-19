@@ -11,7 +11,9 @@ export const analyticsPreferencesVisible = ref(getAnalyticsConsent() === null)
 
 export function openAnalyticsPreferences() {
   console.log('clicked')
+  console.log(analyticsPreferencesVisible.value)
   analyticsPreferencesVisible.value = true
+  console.log(analyticsPreferencesVisible.value)
 }
 
 declare global {
