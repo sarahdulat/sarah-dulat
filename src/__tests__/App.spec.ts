@@ -155,7 +155,7 @@ describe('portfolio home', () => {
 
     expect(wrapper.get('h1').text()).toBe('Design and engineering, together.')
     expect(wrapper.text()).toContain('12+ years of experience')
-    expect(wrapper.text()).toContain('I’ve been designing and building websites since I was 14')
+    expect(wrapper.text()).toContain('I’ve been designing and building websites since I was 12')
     expect(wrapper.text()).toContain('How I work')
     expect(wrapper.text()).toContain('Beyond the screen')
     expect(wrapper.text()).toContain('Product Design & UX')
