@@ -10,6 +10,7 @@ export type AnalyticsConsent = 'granted' | 'denied' | null
 export const analyticsPreferencesVisible = ref(getAnalyticsConsent() === null)
 
 export function openAnalyticsPreferences() {
+  console.log('clicked')
   analyticsPreferencesVisible.value = true
 }
 
@@ -37,7 +38,7 @@ export function setAnalyticsConsent(consent: Exclude<AnalyticsConsent, null>) {
   }
 
   const disableKey = `ga-disable-${ANALYTICS_MEASUREMENT_ID}`
-  ;(window as unknown as Record<string, unknown>)[disableKey] = consent === 'denied'
+    ; (window as unknown as Record<string, unknown>)[disableKey] = consent === 'denied'
 
   if (consent === 'denied') {
     deleteAnalyticsCookies()
