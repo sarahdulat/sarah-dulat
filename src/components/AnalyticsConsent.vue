@@ -68,11 +68,12 @@ export default defineComponent({
 
 <style scoped>
 .analytics-consent {
-  position: fixed;
+  position: fixed !important;
+  top: auto !important;
   right: var(--space-3);
   bottom: var(--space-3);
   left: var(--space-3);
-  z-index: 20;
+  z-index: 2147483647;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-4);
