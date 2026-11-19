@@ -1,4 +1,4 @@
-export const ANALYTICS_MEASUREMENT_ID = 'G-1PVLS4K203'
+export const ANALYTICS_MEASUREMENT_ID = 'G-ZZ6FNTXG7H'
 
 const consentStorageKey = 'analytics-consent'
 const analyticsScriptId = 'google-analytics-script'

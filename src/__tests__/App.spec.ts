@@ -118,7 +118,7 @@ describe('portfolio home', () => {
 
     expect(window.localStorage.getItem('analytics-consent')).toBe('granted')
     expect(document.getElementById('google-analytics-script')?.getAttribute('src')).toContain(
-      'G-1PVLS4K203',
+      'G-ZZ6FNTXG7H',
     )
     wrapper.unmount()
     document.getElementById('google-analytics-script')?.remove()
