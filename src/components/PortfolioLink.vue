@@ -65,7 +65,6 @@ export default defineComponent({
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
     :aria-label="ariaLabel"
-    @click="$emit('click', $event)"
   >
     <span class="portfolio-link__label">
       <slot />

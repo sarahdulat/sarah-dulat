@@ -15,19 +15,7 @@ export default defineComponent({
     PortfolioLink,
   },
   setup() {
-    const url = new URL(window.location.href)
-    const preferencesRequested = url.searchParams.get('analytics') === 'settings'
-
-    analyticsPreferencesVisible.value = getAnalyticsConsent() === null || preferencesRequested
-
-    if (preferencesRequested) {
-      url.searchParams.delete('analytics')
-      window.history.replaceState(
-        window.history.state,
-        '',
-        `${url.pathname}${url.search}${url.hash}`,
-      )
-    }
+    analyticsPreferencesVisible.value = getAnalyticsConsent() === null
 
     return {
       isVisible: analyticsPreferencesVisible,
