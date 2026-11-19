@@ -32,3 +32,15 @@ test('lets the selected work images peek into a typical desktop viewport', async
   expect(firstProjectImage!.y).toBeLessThan(900)
   expect(firstProjectImage!.y).toBeGreaterThan(760)
 })
+
+test('reopens analytics preferences from the footer', async ({ page }) => {
+  await page.goto('/')
+
+  const dialog = page.getByRole('dialog', { name: 'Optional analytics' })
+  await expect(dialog).toBeVisible()
+  await dialog.getByRole('button', { name: 'Decline' }).click()
+  await expect(dialog).toBeHidden()
+
+  await page.getByRole('button', { name: 'Analytics settings' }).click()
+  await expect(dialog).toBeVisible()
+})

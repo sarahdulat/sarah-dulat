@@ -2,22 +2,12 @@ export const ANALYTICS_MEASUREMENT_ID = 'G-ZZ6FNTXG7H'
 
 const consentStorageKey = 'analytics-consent'
 const analyticsScriptId = 'google-analytics-script'
-let openPreferencesHandler: (() => void) | undefined
+export const analyticsPreferencesEvent = 'analytics-preferences:open'
 
 export type AnalyticsConsent = 'granted' | 'denied' | null
 
 export function openAnalyticsPreferences() {
-  openPreferencesHandler?.()
-}
-
-export function registerAnalyticsPreferences(handler: () => void) {
-  openPreferencesHandler = handler
-
-  return () => {
-    if (openPreferencesHandler === handler) {
-      openPreferencesHandler = undefined
-    }
-  }
+  window.dispatchEvent(new Event(analyticsPreferencesEvent))
 }
 
 declare global {
