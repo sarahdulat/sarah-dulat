@@ -1,9 +1,5 @@
 export const ANALYTICS_MEASUREMENT_ID = 'G-ZZ6FNTXG7H'
 
-// TEMPORARY: Allow Google to detect the production tag during setup verification.
-// Remove this bypass as soon as verification is complete.
-const bypassAnalyticsConsentForVerification = import.meta.env.PROD
-
 const consentStorageKey = 'analytics-consent'
 const analyticsScriptId = 'google-analytics-script'
 let openPreferencesHandler: (() => void) | undefined
@@ -84,13 +80,11 @@ function initializeDataLayer() {
 }
 
 export function loadAnalytics() {
-  if (!bypassAnalyticsConsentForVerification && getAnalyticsConsent() !== 'granted') {
+  if (getAnalyticsConsent() !== 'granted') {
     return
   }
 
-  if (!bypassAnalyticsConsentForVerification) {
-    setAnalyticsConsent('granted')
-  }
+  setAnalyticsConsent('granted')
   initializeDataLayer()
 
   if (!document.getElementById(analyticsScriptId)) {
@@ -106,7 +100,7 @@ export function loadAnalytics() {
 }
 
 export function trackPageView(path: string) {
-  if (!bypassAnalyticsConsentForVerification && getAnalyticsConsent() !== 'granted') {
+  if (getAnalyticsConsent() !== 'granted') {
     return
   }
 
