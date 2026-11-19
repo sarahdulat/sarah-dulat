@@ -143,7 +143,8 @@ describe('portfolio home', () => {
 
     expect(wrapper.find('[role="dialog"]').exists()).toBe(false)
 
-    await wrapper.get('.footer-meta button').trigger('click')
+    const settingsLink = wrapper.get('.footer-meta a[href="?analytics=settings"]')
+    await settingsLink.trigger('click')
 
     expect(wrapper.get('[role="dialog"]').text()).toContain('Optional analytics')
     wrapper.unmount()

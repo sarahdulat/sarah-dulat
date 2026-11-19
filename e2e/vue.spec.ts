@@ -41,6 +41,6 @@ test('reopens analytics preferences from the footer', async ({ page }) => {
   await dialog.getByRole('button', { name: 'Decline' }).click()
   await expect(dialog).toBeHidden()
 
-  await page.getByRole('button', { name: 'Analytics settings' }).click()
+  await page.getByRole('link', { name: 'Analytics settings' }).click()
   await expect(dialog).toBeVisible()
 })

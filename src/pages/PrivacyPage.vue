@@ -107,7 +107,11 @@ export default defineComponent({
           </p>
           <p>
             You can withdraw or give consent at any time using
-            <PortfolioLink variant="utility" button @click="openAnalyticsPreferences">
+            <PortfolioLink
+              href="?analytics=settings"
+              variant="utility"
+              @click.prevent="openAnalyticsPreferences"
+            >
               Analytics settings</PortfolioLink
             >. Withdrawing consent stops further Analytics collection and removes Analytics cookies
             accessible to this website.

@@ -115,7 +115,11 @@ export default defineComponent({
       <p>Working remotely across time zones</p>
       <div class="footer-meta__links">
         <PortfolioLink href="/privacy" variant="utility">Privacy Policy</PortfolioLink>
-        <PortfolioLink variant="utility" button @click="openAnalyticsPreferences">
+        <PortfolioLink
+          href="?analytics=settings"
+          variant="utility"
+          @click.prevent="openAnalyticsPreferences"
+        >
           Analytics settings
         </PortfolioLink>
       </div>
