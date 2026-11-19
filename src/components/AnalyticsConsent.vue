@@ -39,6 +39,7 @@ export default defineComponent({
   <aside
     v-if="isVisible"
     class="analytics-consent"
+    style="position: fixed !important; top: auto !important"
     role="dialog"
     aria-labelledby="analytics-consent-title"
     aria-describedby="analytics-consent-description"
