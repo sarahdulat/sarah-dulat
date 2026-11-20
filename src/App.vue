@@ -16,8 +16,8 @@ export default defineComponent({
 <template>
   <div class="site-shell">
     <RouterView />
+    <AnalyticsConsent />
   </div>
-  <AnalyticsConsent />
 </template>
 
 <style scoped>

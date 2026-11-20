@@ -34,9 +34,7 @@ export default defineComponent({
     }
   },
   methods: {
-    openAnalyticsPreferences() {
-      openAnalyticsPreferences()
-    },
+    openAnalyticsPreferences,
     updateBaselTime() {
       this.baselTime = new Intl.DateTimeFormat('en-GB', {
         timeZone: 'Europe/Zurich',

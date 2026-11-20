@@ -72,7 +72,7 @@ export default defineComponent({
   right: var(--space-3);
   bottom: var(--space-3);
   left: var(--space-3);
-  z-index: 2147483647;
+  z-index: 20;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-4);
