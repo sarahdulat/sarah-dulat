@@ -38,27 +38,26 @@ export default defineComponent({
 <template>
   <aside
     v-if="isVisible"
-    class="analytics-consent"
-    style="position: fixed !important; top: auto !important"
+    class="portfolio-preferences"
     role="dialog"
-    aria-labelledby="analytics-consent-title"
-    aria-describedby="analytics-consent-description"
+    aria-labelledby="preferences-title"
+    aria-describedby="preferences-description"
   >
     <div>
-      <h2 id="analytics-consent-title">Optional analytics</h2>
-      <p id="analytics-consent-description">
+      <h2 id="preferences-title">Optional analytics</h2>
+      <p id="preferences-description">
         I’d like to use Google Analytics to understand where visitors are coming from. It will only
         load if you allow it. Read the
         <PortfolioLink href="/privacy" variant="utility">Privacy Policy</PortfolioLink>.
       </p>
     </div>
-    <div class="analytics-consent__actions">
-      <button type="button" class="analytics-consent__button" @click="declineAnalytics">
+    <div class="portfolio-preferences__actions">
+      <button type="button" class="portfolio-preferences__button" @click="declineAnalytics">
         Decline
       </button>
       <button
         type="button"
-        class="analytics-consent__button analytics-consent__button--primary"
+        class="portfolio-preferences__button portfolio-preferences__button--primary"
         @click="allowAnalytics"
       >
         Allow analytics
@@ -68,9 +67,8 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.analytics-consent {
-  position: fixed !important;
-  top: auto !important;
+.portfolio-preferences {
+  position: fixed;
   right: var(--space-3);
   bottom: var(--space-3);
   left: var(--space-3);
@@ -107,14 +105,14 @@ p :deep(.portfolio-link) {
   vertical-align: baseline;
 }
 
-.analytics-consent__actions {
+.portfolio-preferences__actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1);
   justify-content: flex-end;
 }
 
-.analytics-consent__button {
+.portfolio-preferences__button {
   padding: 10px 14px;
   border: 1px solid var(--color-border);
   border-radius: 0;
@@ -125,14 +123,14 @@ p :deep(.portfolio-link) {
   cursor: pointer;
 }
 
-.analytics-consent__button--primary {
+.portfolio-preferences__button--primary {
   border-color: var(--color-heading);
   background: var(--color-heading);
   color: var(--color-background);
 }
 
 @media (max-width: 768px) {
-  .analytics-consent {
+  .portfolio-preferences {
     right: var(--space-2);
     bottom: var(--space-2);
     left: var(--space-2);
@@ -141,7 +139,7 @@ p :deep(.portfolio-link) {
     padding: var(--space-2);
   }
 
-  .analytics-consent__actions {
+  .portfolio-preferences__actions {
     justify-content: flex-start;
   }
 }

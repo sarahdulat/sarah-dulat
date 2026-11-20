@@ -114,7 +114,7 @@ describe('portfolio home', () => {
     const wrapper = mount(AnalyticsConsent)
     await wrapper.vm.$nextTick()
 
-    await wrapper.get('.analytics-consent__button--primary').trigger('click')
+    await wrapper.get('.portfolio-preferences__button--primary').trigger('click')
 
     expect(window.localStorage.getItem('analytics-consent')).toBe('granted')
     expect(document.getElementById('google-analytics-script')?.getAttribute('src')).toContain(
